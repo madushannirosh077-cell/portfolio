@@ -1,61 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nirosh | Software Development</title>
+    <title>Nirosh | Portfolio</title>
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #020617);
             color: white;
         }
 
         .container {
-            padding: 30px;
+            padding: 20px;
             text-align: center;
         }
 
         h1 {
-            color: #38bdf8;
-            font-size: 40px;
+            font-size: 42px;
+            background: linear-gradient(to right, #38bdf8, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         h2 {
             color: #22c55e;
-            margin-top: 40px;
         }
 
         .card {
-            background: #1e293b;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
             padding: 20px;
             margin: 20px auto;
-            border-radius: 15px;
             max-width: 500px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            transition: 0.3s;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
 
-        .contact a {
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .btn {
             display: block;
             margin: 10px;
-            padding: 10px;
-            border-radius: 10px;
+            padding: 12px;
+            border-radius: 12px;
             text-decoration: none;
-            color: white;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         .call {
             background: #22c55e;
+            color: black;
+        }
+
+        .call:hover {
+            background: #16a34a;
         }
 
         .whatsapp {
             background: #25D366;
+            color: black;
+        }
+
+        .whatsapp:hover {
+            background: #1da851;
         }
 
         .footer {
             margin-top: 40px;
-            font-size: 14px;
             color: #94a3b8;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -68,54 +86,42 @@
     <p>Software Development & System Architecture</p>
 
     <div class="card">
-        <h2>About My Business</h2>
-        <p>Our main goal is to provide high quality service to all clients.</p>
-        <p>Friendly team with professional support.</p>
-        <p>All services are offered at fair prices with flexible payment options.</p>
-        <p>100% transparency in all projects.</p>
+        <h2>About</h2>
+        <p>High quality service for all clients.</p>
+        <p>Friendly team & professional support.</p>
+        <p>Fair pricing & flexible payments.</p>
+        <p>100% transparency.</p>
     </div>
 
     <div class="card">
         <h2>Services</h2>
-
-        <p><b>1. Custom Software Development</b><br>
-        Web & mobile applications for your business needs.</p>
-
-        <p><b>2. System Architecture Design</b><br>
-        Scalable and secure systems.</p>
-
-        <p><b>3. API Development & Integration</b><br>
-        REST API & third-party integrations.</p>
-
-        <p><b>4. Maintenance & Support</b><br>
-        Bug fixing & performance optimization.</p>
+        <p><b>Custom Software Development</b></p>
+        <p><b>System Architecture Design</b></p>
+        <p><b>API Development</b></p>
+        <p><b>Maintenance & Support</b></p>
     </div>
 
     <div class="card">
         <h2>Locations</h2>
-        <p>Main Office: Kandy</p>
-        <p>Second Office: Gampaha</p>
-    </div>
-
-    <div class="card contact">
-        <h2>Contact Me</h2>
-
-        <a class="call" href="tel:+94754708490">
-            📞 Call: +94 75 470 8490
-        </a>
-
-        <a class="whatsapp" href="https://wa.me/94754708490">
-            💬 WhatsApp Business
-        </a>
+        <p>Kandy (Main)</p>
+        <p>Gampaha</p>
     </div>
 
     <div class="card">
-        <h2>Future Plans</h2>
-        <p>We are planning to expand and hire new team members soon.</p>
+        <h2>Contact</h2>
+
+        <a class="btn call" href="tel:+94754708490">📞 Call Now</a>
+        <a class="btn whatsapp" href="https://wa.me/94754708490">💬 WhatsApp</a>
+
+    </div>
+
+    <div class="card">
+        <h2>Future</h2>
+        <p>Expanding & hiring soon 🚀</p>
     </div>
 
     <div class="footer">
-        © 2026 Nirosh | All Rights Reserved
+        © 2026 Nirosh
     </div>
 
 </div>
