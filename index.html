@@ -106,7 +106,564 @@
         <p>Kandy (Main)</p>
         <p>Gampaha</p>
     </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Nirosh | Software Development & System Architecture</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#00ffd5;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00ffd5;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1974&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#00ffd5;
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    color:#cfcfcf;
+}
+
+/* BUTTONS */
+
+.btns{
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    margin:10px;
+    border-radius:40px;
+    text-decoration:none;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.btn-primary{
+    background:#00ffd5;
+    color:black;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:2px solid #00ffd5;
+    color:#00ffd5;
+}
+
+.btn-outline:hover{
+    background:#00ffd5;
+    color:black;
+}
+
+/* SECTION */
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    font-size:40px;
+    margin-bottom:40px;
+    color:#00ffd5;
+    text-align:center;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,255,213,0.3);
+}
+
+.about-text p{
+    line-height:1.9;
+    color:#cfcfcf;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#101010;
+    padding:30px;
+    border-radius:20px;
+    transition:0.3s;
+    border:1px solid #1e1e1e;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#00ffd5;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#00ffd5;
+}
+
+/* PROJECTS */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    overflow:hidden;
+    border-radius:20px;
+    background:#111;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:scale(1.03);
+}
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-card div{
+    padding:20px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    color:#ccc;
+}
+
+.contact-buttons{
+    margin-top:25px;
+}
+
+.contact-buttons a{
+    display:inline-block;
+    margin:10px;
+    padding:14px 28px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.call-btn{
+    background:#22c55e;
+    color:black;
+}
+
+.call-btn:hover{
+    background:#16a34a;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:black;
+}
+
+.whatsapp-btn:hover{
+    background:#1da851;
+}
+
+/* LOCATIONS */
+
+.locations{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/* FUTURE */
+
+.future{
+    text-align:center;
+    font-size:22px;
+    color:#00ffd5;
+}
+
+/* FOOTER */
+
+footer{
+    padding:30px;
+    text-align:center;
+    background:#0d0d0d;
+    color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">NIROSH</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#locations">Locations</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Software Development & <span>System Architecture</span></h1>
+
+<p>
+Professional Software Solutions, Modern Web Development,
+System Design, API Integration, UI/UX Concepts,
+and Tech Innovation by Nirosh.
+</p>
+
+<div class="btns">
+
+<a href="#services" class="btn btn-primary">My Services</a>
+
+<a href="https://github.com/" class="btn btn-outline">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2070&auto=format&fit=crop">
+
+<div class="about-text">
+
+<p>
+Hello, I'm Nirosh. I specialize in Software Development,
+System Architecture, Web Technologies, and Modern Digital Solutions.
+</p>
+
+<br>
+
+<p>
+High quality service for all clients.
+Friendly team & professional support.
+Fair pricing & flexible payments.
+100% transparency.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2 class="section-title">Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Custom Software Development</h3>
+<p>Modern and scalable software solutions.</p>
+</div>
+
+<div class="card">
+<h3>System Architecture Design</h3>
+<p>Efficient and professional system planning.</p>
+</div>
+
+<div class="card">
+<h3>API Development</h3>
+<p>Secure API integration and backend solutions.</p>
+</div>
+
+<div class="card">
+<h3>Maintenance & Support</h3>
+<p>Reliable updates and technical support services.</p>
+</div>
+
+<div class="card">
+<h3>Web Development</h3>
+<p>Responsive modern websites and web apps.</p>
+</div>
+
+<div class="card">
+<h3>UI / UX Design</h3>
+<p>Professional futuristic interface designs.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop">
+
+<div>
+<h3>AI Dashboard</h3>
+<p>Modern analytics dashboard system.</p>
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop">
+
+<div>
+<h3>Developer Workspace</h3>
+<p>Professional coding workspace design.</p>
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop">
+
+<div>
+<h3>Cloud System</h3>
+<p>Cloud infrastructure and architecture solutions.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LOCATIONS -->
+
+<section id="locations">
+
+<h2 class="section-title">Locations</h2>
+
+<div class="locations">
+
+<div class="card">
+<h3>Kandy</h3>
+<p>Main Branch</p>
+</div>
+
+<div class="card">
+<h3>Gampaha</h3>
+<p>Service Area</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact">
+
+<p>📱 WhatsApp: +94 754 708 490</p>
+
+<p>💻 GitHub: github.com/yourusername</p>
+
+<p>📧 Email: yourmail@example.com</p>
+
+<div class="contact-buttons">
+
+<a class="call-btn" href="tel:+94754708490">
+📞 Call Now
+</a>
+
+<a class="whatsapp-btn" href="https://wa.me/94754708490">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FUTURE -->
+
+<section>
+
+<h2 class="section-title">Future</h2>
+
+<div class="future">
+Expanding & hiring soon 🚀
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Nirosh | Software Development & System Architecture
+
+</footer>
+
+</body>
+</html>
     
     <div class="card">
         <h2>Contact</h2>
