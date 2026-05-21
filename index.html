@@ -41,7 +41,7 @@ transition:0.3s;
 }
 .card:hover{transform:scale(1.05)}
 
-/* IMAGE (NO SLIDER) */
+/* IMAGE (UNCHANGED) */
 .card img{
 width:100%;
 height:200px;
@@ -69,37 +69,52 @@ margin-top:10px;
 max-width:900px;
 margin:auto;
 text-align:center;
-line-height:1.8;
+line-height:1.9;
+font-size:15px;
+opacity:0.9;
 }
 
 /* CONTACT */
-.contact{text-align:center;margin-top:10px}
+.contact{
+text-align:center;
+margin-top:10px;
+font-size:16px;
+}
 
-/* NEW WHATSAPP BUTTON */
+/* WHATSAPP BUTTON (UPGRADED) */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:12px 18px;
+padding:14px 20px;
 border-radius:50px;
 text-decoration:none;
 display:flex;
 align-items:center;
 gap:10px;
-font-size:14px;
-box-shadow:0 5px 15px rgba(0,0,0,0.5);
+font-size:15px;
+font-weight:600;
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
 transition:0.3s;
+animation:float 2s infinite ease-in-out;
 }
 
 .whatsapp:hover{
 background:#1ebe5d;
-transform:scale(1.05);
+transform:scale(1.08);
 }
 
 .whatsapp span{
-font-size:18px;
+font-size:20px;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-5px);}
+100%{transform:translateY(0px);}
 }
 
 </style>
@@ -162,11 +177,13 @@ Providing modern technology to all people in the world to easily manage business
 </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT (UPGRADED) -->
 <section>
 <h2 style="text-align:center;margin-bottom:20px;">About the Owner</h2>
 <p class="about">
-Hello, my name is Nirosh. I am a skilled developer specializing in coding, web development, app development, and graphic design. I work closely with clients to deliver high-quality solutions. We offer complete service packages at affordable prices with flexible payment options.
+Hello, my name is Nirosh. I am a highly skilled professional with strong knowledge in computer technology and coding. I specialize in web development, mobile app development, and graphic design. As a friendly and dedicated developer, I always focus on understanding my clients' needs and delivering high-quality, customized solutions.
+
+Our business offers complete service packages designed to suit different customer requirements. All our services are provided at very reasonable prices, along with flexible and convenient payment options. My goal is to provide reliable, modern, and efficient digital solutions that help businesses grow and succeed.
 </p>
 </section>
 
@@ -176,7 +193,7 @@ Hello, my name is Nirosh. I am a skilled developer specializing in coding, web d
 <p class="contact">Phone: +94 75 470 8490</p>
 </section>
 
-<!-- NEW WHATSAPP -->
+<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/94754708490" target="_blank">
 <span>💬</span> Chat on WhatsApp
 </a>
