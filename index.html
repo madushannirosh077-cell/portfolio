@@ -6,61 +6,36 @@
 <title>Nirosh Software Solutions</title>
 
 <style>
-
-/* LOADER */
-#loader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-.loader-text {
-    color: gold;
-    font-size: 24px;
-    animation: blink 1s infinite;
-}
-@keyframes blink {
-    50% { opacity: 0.3; }
-}
-
-/* BODY */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center/cover;
+    background: url('your-image.jpg') no-repeat center/cover;
     color: white;
-    scroll-behavior: smooth;
 }
 
-/* overlay */
+/* Dark overlay */
 body::before {
     content: "";
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.75);
     z-index: -1;
 }
 
-/* NAVBAR */
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 20px 50px;
     backdrop-filter: blur(10px);
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: bold;
+nav h1 {
     color: gold;
 }
 
-/* HERO */
+/* Hero */
 .hero {
     text-align: center;
     padding: 80px 20px;
@@ -72,14 +47,15 @@ nav {
 }
 
 .hero p {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
+    line-height: 1.6;
 }
 
-/* CONTAINER */
+/* Glass cards */
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     padding: 40px;
 }
@@ -89,17 +65,17 @@ nav {
     border-radius: 20px;
     backdrop-filter: blur(15px);
     padding: 20px;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.05);
 }
 
 .card img {
     width: 100%;
-    height: 200px;
     border-radius: 15px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -107,17 +83,12 @@ nav {
     color: gold;
 }
 
-/* ABOUT */
-.about {
-    padding: 60px 20px;
-    text-align: center;
+.card p {
+    font-size: 14px;
+    color: #ddd;
 }
 
-.about h2 {
-    color: gold;
-}
-
-/* CONTACT */
+/* Contact */
 .contact {
     text-align: center;
     padding: 40px;
@@ -125,81 +96,61 @@ nav {
 
 .contact a {
     color: gold;
+    font-size: 18px;
     text-decoration: none;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
+    font-size: 14px;
     color: #aaa;
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- LOADER -->
-<div id="loader">
-<div class="loader-text">Loading...</div>
-</div>
-
-<!-- NAV -->
 <nav>
-<div class="logo">NIROSH TECH</div>
+<h1>NIROSH</h1>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
 <h1>Software Development & System Architecture</h1>
-<p>Modern, reliable and scalable digital solutions for businesses worldwide.</p>
+<p>
+Providing modern, reliable, and transparent technology solutions to help businesses, products, and services grow globally with ease and efficiency.
+</p>
 </section>
 
-<!-- SERVICES -->
 <section class="container">
 
 <div class="card">
 <img id="img1">
-<h2>Software Development</h2>
-<p>Custom web & mobile apps.</p>
+<h2>Custom Software Development</h2>
+<p>Web and mobile application development tailored for business needs. Scalable and efficient solutions.</p>
 </div>
 
 <div class="card">
 <img id="img2">
-<h2>System Architecture</h2>
-<p>Secure scalable systems.</p>
+<h2>System Architecture Design</h2>
+<p>Designing scalable and secure system architectures for modern applications and businesses.</p>
 </div>
 
 <div class="card">
 <img id="img3">
-<h2>API Development</h2>
-<p>Seamless integrations.</p>
+<h2>API Development & Integration</h2>
+<p>REST API development and integration with third-party services for seamless system connectivity.</p>
 </div>
 
 <div class="card">
 <img id="img4">
-<h2>Support & Maintenance</h2>
-<p>Reliable system updates.</p>
+<h2>Software Maintenance & Support</h2>
+<p>Bug fixing, updates, performance optimization, and ongoing system support.</p>
 </div>
 
 </section>
 
-<!-- ABOUT -->
-<section class="about">
-<h2>About Me</h2>
-<p>
-Hi, I’m <b>Nirosh</b> — a highly skilled software developer, web designer, app developer, and graphic designer.
-I specialize in creating modern, high-quality digital solutions tailored to client needs.
-
-I am a friendly and dedicated professional who always focuses on delivering the best results for customers.
-My services include custom software development, website creation, mobile app development, and design solutions.
-
-We offer flexible business packages with fair pricing and easy payment methods to suit your needs.
-</p>
-</section>
-
-<!-- CONTACT -->
 <section class="contact">
 <p>📍 Kandy & Gampaha, Sri Lanka</p>
 <p>📞 +94 754 708 490</p>
@@ -207,25 +158,53 @@ We offer flexible business packages with fair pricing and easy payment methods t
 </section>
 
 <footer>
-© 2026 Nirosh Software Solutions
+Closed on Saturdays & Sundays
 </footer>
 
 <script>
+// Image arrays
+const images1 = [
+"https://source.unsplash.com/400x300/?software,code",
+"https://source.unsplash.com/400x300/?web,development",
+"https://source.unsplash.com/400x300/?programming",
+"https://source.unsplash.com/400x300/?coding",
+"https://source.unsplash.com/400x300/?app,development"
+];
 
-/* LOADER */
-window.onload = function() {
-    document.getElementById("loader").style.display = "none";
+const images2 = [
+"https://source.unsplash.com/400x300/?system,architecture",
+"https://source.unsplash.com/400x300/?cloud,network",
+"https://source.unsplash.com/400x300/?server,technology",
+"https://source.unsplash.com/400x300/?data,center",
+"https://source.unsplash.com/400x300/?it,infrastructure"
+];
+
+const images3 = [
+"https://source.unsplash.com/400x300/?api,technology",
+"https://source.unsplash.com/400x300/?integration,software",
+"https://source.unsplash.com/400x300/?backend,development",
+"https://source.unsplash.com/400x300/?coding,api",
+"https://source.unsplash.com/400x300/?cloud,api"
+];
+
+const images4 = [
+"https://source.unsplash.com/400x300/?software,maintenance",
+"https://source.unsplash.com/400x300/?debugging",
+"https://source.unsplash.com/400x300/?technical,support",
+"https://source.unsplash.com/400x300/?computer,repair",
+"https://source.unsplash.com/400x300/?system,update"
+];
+
+// Random function
+function randomImage(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
 }
 
-/* RANDOM IMAGES */
-function randomImage(keyword) {
-    return "https://source.unsplash.com/400x300/?" + keyword + "&" + Math.random();
-}
-
-document.getElementById("img1").src = randomImage("software,code");
-document.getElementById("img2").src = randomImage("system,architecture");
-document.getElementById("img3").src = randomImage("api,technology");
-document.getElementById("img4").src = randomImage("computer,repair");
+// Assign images
+document.getElementById("img1").src = randomImage(images1);
+document.getElementById("img2").src = randomImage(images2);
+document.getElementById("img3").src = randomImage(images3);
+document.getElementById("img4").src = randomImage(images4);
 
 </script>
 
