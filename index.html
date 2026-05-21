@@ -15,7 +15,7 @@ body{background:#0a0a0a;color:white;}
 .hero{
 height:100vh;
 background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738'); /* BMW M4 BLACK HEADLIGHTS */
+url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738');
 background-size:cover;
 background-position:center;
 display:flex;align-items:center;justify-content:center;text-align:center;
@@ -73,6 +73,31 @@ text-align:center;
 line-height:1.9;
 font-size:15px;
 opacity:0.9;
+}
+
+/* COMPANY SECTION (BANK BACKGROUND) */
+.company-section{
+position:relative;
+padding:80px 20px;
+text-align:center;
+color:white;
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1507679799987-c73779587ccf');
+background-size:cover;
+background-position:center;
+}
+
+.company-section h2{
+margin-bottom:20px;
+font-size:28px;
+}
+
+.company-section p{
+max-width:900px;
+margin:auto;
+line-height:1.9;
+font-size:15px;
+opacity:0.95;
 }
 
 /* CONTACT */
@@ -184,11 +209,11 @@ Our business offers complete service packages designed to suit different custome
 </p>
 </section>
 
-<!-- BUSINESS DETAILS -->
-<section>
-<h2 style="text-align:center;margin-bottom:20px;">About Our Company</h2>
+<!-- BUSINESS DETAILS (UPDATED) -->
+<section class="company-section">
+<h2>About Our Company</h2>
 
-<p style="max-width:900px;margin:auto;text-align:center;line-height:1.9;font-size:15px;opacity:0.9;">
+<p>
 Nirosh - Software Development & System Architecture Solution Company is proudly based in Sri Lanka, with its main headquarters located in Kandy and an additional branch in the Gampaha area. 
 
 We have a highly friendly, creative, and dedicated team that is always ready to serve you with professionalism and care. Our main mission is to support your business, products, and services to grow successfully by using modern technology and innovative digital solutions.
