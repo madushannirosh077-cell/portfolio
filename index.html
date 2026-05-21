@@ -3,39 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nirosh - Software Development</title>
+<title>Nirosh Software Solutions</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
     background:#0a0a0a;
     color:white;
-    overflow-x:hidden;
 }
 
-/* LOADING */
+/* LOADER */
 #loader{
     position:fixed;
     width:100%;
     height:100%;
     background:black;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     z-index:9999;
 }
-.loader-text{
-    font-size:25px;
-    letter-spacing:3px;
-    animation: blink 1s infinite;
+.loader{
+    font-size:24px;
+    animation:blink 1s infinite;
 }
 @keyframes blink{
     50%{opacity:0;}
@@ -44,9 +43,11 @@ body{
 /* HERO */
 .hero{
     height:100vh;
-    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475') center/cover;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+    background-size:cover;
+    background-position:center;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
@@ -54,24 +55,13 @@ body{
 }
 
 .hero h1{
-    font-size:40px;
-    font-weight:600;
-    margin-bottom:20px;
+    font-size:42px;
 }
 
 .hero p{
     max-width:800px;
-    font-size:18px;
+    margin-top:20px;
     opacity:0.8;
-}
-
-/* GLASS CARD */
-.glass{
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    border-radius:20px;
-    padding:20px;
-    box-shadow:0 0 20px rgba(255,255,255,0.1);
 }
 
 /* SECTION */
@@ -79,17 +69,25 @@ section{
     padding:60px 20px;
 }
 
+/* GLASS */
+.glass{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:20px;
+}
+
 /* CATEGORY */
 .category-container{
     display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
 .card{
-    padding:20px;
     border-radius:20px;
-    background:linear-gradient(145deg,#111,#1c1c1c);
+    overflow:hidden;
+    background:#111;
     transition:0.3s;
 }
 
@@ -97,14 +95,31 @@ section{
     transform:scale(1.05);
 }
 
-.card h2{
-    font-size:22px;
-    margin-bottom:10px;
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
 }
 
-.card p{
-    font-size:14px;
-    color:#ccc;
+.card-content{
+    padding:15px;
+}
+
+/* TITLE BLACK BIG */
+.card-content h2{
+    color:black;
+    background:white;
+    padding:8px;
+    border-radius:10px;
+    font-size:22px;
+    font-weight:600;
+}
+
+/* DESCRIPTION WHITE SMALL */
+.card-content p{
+    color:white;
+    font-size:13px;
+    margin-top:10px;
 }
 
 /* ABOUT */
@@ -124,10 +139,9 @@ footer{
     text-align:center;
     padding:20px;
     background:#111;
-    font-size:14px;
 }
 
-/* ANIMATION */
+/* SCROLL ANIMATION */
 .fade{
     opacity:0;
     transform:translateY(20px);
@@ -137,34 +151,32 @@ footer{
     opacity:1;
     transform:translateY(0);
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<div id="loader">
-    <div class="loader-text">LOADING...</div>
-</div>
+<div id="loader"><div class="loader">LOADING...</div></div>
 
 <!-- HERO -->
 <div class="hero">
-    <div class="glass">
-        <h1>Nirosh - Software Development & System Architecture Solution Company</h1>
-        <p>
-        Providing modern technology to all people in the world to easily manage businesses, products and services in a simple, easy, highly reliable and 100% transparent way.
-        </p>
-    </div>
+<div>
+<h1>Nirosh - Software Development & System Architecture Solution Company</h1>
+<p>
+Providing modern technology to all people in the world to easily manage businesses, products and services in a simple, easy, highly reliable and 100% transparent way.
+</p>
+</div>
 </div>
 
-<!-- ABOUT -->
+<!-- ABOUT OWNER -->
 <section class="fade">
 <div class="about glass">
 <h2>About Owner</h2>
 <p>
-My name is Nirosh. I am highly skilled in computer knowledge and coding. I am a web developer, app creator and app developer, and also a graphic designer. I am a friendly person who works according to customer needs and delivers all services professionally. 
+My name is Nirosh. I am highly skilled in computer knowledge and coding. I am a web developer, app creator and app developer, and also a graphic designer. I am a friendly person who works according to customer needs and delivers all services.
 
-We provide business packages with very reasonable pricing, flexible payment methods, and 100% trust and transparency. Our goal is to support your business growth using modern technology.
+We provide business packages, reasonable prices, flexible payment methods, and 100% trust and transparency.
 </p>
 </div>
 </section>
@@ -173,11 +185,11 @@ We provide business packages with very reasonable pricing, flexible payment meth
 <section class="fade">
 <div class="glass">
 <p>
-Nirosh - Software Development & System Architecture Solution Company is located in Sri Lanka, Kandy as the main office. Another branch is located in Gampaha.
+Nirosh Software Development & System Architecture Company is located in Kandy, Sri Lanka as the main office. Another branch is located in Gampaha.
 
-We have a very friendly and dedicated team ready to serve you. Our main goal is to help your business, products and services grow successfully with modern technology.
+We have a friendly and dedicated team ready to serve you. Our main goal is to help your business, products and services grow successfully using modern technology.
 
-We provide software knowledge, coding solutions, poster design, business launching, wedding card designing, system architecture, planning, graphic design, computer importing and distribution, house and building design, app development, boosting and sponsoring services.
+We provide software knowledge, coding, poster designing, business launching, wedding card designing, system architecture, planning, graphic design, computer importing, house and building design, app development, boosting and sponsoring.
 </p>
 </div>
 </section>
@@ -189,23 +201,35 @@ We provide software knowledge, coding solutions, poster design, business launchi
 <div class="category-container">
 
 <div class="card">
+<img src="https://source.unsplash.com/600x400/?software,code">
+<div class="card-content">
 <h2>Custom Software Development</h2>
 <p>Web and mobile application development tailored for business needs. Scalable and efficient solutions.</p>
 </div>
+</div>
 
 <div class="card">
+<img src="https://source.unsplash.com/600x400/?server,architecture">
+<div class="card-content">
 <h2>System Architecture Design</h2>
 <p>Designing scalable and secure system architectures for modern applications and businesses.</p>
 </div>
-
-<div class="card">
-<h2>API Development & Integration</h2>
-<p>REST API development and integration with third-party services for seamless system connectivity.</p>
 </div>
 
 <div class="card">
+<img src="https://source.unsplash.com/600x400/?api,technology">
+<div class="card-content">
+<h2>API Development & Integration</h2>
+<p>REST API development and integration with third-party services for seamless system connectivity.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/600x400/?maintenance,computer">
+<div class="card-content">
 <h2>Software Maintenance & Support</h2>
 <p>Bug fixing, updates, performance optimization, and ongoing system support.</p>
+</div>
 </div>
 
 </div>
@@ -214,32 +238,34 @@ We provide software knowledge, coding solutions, poster design, business launchi
 <!-- CONTACT -->
 <section class="fade">
 <div class="contact glass">
-<h2>Contact Us</h2>
+<h2>Contact</h2>
 <p>Phone: +94 754708490</p>
 <p>WhatsApp: +94 754708490</p>
 </div>
 </section>
 
 <footer>
-© 2026 Nirosh Software Solutions. All Rights Reserved.
+© 2026 Nirosh Software Solutions
 </footer>
 
 <script>
-window.addEventListener("load",()=>{
+
+/* LOADER */
+window.onload = () =>{
     document.getElementById("loader").style.display="none";
-});
+}
 
 /* SCROLL ANIMATION */
 const fades = document.querySelectorAll(".fade");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", ()=>{
     fades.forEach(el=>{
-        const top = el.getBoundingClientRect().top;
-        if(top < window.innerHeight - 100){
+        if(el.getBoundingClientRect().top < window.innerHeight - 100){
             el.classList.add("show");
         }
-    });
-});
+    })
+})
+
 </script>
 
 </body>
