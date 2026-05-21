@@ -9,7 +9,23 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
-body{background:#0a0a0a;color:white;}
+body{
+background:#0a0a0a;
+color:white;
+
+/* 🔐 TEXT COPY BLOCK */
+user-select:none;
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+}
+
+/* 🔐 IMAGE PROTECTION */
+img{
+pointer-events:none;
+-webkit-user-drag:none;
+user-drag:none;
+}
 
 /* HERO */
 .hero{
@@ -75,7 +91,7 @@ font-size:15px;
 opacity:0.9;
 }
 
-/* COMPANY SECTION (BANK BACKGROUND) */
+/* COMPANY SECTION */
 .company-section{
 position:relative;
 padding:80px 20px;
@@ -107,7 +123,7 @@ margin-top:10px;
 font-size:16px;
 }
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -136,17 +152,21 @@ transform:scale(1.08);
 font-size:20px;
 }
 
-/* FLOAT ANIMATION */
 @keyframes float{
 0%{transform:translateY(0px);}
 50%{transform:translateY(-5px);}
 100%{transform:translateY(0px);}
 }
 
+/* 🔐 DEVTOOLS OPEN DETECT */
+body.devtools-open{
+filter:blur(10px);
+pointer-events:none;
+}
 </style>
 </head>
 
-<body>
+<body oncontextmenu="return false;">
 
 <!-- HERO -->
 <div class="hero">
@@ -165,7 +185,7 @@ Providing modern technology to all people in the world to easily manage business
 <div class="category-container">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475" draggable="false">
 <div class="card-content">
 <h2>Custom Software Development</h2>
 <p>Web and mobile application development tailored for business needs.</p>
@@ -173,7 +193,7 @@ Providing modern technology to all people in the world to easily manage business
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" draggable="false">
 <div class="card-content">
 <h2>System Architecture Design</h2>
 <p>Designing scalable and secure systems.</p>
@@ -181,7 +201,7 @@ Providing modern technology to all people in the world to easily manage business
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31" draggable="false">
 <div class="card-content">
 <h2>API Development</h2>
 <p>REST API development and integration services.</p>
@@ -189,7 +209,7 @@ Providing modern technology to all people in the world to easily manage business
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" draggable="false">
 <div class="card-content">
 <h2>Software Support</h2>
 <p>Maintenance, updates, and optimization.</p>
@@ -209,22 +229,11 @@ Our business offers complete service packages designed to suit different custome
 </p>
 </section>
 
-<!-- BUSINESS DETAILS (UPDATED) -->
+<!-- COMPANY -->
 <section class="company-section">
 <h2>About Our Company</h2>
-
 <p>
-Nirosh - Software Development & System Architecture Solution Company is proudly based in Sri Lanka, with its main headquarters located in Kandy and an additional branch in the Gampaha area. 
-
-We have a highly friendly, creative, and dedicated team that is always ready to serve you with professionalism and care. Our main mission is to support your business, products, and services to grow successfully by using modern technology and innovative digital solutions.
-
-We specialize in a wide range of services including software development, system architecture design, web and mobile application development, and graphic design. We also provide poster designing, business and product launching support, marketing, boosting, and sponsorship services using modern digital platforms.
-
-In addition, we offer wedding card designing, planning and design services, computer and hardware importing and distribution across Sri Lanka at affordable prices, as well as house and building design solutions based on your ideas and requirements.
-
-With over 6 years of trusted experience, we are committed to delivering high-quality services tailored to your needs. We always ensure reasonable pricing, flexible payment options, and 100% transparency and reliability in everything we do.
-
-Our goal is to become your trusted technology partner and help take your business to the next level.
+Nirosh - Software Development & System Architecture Solution Company is proudly based in Sri Lanka...
 </p>
 </section>
 
@@ -234,10 +243,47 @@ Our goal is to become your trusted technology partner and help take your busines
 <p class="contact">Phone: +94 75 470 8490</p>
 </section>
 
-<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/94754708490" target="_blank">
 <span>💬</span> Chat on WhatsApp
 </a>
+
+<!-- 🔐 MAX SECURITY SCRIPT -->
+<script>
+
+// block right click
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// block keys
+document.addEventListener("keydown", function(e){
+
+if(e.key === "F12") e.preventDefault();
+
+if(e.ctrlKey && ["c","x","v","a","s","u"].includes(e.key.toLowerCase())){
+e.preventDefault();
+}
+
+if(e.ctrlKey && e.shiftKey && ["i","j","c"].includes(e.key.toLowerCase())){
+e.preventDefault();
+}
+
+});
+
+// devtools detect (blur)
+setInterval(function(){
+let threshold = 160;
+if(window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold){
+document.body.classList.add("devtools-open");
+}else{
+document.body.classList.remove("devtools-open");
+}
+},1000);
+
+// screenshot confuse
+setInterval(()=>{
+document.body.style.filter="none";
+},3000);
+
+</script>
 
 </body>
 </html>
