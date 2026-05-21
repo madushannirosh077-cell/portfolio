@@ -25,7 +25,7 @@ display:flex;align-items:center;justify-content:center;text-align:center;
 /* SECTION */
 section{padding:60px 20px}
 
-/* CATEGORY GRID */
+/* GRID */
 .category-container{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -41,26 +41,16 @@ transition:0.3s;
 }
 .card:hover{transform:scale(1.05)}
 
-/* SLIDER */
-.slider{
-position:relative;
-height:200px;
-overflow:hidden;
-}
-.slide{
-position:absolute;
+/* IMAGE (NO SLIDER) */
+.card img{
 width:100%;
-height:100%;
+height:200px;
 object-fit:cover;
-opacity:0;
-transition:1s;
 }
-.slide.active{opacity:1}
 
 /* CONTENT */
 .card-content{padding:15px}
 
-/* TITLE BLACK */
 .card-content h2{
 background:white;
 color:black;
@@ -69,42 +59,47 @@ border-radius:10px;
 font-size:22px;
 }
 
-/* DESCRIPTION WHITE SMALL */
 .card-content p{
 font-size:13px;
-color:white;
 margin-top:10px;
 }
 
-/* ABOUT TEXT */
+/* ABOUT */
 .about{
 max-width:900px;
 margin:auto;
-line-height:1.8;
-font-size:14px;
-opacity:0.9;
 text-align:center;
+line-height:1.8;
 }
 
 /* CONTACT */
-.contact{
-text-align:center;
-font-size:16px;
-margin-top:10px;
-}
+.contact{text-align:center;margin-top:10px}
 
-/* WHATSAPP BUTTON */
+/* NEW WHATSAPP BUTTON */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-font-size:22px;
-padding:15px 18px;
-border-radius:50%;
+padding:12px 18px;
+border-radius:50px;
 text-decoration:none;
-box-shadow:0 0 10px rgba(0,0,0,0.5);
+display:flex;
+align-items:center;
+gap:10px;
+font-size:14px;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+transition:0.3s;
+}
+
+.whatsapp:hover{
+background:#1ebe5d;
+transform:scale(1.05);
+}
+
+.whatsapp span{
+font-size:18px;
 }
 
 </style>
@@ -130,69 +125,48 @@ Providing modern technology to all people in the world to easily manage business
 
 <!-- CARD 1 -->
 <div class="card">
-<div class="slider">
-<img class="slide active" src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-<img class="slide" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-<img class="slide" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-</div>
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
 <div class="card-content">
 <h2>Custom Software Development</h2>
-<p>Web and mobile application development tailored for business needs. Scalable and efficient solutions.</p>
+<p>Web and mobile application development tailored for business needs.</p>
 </div>
 </div>
 
 <!-- CARD 2 -->
 <div class="card">
-<div class="slider">
-<img class="slide active" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<img class="slide" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
-<img class="slide" src="https://images.unsplash.com/photo-1581090700227-1e8a8f9c2c2c">
-</div>
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
 <div class="card-content">
 <h2>System Architecture Design</h2>
-<p>Designing scalable and secure system architectures for modern applications and businesses.</p>
+<p>Designing scalable and secure systems.</p>
 </div>
 </div>
 
 <!-- CARD 3 -->
 <div class="card">
-<div class="slider">
-<img class="slide active" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
-<img class="slide" src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
-<img class="slide" src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
-</div>
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
 <div class="card-content">
-<h2>API Development & Integration</h2>
-<p>REST API development and integration with third-party services for seamless system connectivity.</p>
+<h2>API Development</h2>
+<p>REST API development and integration services.</p>
 </div>
 </div>
 
 <!-- CARD 4 -->
 <div class="card">
-<div class="slider">
-<img class="slide active" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-<img class="slide" src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf">
-<img class="slide" src="https://images.unsplash.com/photo-1581091012184-5c7c0b0b8d2c">
-</div>
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
 <div class="card-content">
-<h2>Software Maintenance & Support</h2>
-<p>Bug fixing, updates, performance optimization, and ongoing system support.</p>
+<h2>Software Support</h2>
+<p>Maintenance, updates, and optimization.</p>
 </div>
 </div>
 
 </div>
 </section>
 
-<!-- ABOUT OWNER -->
+<!-- ABOUT -->
 <section>
-<h2 style="text-align:center;margin-bottom:25px;">About the Owner</h2>
-
+<h2 style="text-align:center;margin-bottom:20px;">About the Owner</h2>
 <p class="about">
-Hello, my name is Nirosh. I am the owner of this business and a passionate technology professional.
-I specialize in web development, app development, coding, and graphic design.
-I am a friendly and dedicated person who works according to customer requirements.
-We offer complete service packages at reasonable prices with flexible payment methods.
-My goal is to help your business grow using modern technology.
+Hello, my name is Nirosh. I am a skilled developer specializing in coding, web development, app development, and graphic design. I work closely with clients to deliver high-quality solutions. We offer complete service packages at affordable prices with flexible payment options.
 </p>
 </section>
 
@@ -202,26 +176,10 @@ My goal is to help your business grow using modern technology.
 <p class="contact">Phone: +94 75 470 8490</p>
 </section>
 
-<!-- WHATSAPP BUTTON -->
-<a class="whatsapp" href="https://wa.me/94754708490" target="_blank">💬</a>
-
-<script>
-
-/* SLIDER AUTO CHANGE */
-const sliders = document.querySelectorAll(".slider");
-
-sliders.forEach(slider=>{
-    let slides = slider.querySelectorAll(".slide");
-    let index = 0;
-
-    setInterval(()=>{
-        slides[index].classList.remove("active");
-        index = (index + 1) % slides.length;
-        slides[index].classList.add("active");
-    },3000);
-});
-
-</script>
+<!-- NEW WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/94754708490" target="_blank">
+<span>💬</span> Chat on WhatsApp
+</a>
 
 </body>
 </html>
