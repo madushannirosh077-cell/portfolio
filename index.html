@@ -1,638 +1,138 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Nirosh | Portfolio</title>
-
-    <style>
-
-body{
-margin:0;
-font-family:'Segoe UI',sans-serif;
-background-image:url('bmw hero photo.png');
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-color:white;
-}
-
-.container{
-padding:20px;
-text-align:center;
-}
-
-h1{
-font-size:42px;
-color:#22c55e;
-}
-
-h2{
-color:#22c55e;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-padding:20px;
-margin:20px auto;
-max-width:500px;
-transition:0.3s;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-
-.btn{
-display:block;
-margin:10px;
-padding:12px;
-border-radius:12px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.call{
-background:#22c55e;
-color:black;
-}
-
-.whatsapp{
-background:#25D366;
-color:black;
-}
-
-.footer{
-margin-top:40px;
-color:#94a3b8;
-font-size:14px;
-}
-
-</style>
-            font-size: 42px;
-            background: linear-gradient(to right, #38bdf8, #22c55e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        h2 {
-            color: #22c55e;
-        }
-
-        .card {
-            backdrop-filter: blur(10px);
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 500px;
-            transition: 0.3s;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .btn {
-            display: block;
-            margin: 10px;
-            padding: 12px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .call {
-            background: #22c55e;
-            color: black;
-        }
-
-        .call:hover {
-            background: #16a34a;
-        }
-
-        .whatsapp {
-            background: #25D366;
-            color: black;
-        }
-
-        .whatsapp:hover {
-            background: #1da851;
-        }
-
-        .footer {
-            margin-top: 40px;
-            color: #94a3b8;
-            font-size: 14px;
-        }
-    </style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <h1>Nirosh</h1>
-    <p>Software Development & System Architecture</p>
-
-    <div class="card">
-        <h2>About</h2>
-        <p>High quality service for all clients.</p>
-        <p>Friendly team & professional support.</p>
-        <p>Fair pricing & flexible payments.</p>
-        <p>100% transparency.</p>
-    </div>
-
-    <div class="card">
-        <h2>Services</h2>
-        <p><b>Custom Software Development</b></p>
-        <p><b>System Architecture Design</b></p>
-        <p><b>API Development</b></p>
-        <p><b>Maintenance & Support</b></p>
-    </div>
-
-    <div class="card">
-        <h2>Locations</h2>
-        <p>Kandy (Main)</p>
-        <p>Gampaha</p>
-    </div>
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nirosh | Software Development & System Architecture</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Nirosh Software Solutions</title>
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+/* LOADER */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.loader-text {
+    color: gold;
+    font-size: 24px;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    50% { opacity: 0.3; }
 }
 
-html{
-    scroll-behavior:smooth;
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center/cover;
+    color: white;
+    scroll-behavior: smooth;
 }
 
-body{
-    background:#050505;
-    color:white;
-    overflow-x:hidden;
+/* overlay */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: -1;
 }
 
 /* NAVBAR */
-
-nav{
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:fixed;
-    top:0;
-    background:rgba(0,0,0,0.4);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    backdrop-filter: blur(10px);
 }
 
-.logo{
-    font-size:28px;
-    font-weight:700;
-    color:#00ffd5;
-}
-
-nav ul{
-    display:flex;
-    gap:25px;
-    list-style:none;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-nav ul li a:hover{
-    color:#00ffd5;
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: gold;
 }
 
 /* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:120px 20px;
-    background:
-    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1974&auto=format&fit=crop');
-    background-size:cover;
-    background-position:center;
+.hero {
+    text-align: center;
+    padding: 80px 20px;
 }
 
-.hero-content h1{
-    font-size:60px;
-    margin-bottom:20px;
+.hero h1 {
+    font-size: 40px;
+    color: gold;
 }
 
-.hero-content span{
-    color:#00ffd5;
+.hero p {
+    max-width: 800px;
+    margin: auto;
 }
 
-.hero-content p{
-    max-width:700px;
-    margin:auto;
-    line-height:1.8;
-    color:#cfcfcf;
+/* CONTAINER */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px;
 }
 
-/* BUTTONS */
-
-.btns{
-    margin-top:35px;
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    transition: 0.4s;
 }
 
-.btn{
-    display:inline-block;
-    padding:14px 30px;
-    margin:10px;
-    border-radius:40px;
-    text-decoration:none;
-    transition:0.3s;
-    font-weight:600;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.btn-primary{
-    background:#00ffd5;
-    color:black;
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
 }
 
-.btn-primary:hover{
-    transform:translateY(-3px);
-}
-
-.btn-outline{
-    border:2px solid #00ffd5;
-    color:#00ffd5;
-}
-
-.btn-outline:hover{
-    background:#00ffd5;
-    color:black;
-}
-
-/* SECTION */
-
-section{
-    padding:100px 8%;
-}
-
-.section-title{
-    font-size:40px;
-    margin-bottom:40px;
-    color:#00ffd5;
-    text-align:center;
+.card h2 {
+    color: gold;
 }
 
 /* ABOUT */
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+.about {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.about img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 0 30px rgba(0,255,213,0.3);
-}
-
-.about-text p{
-    line-height:1.9;
-    color:#cfcfcf;
-}
-
-/* SERVICES */
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:#101010;
-    padding:30px;
-    border-radius:20px;
-    transition:0.3s;
-    border:1px solid #1e1e1e;
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    border-color:#00ffd5;
-}
-
-.card h3{
-    margin-bottom:15px;
-    color:#00ffd5;
-}
-
-/* PROJECTS */
-
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.project-card{
-    overflow:hidden;
-    border-radius:20px;
-    background:#111;
-    transition:0.3s;
-}
-
-.project-card:hover{
-    transform:scale(1.03);
-}
-
-.project-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.project-card div{
-    padding:20px;
+.about h2 {
+    color: gold;
 }
 
 /* CONTACT */
-
-.contact{
-    text-align:center;
+.contact {
+    text-align: center;
+    padding: 40px;
 }
 
-.contact p{
-    margin:15px 0;
-    color:#ccc;
-}
-
-.contact-buttons{
-    margin-top:25px;<!-- HERO SECTION -->
-
-<section class="hero" id="home">
-
-<div class="overlay"></div>
-
-<div class="hero-content">
-
-<h1>Nirosh</h1>
-
-<h2>Software Development & System Architecture</h2>
-
-<p>
-Building scalable solutions for the future with modern technology,
-professional software engineering, API integration,
-cloud infrastructure, and advanced system architecture.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#services" class="btn btn-primary">
-My Services
-</a>
-
-<a href="https://wa.me/94754708490" class="btn btn-whatsapp">
-WhatsApp
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<style>
-
-/* HERO SECTION */
-
-.hero{
-    position:relative;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    overflow:hidden;
-
-    background:
-    linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.88)),
-    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop');
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-}
-
-/* DARK OVERLAY */
-
-.overlay{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:
-    radial-gradient(circle at center,
-    rgba(0,150,255,0.10),
-    rgba(0,0,0,0.85));
-}
-
-/* CONTENT */
-
-.hero-content{
-    position:relative;
-    z-index:10;
-    max-width:900px;
-    padding:20px;
-}
-
-.hero-content h1{
-    font-size:95px;
-    font-weight:700;
-    margin-bottom:10px;
-
-    background:linear-gradient(to right,#009dff,#ffffff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-
-    text-shadow:0 0 30px rgba(0,153,255,0.3);
-}
-
-.hero-content h2{
-    font-size:34px;
-    color:#00bfff;
-    margin-bottom:25px;
-    letter-spacing:2px;
-}
-
-.hero-content p{
-    color:#d1d5db;
-    font-size:18px;
-    line-height:1.9;
-    max-width:760px;
-    margin:auto;
-}
-
-/* BUTTONS */
-
-.hero-buttons{
-    margin-top:40px;
-}
-
-.btn{
-    display:inline-block;
-    padding:16px 34px;
-    margin:10px;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.4s;
-    font-size:16px;
-}
-
-.btn-primary{
-    background:#009dff;
-    color:white;
-    box-shadow:0 0 20px rgba(0,153,255,0.4);
-}
-
-.btn-primary:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 35px rgba(0,153,255,0.7);
-}
-
-.btn-whatsapp{
-    background:#25D366;
-    color:black;
-    box-shadow:0 0 20px rgba(37,211,102,0.4);
-}
-
-.btn-whatsapp:hover{
-    transform:translateY(-5px);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-.hero-content h1{
-    font-size:55px;
-}
-
-.hero-content h2{
-    font-size:24px;
-}
-
-.hero-content p{
-    font-size:15px;
-}
-
-.btn{
-    padding:14px 24px;
-    font-size:14px;
-}
-
-}
-
-</style>
-}
-
-.contact-buttons a{
-    display:inline-block;
-    margin:10px;
-    padding:14px 28px;
-    border-radius:14px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.call-btn{
-    background:#22c55e;
-    color:black;
-}
-
-.call-btn:hover{
-    background:#16a34a;
-}
-
-.whatsapp-btn{
-    background:#25D366;
-    color:black;
-}
-
-.whatsapp-btn:hover{
-    background:#1da851;
-}
-
-/* LOCATIONS */
-
-.locations{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-/* FUTURE */
-
-.future{
-    text-align:center;
-    font-size:22px;
-    color:#00ffd5;
+.contact a {
+    color: gold;
+    text-decoration: none;
 }
 
 /* FOOTER */
-
-footer{
-    padding:30px;
-    text-align:center;
-    background:#0d0d0d;
-    color:#777;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.hero-content h1{
-    font-size:40px;
-}
-
-.about{
-    grid-template-columns:1fr;
-}
-
-nav{
-    flex-direction:column;
-    gap:15px;
-}
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
 }
 
 </style>
@@ -640,315 +140,94 @@ nav ul{
 
 <body>
 
-<!-- NAVBAR -->
+<!-- LOADER -->
+<div id="loader">
+<div class="loader-text">Loading...</div>
+</div>
 
+<!-- NAV -->
 <nav>
-
-<div class="logo">NIROSH</div>
-
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#locations">Locations</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
+<div class="logo">NIROSH TECH</div>
 </nav>
 
 <!-- HERO -->
+<section class="hero">
+<h1>Software Development & System Architecture</h1>
+<p>Modern, reliable and scalable digital solutions for businesses worldwide.</p>
+</section>
 
-<section class="hero" id="home">
+<!-- SERVICES -->
+<section class="container">
 
-<div class="hero-content">
-
-<h1>Software Development & <span>System Architecture</span></h1>
-
-<p>
-Professional Software Solutions, Modern Web Development,
-System Design, API Integration, UI/UX Concepts,
-and Tech Innovation by Nirosh.
-</p>
-
-<div class="btns">
-
-<a href="#services" class="btn btn-primary">My Services</a>
-
-<a href="https://github.com/" class="btn btn-outline">
-GitHub
-</a>
-
+<div class="card">
+<img id="img1">
+<h2>Software Development</h2>
+<p>Custom web & mobile apps.</p>
 </div>
 
+<div class="card">
+<img id="img2">
+<h2>System Architecture</h2>
+<p>Secure scalable systems.</p>
+</div>
+
+<div class="card">
+<img id="img3">
+<h2>API Development</h2>
+<p>Seamless integrations.</p>
+</div>
+
+<div class="card">
+<img id="img4">
+<h2>Support & Maintenance</h2>
+<p>Reliable system updates.</p>
 </div>
 
 </section>
 
 <!-- ABOUT -->
-
-<section id="about">
-
-<h2 class="section-title">About</h2>
-
-<div class="about">
-
-<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2070&auto=format&fit=crop">
-
-<div class="about-text">
-
+<section class="about">
+<h2>About Me</h2>
 <p>
-Hello, I'm Nirosh. I specialize in Software Development,
-System Architecture, Web Technologies, and Modern Digital Solutions.
+Hi, I’m <b>Nirosh</b> — a highly skilled software developer, web designer, app developer, and graphic designer.
+I specialize in creating modern, high-quality digital solutions tailored to client needs.
+
+I am a friendly and dedicated professional who always focuses on delivering the best results for customers.
+My services include custom software development, website creation, mobile app development, and design solutions.
+
+We offer flexible business packages with fair pricing and easy payment methods to suit your needs.
 </p>
-
-<br>
-
-<p>
-High quality service for all clients.
-Friendly team & professional support.
-Fair pricing & flexible payments.
-100% transparency.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<h2 class="section-title">Services</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>Custom Software Development</h3>
-<p>Modern and scalable software solutions.</p>
-</div>
-
-<div class="card">
-<h3>System Architecture Design</h3>
-<p>Efficient and professional system planning.</p>
-</div>
-
-<div class="card">
-<h3>API Development</h3>
-<p>Secure API integration and backend solutions.</p>
-</div>
-
-<div class="card">
-<h3>Maintenance & Support</h3>
-<p>Reliable updates and technical support services.</p>
-</div>
-
-<div class="card">
-<h3>Web Development</h3>
-<p>Responsive modern websites and web apps.</p>
-</div>
-
-<div class="card">
-<h3>UI / UX Design</h3>
-<p>Professional futuristic interface designs.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-<h2 class="section-title">Projects</h2>
-
-<div class="projects">
-
-<div class="project-card">
-
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop">
-
-<div>
-<h3>AI Dashboard</h3>
-<p>Modern analytics dashboard system.</p>
-</div>
-
-</div>
-
-<div class="project-card">
-
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop">
-
-<div>
-<h3>Developer Workspace</h3>
-<p>Professional coding workspace design.</p>
-</div>
-
-</div>
-
-<div class="project-card">
-
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop">
-
-<div>
-<h3>Cloud System</h3>
-<p>Cloud infrastructure and architecture solutions.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- LOCATIONS -->
-
-<section id="locations">
-
-<h2 class="section-title">Locations</h2>
-
-<div class="locations">
-
-<div class="card">
-<h3>Kandy</h3>
-<p>Main Branch</p>
-</div>
-
-<div class="card">
-<h3>Gampaha</h3>
-<p>Service Area</p>
-</div>
-
-</div>
-
 </section>
 
 <!-- CONTACT -->
-
-<section id="contact">
-
-<h2 class="section-title">Contact</h2>
-
-<div class="contact">
-
-<p>📱 WhatsApp: +94 754 708 490</p>
-
-<p>💻 GitHub: github.com/yourusername</p>
-
-<p>📧 Email: yourmail@example.com</p>
-
-<div class="contact-buttons">
-
-<a class="call-btn" href="tel:+94754708490">
-📞 Call Now
-</a>
-
-<a class="whatsapp-btn" href="https://wa.me/94754708490">
-💬 WhatsApp
-</a>
-
-</div>
-
-</div>
-
+<section class="contact">
+<p>📍 Kandy & Gampaha, Sri Lanka</p>
+<p>📞 +94 754 708 490</p>
+<a href="https://wa.me/94754708490">WhatsApp Chat</a>
 </section>
-
-<!-- FUTURE -->
-
-<section>
-
-<h2 class="section-title">Future</h2>
-
-<div class="future">
-Expanding & hiring soon 🚀
-</div>
-
-</section>
-
-<!-- FOOTER -->
 
 <footer>
-
-© 2026 Nirosh | Software Development & System Architecture
-
+© 2026 Nirosh Software Solutions
 </footer>
-<!-- Professional Software Company Gallery Section -->
-<!-- Our Technology Expertise Section -->
-<section style="padding: 80px 20px; background: linear-gradient(135deg, #0f172a, #1e293b); color: #ffffff;">
-  <div style="max-width: 1200px; margin: auto; text-align: center;">
 
-    <h2 style="font-size: 42px; margin-bottom: 15px; font-weight: bold;">
-      Our Technology Expertise
-    </h2>
+<script>
 
-    <p style="font-size: 18px; color: #cbd5e1; max-width: 800px; margin: 0 auto 50px;">
-      We deliver modern software solutions including web applications,
-      mobile apps, API integrations, and scalable enterprise systems.
-    </p>
+/* LOADER */
+window.onload = function() {
+    document.getElementById("loader").style.display = "none";
+}
 
-    <div style="
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    ">
+/* RANDOM IMAGES */
+function randomImage(keyword) {
+    return "https://source.unsplash.com/400x300/?" + keyword + "&" + Math.random();
+}
 
-      <!-- Card 1 -->
-      <div style="background: #1e293b; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80"
-             alt="Custom Software Development"
-             style="width: 100%; height: 220px; object-fit: cover;">
-        <div style="padding: 25px;">
-          <h3 style="font-size: 24px; margin-bottom: 10px;">Custom Software Development</h3>
-          <p style="color: #cbd5e1; line-height: 1.7;">
-            Tailored web and mobile applications built to meet your business needs.
-          </p>
-        </div>
-      </div>
+document.getElementById("img1").src = randomImage("software,code");
+document.getElementById("img2").src = randomImage("system,architecture");
+document.getElementById("img3").src = randomImage("api,technology");
+document.getElementById("img4").src = randomImage("computer,repair");
 
-      <!-- Card 2 -->
-      <div style="background: #1e293b; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
-             alt="System Architecture Design"
-             style="width: 100%; height: 220px; object-fit: cover;">
-        <div style="padding: 25px;">
-          <h3 style="font-size: 24px; margin-bottom: 10px;">System Architecture Design</h3>
-          <p style="color: #cbd5e1; line-height: 1.7;">
-            Secure and scalable architectures for modern applications.
-          </p>
-        </div>
-      </div>
+</script>
 
-      <!-- Card 3 -->
-      <div style="background: #1e293b; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80"
-             alt="API Development & Integration"
-             style="width: 100%; height: 220px; object-fit: cover;">
-        <div style="padding: 25px;">
-          <h3 style="font-size: 24px; margin-bottom: 10px;">API Development & Integration</h3>
-          <p style="color: #cbd5e1; line-height: 1.7;">
-            REST APIs and third-party integrations for seamless connectivity.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div style="background: #1e293b; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
-             alt="Software Maintenance & Support"
-             style="width: 100%; height: 220px; object-fit: cover;">
-        <div style="padding: 25px;">
-          <h3 style="font-size: 24px; margin-bottom: 10px;">Software Maintenance & Support</h3>
-          <p style="color: #cbd5e1; line-height: 1.7;">
-            Ongoing updates, optimization, and reliable technical support.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 </body>
 </html>
