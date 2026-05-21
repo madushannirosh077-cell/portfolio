@@ -1,61 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nirosh Software Solutions</title>
+<!-- 🔥 NIROSH COMPANY WEBSITE -->
 
 <style>
 body{
   margin:0;
-  font-family: 'Segoe UI',sans-serif;
-  background:#0a0f1c;
-  color:#fff;
+  font-family: 'Segoe UI', sans-serif;
+  background:#0b0f1a;
+  color:white;
 }
 
 /* HERO */
 .hero{
   height:100vh;
-  background:url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c') center/cover no-repeat;
+  background:url('https://images.unsplash.com/photo-1549921296-3ecf3f7b8d24') center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
   position:relative;
 }
-
 .hero::after{
   content:"";
   position:absolute;
   inset:0;
   background:rgba(0,0,0,0.7);
 }
-
 .hero-content{
   position:relative;
   max-width:900px;
-}
-
-.hero h1{
-  font-size:28px;
-  line-height:1.7;
 }
 
 /* GLASS */
 .glass{
   background:rgba(255,255,255,0.05);
   backdrop-filter:blur(12px);
-  margin:40px;
-  padding:30px;
   border-radius:20px;
+  padding:30px;
+  margin:40px;
 }
 
 /* ABOUT */
-.about p{
-  color:#ccc;
-  line-height:1.9;
+.about{
   font-size:15px;
+  line-height:1.8;
+  color:#ccc;
 }
 
 /* SERVICES */
@@ -64,26 +51,20 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
-
-.box{
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  padding:20px;
+.service-box{
+  background:#020617;
+  padding:25px;
   border-radius:15px;
-  transition:0.3s;
 }
-
-.box:hover{
-  transform:translateY(-5px);
-}
-
-.box h3{
-  color:#00eaff;
+.service-box h3{
+  color:black;
+  background:white;
+  padding:10px;
   font-size:18px;
 }
-
-.box p{
+.service-box p{
+  color:white;
   font-size:13px;
-  color:#ddd;
 }
 
 /* PROJECTS */
@@ -92,15 +73,13 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:15px;
 }
-
 .projects img{
   width:100%;
   height:180px;
   object-fit:cover;
-  border-radius:15px;
+  border-radius:12px;
   transition:0.4s;
 }
-
 .projects img:hover{
   transform:scale(1.08);
 }
@@ -109,93 +88,79 @@ body{
 .contact{
   text-align:center;
   font-size:16px;
-  color:#ccc;
 }
-
 </style>
-</head>
 
-<body>
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-content glass">
-<h1>
-Providing advanced technology solutions to help people around the world manage their businesses, products, and services easily and efficiently with reliability, simplicity, and complete transparency.
-</h1>
-</div>
+  <div class="hero-content glass">
+    <h1>
+      Delivering advanced technology solutions to help people around the world manage their businesses, products, and services easily using modern technology with high reliability, simplicity, and complete transparency.
+    </h1>
+  </div>
 </section>
 
 
 <!-- ABOUT -->
-<section class="glass about">
-<p>
-Nirosh - Software Development & System Architecture Solutions is a modern technology company based in Kandy, Sri Lanka, with another branch in Gampaha. Our team is friendly, humble, and dedicated to delivering high-quality services to every client.
-<br><br>
-Our main goal is to help businesses grow successfully using modern technology. We provide services such as software development, system architecture design, application development, graphic design, product launching, and digital promotion. We also support businesses in boosting and sponsoring their services using modern digital platforms.
-<br><br>
-I am Nirosh, a professional with strong knowledge in computer technology and coding. I specialize in website development, mobile application development, and graphic design. I work closely with clients to understand their needs and deliver customized solutions. We offer business packages with reasonable pricing and flexible payment methods. With over 6 years of trusted experience, we ensure reliable service, transparency, and customer satisfaction.
-</p>
+<section class="glass">
+  <p class="about">
+    Nirosh - Software Development & System Architecture Solutions is a professional technology company based in Kandy, Sri Lanka, with an additional branch in Gampaha. Our team is friendly, creative, and dedicated to delivering high-quality services to every client.
+    <br><br>
+    Our main objective is to help businesses grow successfully by using modern technology. We provide complete solutions including software development, system architecture design, application development, graphic design, and digital product launching.
+    <br><br>
+    I am Nirosh, a highly skilled individual in computer technology, coding, website development, mobile application development, and graphic design. I work closely with clients to understand their needs and deliver solutions accordingly. We provide business packages, fair pricing, and flexible payment methods while maintaining trust, transparency, and quality service.
+  </p>
 </section>
 
 
 <!-- SERVICES -->
 <section class="glass">
-<div class="services">
+  <div class="services">
 
-<div class="box">
-<h3>Custom Software Development</h3>
-<p>Web and mobile applications tailored for business needs with scalable and efficient solutions.</p>
-</div>
+    <div class="service-box">
+      <h3>Custom Software Development</h3>
+      <p>Web and mobile application development tailored for business needs with scalable and efficient solutions.</p>
+    </div>
 
-<div class="box">
-<h3>System Architecture Design</h3>
-<p>Designing secure and scalable system architectures for modern businesses and applications.</p>
-</div>
+    <div class="service-box">
+      <h3>System Architecture Design</h3>
+      <p>Designing secure and scalable system architectures for modern businesses and applications.</p>
+    </div>
 
-<div class="box">
-<h3>API Development & Integration</h3>
-<p>REST API development and integration with third-party systems for seamless connectivity.</p>
-</div>
+    <div class="service-box">
+      <h3>API Development & Integration</h3>
+      <p>REST API development and integration with third-party services for seamless connectivity.</p>
+    </div>
 
-<div class="box">
-<h3>Software Maintenance & Support</h3>
-<p>Bug fixing, updates, performance optimization, and continuous system support.</p>
-</div>
+    <div class="service-box">
+      <h3>Software Maintenance & Support</h3>
+      <p>Bug fixing, updates, performance optimization, and continuous system support services.</p>
+    </div>
 
-</div>
+  </div>
 </section>
 
 
-<!-- PROJECTS (12 REAL IMAGES) -->
+<!-- PROJECTS (8 REAL IMAGES) -->
 <section class="glass">
-<h2 style="text-align:center;">PROJECTS</h2>
+  <div class="projects">
 
-<div class="projects">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
+    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
+    <img src="https://images.unsplash.com/photo-1526378722484-cc5c510b5c89">
+    <img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9">
+    <img src="https://images.unsplash.com/photo-1550439062-609e1531270e">
 
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-<img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
-<img src="https://images.unsplash.com/photo-1526378722484-cc5c510b5c89">
-<img src="https://images.unsplash.com/photo-1537432376769-00a2a7b1a3c7">
-<img src="https://images.unsplash.com/photo-1581090700227-1e8e1f7c1c7c">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-<img src="https://images.unsplash.com/photo-1550439062-609e1531270e">
-<img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9">
-<img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
-
-</div>
+  </div>
 </section>
 
 
 <!-- CONTACT -->
 <section class="glass contact">
-<p>Phone: +94 754 708 490</p>
-<p>WhatsApp: +94 754 708 490</p>
+  <p>Owner Contact: (+94754708490)</p>
+  <p>WhatsApp: (+94754708490)</p>
 </section>
-
-
-</body>
-</html>
