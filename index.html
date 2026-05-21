@@ -3,161 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nirosh Software Solutions</title>
+<title>Nirosh Software</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:#0a0a0a;
-    color:white;
-}
-
-/* LOADER */
-#loader{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:black;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-}
-.loader{
-    font-size:24px;
-    animation:blink 1s infinite;
-}
-@keyframes blink{
-    50%{opacity:0;}
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+body{background:#0a0a0a;color:white;}
 
 /* HERO */
 .hero{
-    height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+background-size:cover;
+display:flex;align-items:center;justify-content:center;text-align:center;
 }
-
-.hero h1{
-    font-size:42px;
-}
-
-.hero p{
-    max-width:800px;
-    margin-top:20px;
-    opacity:0.8;
-}
+.hero h1{font-size:40px;}
+.hero p{max-width:700px;margin-top:15px;opacity:0.8}
 
 /* SECTION */
-section{
-    padding:60px 20px;
-}
+section{padding:60px 20px}
 
-/* GLASS */
-.glass{
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
-    padding:20px;
-}
-
-/* CATEGORY */
+/* CATEGORY GRID */
 .category-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
+/* CARD */
 .card{
-    border-radius:20px;
-    overflow:hidden;
-    background:#111;
-    transition:0.3s;
+background:#111;
+border-radius:20px;
+overflow:hidden;
+transition:0.3s;
 }
+.card:hover{transform:scale(1.05)}
 
-.card:hover{
-    transform:scale(1.05);
+/* SLIDER */
+.slider{
+position:relative;
+height:200px;
+overflow:hidden;
 }
-
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:1s;
 }
+.slide.active{opacity:1}
 
-.card-content{
-    padding:15px;
-}
+/* CONTENT */
+.card-content{padding:15px}
 
-/* TITLE BLACK BIG */
+/* TITLE BLACK */
 .card-content h2{
-    color:black;
-    background:white;
-    padding:8px;
-    border-radius:10px;
-    font-size:22px;
-    font-weight:600;
+background:white;
+color:black;
+padding:8px;
+border-radius:10px;
+font-size:22px;
 }
 
 /* DESCRIPTION WHITE SMALL */
 .card-content p{
-    color:white;
-    font-size:13px;
-    margin-top:10px;
-}
-
-/* ABOUT */
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
-
-/* CONTACT */
-.contact{
-    text-align:center;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    background:#111;
-}
-
-/* SCROLL ANIMATION */
-.fade{
-    opacity:0;
-    transform:translateY(20px);
-    transition:1s;
-}
-.fade.show{
-    opacity:1;
-    transform:translateY(0);
+font-size:13px;
+color:white;
+margin-top:10px;
 }
 
 </style>
 </head>
 
 <body>
-
-<div id="loader"><div class="loader">LOADING...</div></div>
 
 <!-- HERO -->
 <div class="hero">
@@ -169,63 +91,58 @@ Providing modern technology to all people in the world to easily manage business
 </div>
 </div>
 
-<!-- ABOUT OWNER -->
-<section class="fade">
-<div class="about glass">
-<h2>About Owner</h2>
-<p>
-My name is Nirosh. I am highly skilled in computer knowledge and coding. I am a web developer, app creator and app developer, and also a graphic designer. I am a friendly person who works according to customer needs and delivers all services.
-
-We provide business packages, reasonable prices, flexible payment methods, and 100% trust and transparency.
-</p>
-</div>
-</section>
-
-<!-- COMPANY DETAILS -->
-<section class="fade">
-<div class="glass">
-<p>
-Nirosh Software Development & System Architecture Company is located in Kandy, Sri Lanka as the main office. Another branch is located in Gampaha.
-
-We have a friendly and dedicated team ready to serve you. Our main goal is to help your business, products and services grow successfully using modern technology.
-
-We provide software knowledge, coding, poster designing, business launching, wedding card designing, system architecture, planning, graphic design, computer importing, house and building design, app development, boosting and sponsoring.
-</p>
-</div>
-</section>
-
 <!-- SERVICES -->
-<section class="fade">
+<section>
 <h2 style="text-align:center;margin-bottom:30px;">Our Services</h2>
 
 <div class="category-container">
 
+<!-- CARD 1 -->
 <div class="card">
-<img src="https://source.unsplash.com/600x400/?software,code">
+<div class="slider">
+<img class="slide active" src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<img class="slide" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+<img class="slide" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+</div>
 <div class="card-content">
 <h2>Custom Software Development</h2>
 <p>Web and mobile application development tailored for business needs. Scalable and efficient solutions.</p>
 </div>
 </div>
 
+<!-- CARD 2 -->
 <div class="card">
-<img src="https://source.unsplash.com/600x400/?server,architecture">
+<div class="slider">
+<img class="slide active" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<img class="slide" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+<img class="slide" src="https://images.unsplash.com/photo-1581090700227-1e8a8f9c2c2c">
+</div>
 <div class="card-content">
 <h2>System Architecture Design</h2>
 <p>Designing scalable and secure system architectures for modern applications and businesses.</p>
 </div>
 </div>
 
+<!-- CARD 3 -->
 <div class="card">
-<img src="https://source.unsplash.com/600x400/?api,technology">
+<div class="slider">
+<img class="slide active" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
+<img class="slide" src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
+<img class="slide" src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
+</div>
 <div class="card-content">
 <h2>API Development & Integration</h2>
 <p>REST API development and integration with third-party services for seamless system connectivity.</p>
 </div>
 </div>
 
+<!-- CARD 4 -->
 <div class="card">
-<img src="https://source.unsplash.com/600x400/?maintenance,computer">
+<div class="slider">
+<img class="slide active" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+<img class="slide" src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf">
+<img class="slide" src="https://images.unsplash.com/photo-1581091012184-5c7c0b0b8d2c">
+</div>
 <div class="card-content">
 <h2>Software Maintenance & Support</h2>
 <p>Bug fixing, updates, performance optimization, and ongoing system support.</p>
@@ -235,36 +152,21 @@ We provide software knowledge, coding, poster designing, business launching, wed
 </div>
 </section>
 
-<!-- CONTACT -->
-<section class="fade">
-<div class="contact glass">
-<h2>Contact</h2>
-<p>Phone: +94 754708490</p>
-<p>WhatsApp: +94 754708490</p>
-</div>
-</section>
-
-<footer>
-© 2026 Nirosh Software Solutions
-</footer>
-
 <script>
 
-/* LOADER */
-window.onload = () =>{
-    document.getElementById("loader").style.display="none";
-}
+/* SLIDER AUTO CHANGE */
+const sliders = document.querySelectorAll(".slider");
 
-/* SCROLL ANIMATION */
-const fades = document.querySelectorAll(".fade");
+sliders.forEach(slider=>{
+    let slides = slider.querySelectorAll(".slide");
+    let index = 0;
 
-window.addEventListener("scroll", ()=>{
-    fades.forEach(el=>{
-        if(el.getBoundingClientRect().top < window.innerHeight - 100){
-            el.classList.add("show");
-        }
-    })
-})
+    setInterval(()=>{
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    },3000);
+});
 
 </script>
 
