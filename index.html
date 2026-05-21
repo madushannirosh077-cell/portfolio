@@ -3,77 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nirosh Software</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Nirosh Software Solutions</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
-body{background:#0a0a0a;color:white;}
+body{
+  margin:0;
+  font-family: 'Segoe UI',sans-serif;
+  background:#0a0f1c;
+  color:#fff;
+}
 
 /* HERO */
 .hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
-background-size:cover;
-display:flex;align-items:center;justify-content:center;text-align:center;
-}
-.hero h1{font-size:40px;}
-.hero p{max-width:700px;margin-top:15px;opacity:0.8}
-
-/* SECTION */
-section{padding:60px 20px}
-
-/* CATEGORY GRID */
-.category-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
 }
 
-/* CARD */
-.card{
-background:#111;
-border-radius:20px;
-overflow:hidden;
-transition:0.3s;
-}
-.card:hover{transform:scale(1.05)}
-
-/* SLIDER */
-.slider{
-position:relative;
-height:200px;
-overflow:hidden;
-}
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:0;
-transition:1s;
-}
-.slide.active{opacity:1}
-
-/* CONTENT */
-.card-content{padding:15px}
-
-/* TITLE BLACK */
-.card-content h2{
-background:white;
-color:black;
-padding:8px;
-border-radius:10px;
-font-size:22px;
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.7);
 }
 
-/* DESCRIPTION WHITE SMALL */
-.card-content p{
-font-size:13px;
-color:white;
-margin-top:10px;
+.hero-content{
+  position:relative;
+  max-width:900px;
+}
+
+.hero h1{
+  font-size:28px;
+  line-height:1.7;
+}
+
+/* GLASS */
+.glass{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  margin:40px;
+  padding:30px;
+  border-radius:20px;
+}
+
+/* ABOUT */
+.about p{
+  color:#ccc;
+  line-height:1.9;
+  font-size:15px;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.box{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  padding:20px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.box:hover{
+  transform:translateY(-5px);
+}
+
+.box h3{
+  color:#00eaff;
+  font-size:18px;
+}
+
+.box p{
+  font-size:13px;
+  color:#ddd;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+.projects img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:15px;
+  transition:0.4s;
+}
+
+.projects img:hover{
+  transform:scale(1.08);
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+  font-size:16px;
+  color:#ccc;
 }
 
 </style>
@@ -82,256 +118,84 @@ margin-top:10px;
 <body>
 
 <!-- HERO -->
-<div class="hero">
-<div>
-<h1>Nirosh - Software Development & System Architecture Solution Company</h1>
+<section class="hero">
+<div class="hero-content glass">
+<h1>
+Providing advanced technology solutions to help people around the world manage their businesses, products, and services easily and efficiently with reliability, simplicity, and complete transparency.
+</h1>
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="glass about">
 <p>
-Providing modern technology to all people in the world to easily manage businesses, products and services in a simple, easy, highly reliable and 100% transparent way.
+Nirosh - Software Development & System Architecture Solutions is a modern technology company based in Kandy, Sri Lanka, with another branch in Gampaha. Our team is friendly, humble, and dedicated to delivering high-quality services to every client.
+<br><br>
+Our main goal is to help businesses grow successfully using modern technology. We provide services such as software development, system architecture design, application development, graphic design, product launching, and digital promotion. We also support businesses in boosting and sponsoring their services using modern digital platforms.
+<br><br>
+I am Nirosh, a professional with strong knowledge in computer technology and coding. I specialize in website development, mobile application development, and graphic design. I work closely with clients to understand their needs and deliver customized solutions. We offer business packages with reasonable pricing and flexible payment methods. With over 6 years of trusted experience, we ensure reliable service, transparency, and customer satisfaction.
 </p>
-</div>
-</div>
-<section style="padding:60px 20px; display:flex; justify-content:center;">
-
-<div style="
-max-width:900px;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-border-radius:20px;
-padding:30px;
-color:white;
-text-align:center;
-box-shadow:0 0 25px rgba(255,255,255,0.1);
-">
-
-<h2 style="
-font-size:28px;
-margin-bottom:20px;
-background:linear-gradient(90deg,#ffffff,#999);
--webkit-background-clip:text;
-color:transparent;
-">
-About Me
-</h2>
-
-<p style="font-size:15px; line-height:1.8; color:#ddd;">
-
-My name is <strong style="color:#fff;">Nirosh</strong>, and I am the owner of this business. 
-I am highly skilled in computer knowledge and coding, and I specialize as a professional web developer, 
-application creator, and application developer. In addition, I also work as a graphic designer. 
-
-I am a friendly and dedicated person who always works according to customer requirements and delivers 
-all services with full responsibility. I ensure that every project is completed based on the client’s 
-needs, ideas, and expectations.
-
-Our company provides a range of business packages designed to support your growth. 
-We offer very reasonable pricing, along with flexible and easy payment methods, ensuring 
-that every customer can access our services without difficulty.
-
-My main goal is to provide reliable, modern, and high-quality technology solutions 
-while maintaining 100% trust and transparency with every client.
-
-</p>
-
-</div>
-
-</section><section style="padding:60px 20px; display:flex; justify-content:center;">
-  
-  <div style="
-    max-width:900px;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
-    padding:30px;
-    color:white;
-    text-align:center;
-    box-shadow:0 0 25px rgba(255,255,255,0.1);
-  ">
-
-    <h2 style="
-      font-size:28px;
-      margin-bottom:20px;
-      background:linear-gradient(90deg,#ffffff,#999);
-      -webkit-background-clip:text;
-      color:transparent;
-    ">
-      About Our Company
-    </h2>
-
-    <p style="font-size:15px; line-height:1.8; color:#ddd;">
-
-      <strong style="color:#fff;">Nirosh - Software Development & System Architecture Solution Company</strong> 
-      is a modern technology solutions company with its main headquarters located in Kandy, Sri Lanka, 
-      and an additional branch in Gampaha.
-
-      <br><br>
-
-      We have a highly friendly, creative, and dedicated team that is always ready to provide the best service for our clients. 
-      Our main goal is to support your business, products, and services to grow successfully by integrating modern technology 
-      and innovative solutions.
-
-      <br><br>
-
-      Our expertise includes software development, system architecture design, application development, 
-      and modern coding solutions. We also specialize in graphic design, poster creation, wedding card design, 
-      and complete branding solutions to help launch and promote your business or products effectively.
-
-      <br><br>
-
-      In addition, we provide business planning, system design, and technical consulting tailored to your needs, ideas, 
-      and expectations. We also import computer equipment and components to Sri Lanka and distribute them at reasonable prices.
-
-      <br><br>
-
-      Furthermore, we offer house and building design services, ensuring that all designs are aligned with customer requirements 
-      and modern standards.
-
-      <br><br>
-
-      Our team is fully committed to supporting your business growth by providing services such as app development, 
-      business launching, boosting, and digital promotion, including sponsorship support.
-
-      <br><br>
-
-      With over <strong style="color:#fff;">6 years of continuous and reliable experience</strong>, 
-      we ensure high-quality service, affordable pricing, flexible payment options, and 100% trust and transparency 
-      in everything we do.
-
-    </p>
-
-  </div>
-
-</section><!-- <section id="projects" style="padding: 50px; background:#0f172a; color:white; text-align:center;">
-
-  <h2 style="font-size: 32px; margin-bottom: 30px;">🚀 PROJECTS</h2>
-
-  <div style="
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  ">
-
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" style="width:100%; border-radius:10px;">
-    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" style="width:100%; border-radius:10px;">
-    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d" style="width:100%; border-radius:10px;">
-    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" style="width:100%; border-radius:10px;">
-    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" style="width:100%; border-radius:10px;">
-    <img src="https://images.unsplash.com/photo-1526378722484-cc5c510b5c89" style="width:100%; border-radius:10px;">
-    <img src="https://images.unsplash.com/photo-1537432376769-00a2a7b1a3c7" style="width:100%; border-radius:10px;">
-    <img src="https://images.unsplash.com/photo-1581090700227-1e8e1f7c1c7c" style="width:100%; border-radius:10px;">
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" style="width:100%; border-radius:10px;">
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" style="width:100%; border-radius:10px;">
-    <img src="https://images.unsplash.com/photo-1550439062-609e1531270e" style="width:100%; border-radius:10px;">
-    <img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9" style="width:100%; border-radius:10px;">
-
-  </div>
-
 </section>
-<section id="projects" style="padding: 50px; background:#0f172a; color:white; text-align:center;">
 
-  <h2 style="font-size: 32px; margin-bottom: 30px;">🚀 PROJECTS</h2>
 
-  <div style="
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  ">
-
-    <!-- 12 REAL AUTO IMAGES -->
-    <img src="https://source.unsplash.com/400x300/?software,developer,code" style="width:100%; border-radius:10px;">
-    <img src="https://source.unsplash.com/400x300/?system,architecture,technology" style="width:100%; border-radius:10px;">
-    <img src="https://source.unsplash.com/400x300/?programming,computer" style="width:100%; border-radius:10px;">
-    <img src="https://source.unsplash.com/400x300/?coding,workspace" style="width:100%; border-radius:10px;">
-    <img src="https://source.unsplash.com/400x300/?data,server,cloud" style="width:100%; border-radius:10px;">
-    <img src="https://source.unsplash.com/400x300/?web,development" style="width:100%; border-radius:10px;">
-    <img src="https://source.unsplash.com/400x300/?ui,ux,design" style="width:100%; border-radius:10px;">
-    <img src="https://source.unsplash.com/400x300/?cybersecurity,hacking" style="width:100%; border-radius:10px;">
-    <img src="https://source.unsplash.com/400x300/?database,technology" style="width:100%; border-radius:10px;">
-    <img src="https://source.unsplash.com/400x300/?ai,artificial,intelligence" style="width:100%; border-radius:10px;">
-    <img src="https://source.unsplash.com/400x300/?mobile,app,development" style="width:100%; border-radius:10px;">
-    <img src="https://source.unsplash.com/400x300/?network,system" style="width:100%; border-radius:10px;">
-
-  </div>
-
-</section>
-<!-- 🔥 PROJECTS SECTION END -->
 <!-- SERVICES -->
-<section>
-<h2 style="text-align:center;margin-bottom:30px;">Our Services</h2>
+<section class="glass">
+<div class="services">
 
-<div class="category-container">
-
-<!-- CARD 1 -->
-<div class="card">
-<div class="slider">
-<img class="slide active" src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-<img class="slide" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-<img class="slide" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-</div>
-<div class="card-content">
-<h2>Custom Software Development</h2>
-<p>Web and mobile application development tailored for business needs. Scalable and efficient solutions.</p>
-</div>
+<div class="box">
+<h3>Custom Software Development</h3>
+<p>Web and mobile applications tailored for business needs with scalable and efficient solutions.</p>
 </div>
 
-<!-- CARD 2 -->
-<div class="card">
-<div class="slider">
-<img class="slide active" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<img class="slide" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
-<img class="slide" src="https://images.unsplash.com/photo-1581090700227-1e8a8f9c2c2c">
-</div>
-<div class="card-content">
-<h2>System Architecture Design</h2>
-<p>Designing scalable and secure system architectures for modern applications and businesses.</p>
-</div>
+<div class="box">
+<h3>System Architecture Design</h3>
+<p>Designing secure and scalable system architectures for modern businesses and applications.</p>
 </div>
 
-<!-- CARD 3 -->
-<div class="card">
-<div class="slider">
-<img class="slide active" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
-<img class="slide" src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
-<img class="slide" src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
-</div>
-<div class="card-content">
-<h2>API Development & Integration</h2>
-<p>REST API development and integration with third-party services for seamless system connectivity.</p>
-</div>
+<div class="box">
+<h3>API Development & Integration</h3>
+<p>REST API development and integration with third-party systems for seamless connectivity.</p>
 </div>
 
-<!-- CARD 4 -->
-<div class="card">
-<div class="slider">
-<img class="slide active" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-<img class="slide" src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf">
-<img class="slide" src="https://images.unsplash.com/photo-1581091012184-5c7c0b0b8d2c">
-</div>
-<div class="card-content">
-<h2>Software Maintenance & Support</h2>
-<p>Bug fixing, updates, performance optimization, and ongoing system support.</p>
-</div>
+<div class="box">
+<h3>Software Maintenance & Support</h3>
+<p>Bug fixing, updates, performance optimization, and continuous system support.</p>
 </div>
 
 </div>
 </section>
 
-<script>
 
-/* SLIDER AUTO CHANGE */
-const sliders = document.querySelectorAll(".slider");
+<!-- PROJECTS (12 REAL IMAGES) -->
+<section class="glass">
+<h2 style="text-align:center;">PROJECTS</h2>
 
-sliders.forEach(slider=>{
-    let slides = slider.querySelectorAll(".slide");
-    let index = 0;
+<div class="projects">
 
-    setInterval(()=>{
-        slides[index].classList.remove("active");
-        index = (index + 1) % slides.length;
-        slides[index].classList.add("active");
-    },3000);
-});
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+<img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
+<img src="https://images.unsplash.com/photo-1526378722484-cc5c510b5c89">
+<img src="https://images.unsplash.com/photo-1537432376769-00a2a7b1a3c7">
+<img src="https://images.unsplash.com/photo-1581090700227-1e8e1f7c1c7c">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<img src="https://images.unsplash.com/photo-1550439062-609e1531270e">
+<img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9">
+<img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
 
-</script>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="glass contact">
+<p>Phone: +94 754 708 490</p>
+<p>WhatsApp: +94 754 708 490</p>
+</section>
+
 
 </body>
 </html>
