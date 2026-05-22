@@ -536,18 +536,64 @@ Excellent communication and professional system architecture solutions.
 <!-- TEAM -->
 <!-- TEAM -->
 <!-- TEAM -->
+<!-- TEAM -->
 <section id="team">
 
 <!-- Google Font (Tech Terminal Style) -->
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-<div class="team-hero">
-    <div class="overlay">
-        <h2>💻 NIROSH & TEAM</h2>
-        <p>ADVANCED SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SPECIALISTS TEAM LED BY NIROSH</p>
-    </div>
+<div class="team-overlay">
+    <h2>🧑‍💻</h2>
+    <p>NIROSH AND HIS TEAM</p>
 </div>
 
+</section>
+
+<style>
+#team{
+    height:100vh;
+    width:100%;
+    background:url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a') no-repeat center center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+    font-family:'Share Tech Mono', monospace;
+}
+
+/* Dark overlay for readability */
+#team::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    z-index:1;
+}
+
+/* Text content */
+.team-overlay{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:#ffffff;
+}
+
+/* Laptop sticker */
+.team-overlay h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+/* Text */
+.team-overlay p{
+    font-size:18px;
+    letter-spacing:3px;
+}
+</style>
 </section>
 
 <style>
