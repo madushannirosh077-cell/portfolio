@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,19 +8,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
 body{
 background:#0a0a0a;
 color:white;
-
-/* 🔐 TEXT COPY BLOCK */
 user-select:none;
 -webkit-user-select:none;
 -moz-user-select:none;
 -ms-user-select:none;
 }
 
-/* 🔐 IMAGE PROTECTION */
 img{
 pointer-events:none;
 -webkit-user-drag:none;
@@ -37,13 +37,28 @@ background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
 url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738');
 background-size:cover;
 background-position:center;
-display:flex;align-items:center;justify-content:center;text-align:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
 }
-.hero h1{font-size:40px;}
-.hero p{max-width:700px;margin-top:15px;opacity:0.8}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+max-width:700px;
+margin-top:15px;
+opacity:0.8;
+line-height:1.8;
+}
 
 /* SECTION */
-section{padding:60px 20px}
+section{
+padding:60px 20px;
+}
 
 /* GRID */
 .category-container{
@@ -59,7 +74,11 @@ border-radius:20px;
 overflow:hidden;
 transition:0.3s;
 }
-.card:hover{transform:scale(1.05)}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px rgba(0,174,255,0.4);
+}
 
 /* IMAGE */
 .card img{
@@ -69,7 +88,9 @@ object-fit:cover;
 }
 
 /* CONTENT */
-.card-content{padding:15px}
+.card-content{
+padding:15px;
+}
 
 .card-content h2{
 background:white;
@@ -82,6 +103,114 @@ font-size:22px;
 .card-content p{
 font-size:13px;
 margin-top:10px;
+line-height:1.7;
+}
+
+/* TRUST */
+.trust-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.trust-card{
+background:#111;
+padding:25px;
+border-radius:20px;
+text-align:center;
+transition:0.3s;
+}
+
+.trust-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(0,174,255,0.3);
+}
+
+.trust-card h1{
+font-size:45px;
+margin-bottom:15px;
+}
+
+/* TECH */
+.tech-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:30px;
+}
+
+.tech{
+background:#111;
+padding:12px 20px;
+border-radius:50px;
+font-size:14px;
+transition:0.3s;
+}
+
+.tech:hover{
+background:#00aeff;
+}
+
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.stat-box{
+background:#111;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat-box h1{
+font-size:40px;
+color:#00aeff;
+}
+
+/* REVIEWS */
+.review-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.review{
+background:#111;
+padding:25px;
+border-radius:20px;
+line-height:1.8;
+}
+
+/* TEAM */
+.team-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.team-card{
+background:#111;
+padding:25px;
+border-radius:20px;
+text-align:center;
+transition:0.3s;
+}
+
+.team-card:hover{
+transform:scale(1.05);
+}
+
+.team-card h1{
+font-size:50px;
+margin-bottom:15px;
 }
 
 /* ABOUT */
@@ -94,7 +223,7 @@ font-size:15px;
 opacity:0.9;
 }
 
-/* COMPANY SECTION */
+/* COMPANY */
 .company-section{
 position:relative;
 padding:80px 20px;
@@ -124,6 +253,21 @@ opacity:0.95;
 text-align:center;
 margin-top:10px;
 font-size:16px;
+}
+
+/* FOOTER */
+footer{
+background:#050505;
+padding:30px 20px;
+text-align:center;
+margin-top:40px;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+footer p{
+opacity:0.8;
+line-height:1.8;
+font-size:14px;
 }
 
 /* WHATSAPP */
@@ -161,7 +305,7 @@ font-size:20px;
 100%{transform:translateY(0px);}
 }
 
-/* 🔐 DEVTOOLS OPEN DETECT */
+/* DEVTOOLS */
 body.devtools-open{
 filter:blur(10px);
 pointer-events:none;
@@ -188,39 +332,40 @@ Providing modern technology to all people in the world to easily manage business
 <div class="category-container">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475" draggable="false">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
 <div class="card-content">
-<h2>Custom Software Development</h2>
+<h2>💻 Custom Software Development</h2>
 <p>Web and mobile application development tailored for business needs.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" draggable="false">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
 <div class="card-content">
-<h2>System Architecture Design</h2>
+<h2>☁️ System Architecture Design</h2>
 <p>Designing scalable and secure systems.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31" draggable="false">
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
 <div class="card-content">
-<h2>API Development</h2>
+<h2>🔗 API Development</h2>
 <p>REST API development and integration services.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" draggable="false">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
 <div class="card-content">
-<h2>Software Support</h2>
+<h2>🛠️ Software Support</h2>
 <p>Maintenance, updates, and optimization.</p>
 </div>
 </div>
 
 </div>
 </section>
+
 <!-- PROJECTS -->
 <section>
 <h2 style="text-align:center;margin-bottom:30px;">Featured Projects</h2>
@@ -228,7 +373,7 @@ Providing modern technology to all people in the world to easily manage business
 <div class="category-container">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" draggable="false">
+<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6">
 <div class="card-content">
 <h2>Smart Business Platform</h2>
 <p>Advanced business automation and management software systems.</p>
@@ -236,7 +381,7 @@ Providing modern technology to all people in the world to easily manage business
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" draggable="false">
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4">
 <div class="card-content">
 <h2>Modern Web Systems</h2>
 <p>Professional responsive web platforms with premium UI/UX design.</p>
@@ -244,7 +389,7 @@ Providing modern technology to all people in the world to easily manage business
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" draggable="false">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
 <div class="card-content">
 <h2>Enterprise Cloud Solutions</h2>
 <p>Secure and scalable cloud infrastructure for modern businesses.</p>
@@ -252,7 +397,7 @@ Providing modern technology to all people in the world to easily manage business
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28" draggable="false">
+<img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28">
 <div class="card-content">
 <h2>AI & Automation</h2>
 <p>Artificial intelligence and smart automation systems for digital growth.</p>
@@ -260,7 +405,7 @@ Providing modern technology to all people in the world to easily manage business
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" draggable="false">
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
 <div class="card-content">
 <h2>Creative Team Projects</h2>
 <p>Collaborative software and branding solutions developed by our team.</p>
@@ -268,7 +413,7 @@ Providing modern technology to all people in the world to easily manage business
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d" draggable="false">
+<img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
 <div class="card-content">
 <h2>Cyber Security Systems</h2>
 <p>Modern cyber protection and digital security infrastructure solutions.</p>
@@ -277,13 +422,150 @@ Providing modern technology to all people in the world to easily manage business
 
 </div>
 </section>
+
+<!-- WHY CHOOSE US -->
+<section>
+<h2 style="text-align:center;">Why Choose Us</h2>
+
+<div class="trust-box">
+
+<div class="trust-card">
+<h1>⚡</h1>
+<h3>Fast Delivery</h3>
+<p>Quick and efficient project delivery with high quality standards.</p>
+</div>
+
+<div class="trust-card">
+<h1>🔐</h1>
+<h3>Secure Systems</h3>
+<p>Modern secure architecture solutions for businesses and services.</p>
+</div>
+
+<div class="trust-card">
+<h1>💡</h1>
+<h3>Creative Solutions</h3>
+<p>Innovative ideas and modern digital experiences for your business.</p>
+</div>
+
+<div class="trust-card">
+<h1>📞</h1>
+<h3>24/7 Support</h3>
+<p>Friendly support and guidance whenever you need assistance.</p>
+</div>
+
+</div>
+</section>
+
+<!-- TECHNOLOGIES -->
+<section>
+<h2 style="text-align:center;">Technologies We Use</h2>
+
+<div class="tech-container">
+<div class="tech">HTML</div>
+<div class="tech">CSS</div>
+<div class="tech">JavaScript</div>
+<div class="tech">Python</div>
+<div class="tech">PHP</div>
+<div class="tech">MySQL</div>
+<div class="tech">Firebase</div>
+<div class="tech">API Integration</div>
+<div class="tech">Cloud Systems</div>
+<div class="tech">UI/UX Design</div>
+</div>
+</section>
+
+<!-- STATS -->
+<section>
+<h2 style="text-align:center;">Our Statistics</h2>
+
+<div class="stats">
+
+<div class="stat-box">
+<h1>50+</h1>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat-box">
+<h1>6+</h1>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-box">
+<h1>24/7</h1>
+<p>Customer Support</p>
+</div>
+
+<div class="stat-box">
+<h1>100%</h1>
+<p>Transparency & Reliability</p>
+</div>
+
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+<h2 style="text-align:center;">Client Reviews</h2>
+
+<div class="review-container">
+
+<div class="review">
+⭐ ⭐ ⭐ ⭐ ⭐
+<p>
+Professional service with modern design and excellent support. Highly recommended.
+</p>
+</div>
+
+<div class="review">
+⭐ ⭐ ⭐ ⭐ ⭐
+<p>
+Very creative developer with strong technical knowledge and fast delivery.
+</p>
+</div>
+
+<div class="review">
+⭐ ⭐ ⭐ ⭐ ⭐
+<p>
+Excellent communication and professional system architecture solutions.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- TEAM -->
+<section>
+<h2 style="text-align:center;">Our Team</h2>
+
+<div class="team-container">
+
+<div class="team-card">
+<h1>👨‍💻</h1>
+<h3>Nirosh</h3>
+<p>Founder & Lead Software Developer</p>
+</div>
+
+<div class="team-card">
+<h1>☁️</h1>
+<h3>System Architecture</h3>
+<p>Cloud infrastructure and scalable architecture specialist.</p>
+</div>
+
+<div class="team-card">
+<h1>🎨</h1>
+<h3>Creative Design</h3>
+<p>Modern UI/UX design and branding solutions.</p>
+</div>
+
+</div>
+</section>
+
 <!-- ABOUT -->
 <section>
 <h2 style="text-align:center;margin-bottom:20px;">About the Owner</h2>
-<p class="about">
-Hello, my name is Nirosh. I am a highly skilled professional with strong knowledge in computer technology and coding. I specialize in web development, mobile app development, and graphic design. As a friendly and dedicated developer, I always focus on understanding my clients' needs and delivering high-quality, customized solutions.
 
-Our business offers complete service packages designed to suit different customer requirements. All our services are provided at very reasonable prices, along with flexible and convenient payment options. My goal is to provide reliable, modern, and efficient digital solutions that help businesses grow and succeed.
+<p class="about">
+Hello, my name is Nirosh. I am a highly skilled professional with strong knowledge in computer technology and coding. I specialize in web development, mobile app development, and graphic design.
 </p>
 </section>
 
@@ -292,19 +574,8 @@ Our business offers complete service packages designed to suit different custome
 <h2>About Our Company</h2>
 
 <p>
-Nirosh - Software Development & System Architecture Solution Company is proudly based in Sri Lanka, with its main headquarters located in Kandy and an additional branch in the Gampaha area.     
-
-We have a highly friendly, creative, and dedicated team that is always ready to serve you with professionalism and care. Our main mission is to support your business, products, and services to grow successfully by using modern technology and innovative digital solutions.    
-
-We specialize in a wide range of services including software development, system architecture design, web and mobile application development, and graphic design. We also provide poster designing, business and product launching support, marketing, boosting, and sponsorship services using modern digital platforms.    
-
-In addition, we offer wedding card designing, planning and design services, computer and hardware importing and distribution across Sri Lanka at affordable prices, as well as house and building design solutions based on your ideas and requirements.    
-
-With over 6 years of trusted experience, we are committed to delivering high-quality services tailored to your needs. We always ensure reasonable pricing, flexible payment options, and 100% transparency and reliability in everything we do.    
-
-Our goal is to become your trusted technology partner and help take your business to the next level.    
+Nirosh Software is proudly based in Sri Lanka with modern technology solutions and innovative digital services.
 </p>
-
 </section>
 
 <!-- CONTACT -->
@@ -313,11 +584,20 @@ Our goal is to become your trusted technology partner and help take your busines
 <p class="contact">Phone: +94 75 470 8490</p>
 </section>
 
+<!-- FOOTER -->
+<footer>
+<p>
+© 2026 Nirosh Software <br>
+Software Development & System Architecture Solutions <br>
+Sri Lanka | Kandy <br>
+WhatsApp: +94 75 470 8490
+</p>
+</footer>
+
 <a class="whatsapp" href="https://wa.me/94754708490" target="_blank">
 <span>💬</span> Chat on WhatsApp
 </a>
 
-<!-- 🔐 MAX SECURITY SCRIPT -->
 <script>
 
 // block right click
@@ -338,20 +618,22 @@ e.preventDefault();
 
 });
 
-// devtools detect (blur)
+// devtools detect
 setInterval(function(){
 let threshold = 160;
-if(window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold){
-document.body.classList.add("devtools-open");
-}else{
-document.body.classList.remove("devtools-open");
-}
-},1000);
 
-// screenshot confuse
-setInterval(()=>{
-document.body.style.filter="none";
-},3000);
+if(window.outerWidth - window.innerWidth > threshold ||
+window.outerHeight - window.innerHeight > threshold){
+
+document.body.classList.add("devtools-open");
+
+}else{
+
+document.body.classList.remove("devtools-open");
+
+}
+
+},1000);
 
 </script>
 
