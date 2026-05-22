@@ -534,31 +534,91 @@ Excellent communication and professional system architecture solutions.
 </section>
 
 <!-- TEAM -->
-<section>
-<h2 style="text-align:center;">Our Team</h2>
+<!-- TEAM -->
+<section id="team">
+<h2 class="team-title">nirosh & team<span class="cursor">|</span></h2>
 
 <div class="team-container">
 
 <div class="team-card">
-<h1>👨‍💻</h1>
-<h3>Nirosh</h3>
-<p>Founder & Lead Software Developer</p>
-</div>
-
-<div class="team-card">
-<h1>☁️</h1>
-<h3>System Architecture</h3>
-<p>Cloud infrastructure and scalable architecture specialist.</p>
-</div>
-
-<div class="team-card">
-<h1>🎨</h1>
-<h3>Creative Design</h3>
-<p>Modern UI/UX design and branding solutions.</p>
+<h5>💻</h5>
+<p>
+nirosh, the owner of the organization, leads his team with strong expertise in software development and system architecture. 
+his team works together to build modern, efficient, and innovative digital solutions while maintaining high standards in technology and system design.
+</p>
 </div>
 
 </div>
 </section>
+
+<!-- Tech Terminal Font -->
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+#team{
+    font-family: 'Share Tech Mono', monospace;
+    background:#ffffff;
+}
+
+/* title */
+.team-title{
+    text-align:center;
+    font-size:16px;
+    margin-bottom:18px;
+    text-transform:lowercase;
+    color:#000;
+    letter-spacing:1px;
+}
+
+/* blinking cursor */
+.cursor{
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+
+/* container */
+.team-container{
+    display:flex;
+    justify-content:center;
+    padding:10px;
+}
+
+/* card */
+.team-card{
+    background:#ffffff;
+    border:1px solid #000;
+    border-radius:8px;
+    padding:18px;
+    max-width:420px;
+    text-align:center;
+    transition:0.3s;
+}
+
+/* hover effect */
+.team-card:hover{
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    transform:scale(1.02);
+}
+
+/* laptop icon */
+.team-card h5{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+/* text */
+.team-card p{
+    font-size:11px;
+    color:#000;
+    line-height:1.5;
+    text-transform:lowercase;
+}
+</style>
 
 <!-- ABOUT -->
 <section>
