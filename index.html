@@ -739,6 +739,102 @@ document.body.classList.remove("devtools-open");
 },1000);
 
 </script>
+<!-- COOKIE POPUP -->
+<div class="cookie-popup">
 
+<div class="cookie-icon">⌁</div>
+
+<p class="cookie-text">
+By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+<a href="#">Cookie Policy</a>
+</p>
+
+<button class="cookie-btn settings">
+COOKIES SETTINGS
+</button>
+
+<button class="cookie-btn reject">
+REJECT ALL
+</button>
+
+<button class="cookie-btn accept">
+ACCEPT ALL COOKIES
+</button>
+
+</div>
+
+<style>
+
+.cookie-popup{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+width:90%;
+max-width:420px;
+background:#f5f5f5;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+font-family:Arial,sans-serif;
+z-index:9999;
+}
+
+.cookie-icon{
+font-size:60px;
+margin-bottom:20px;
+color:black;
+}
+
+.cookie-text{
+font-size:18px;
+line-height:1.8;
+color:#111;
+margin-bottom:25px;
+}
+
+.cookie-text a{
+color:#333;
+font-weight:bold;
+}
+
+.cookie-btn{
+width:100%;
+padding:18px;
+margin-top:15px;
+border:none;
+border-radius:8px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+/* small letters */
+.settings{
+background:white;
+border:2px solid orange;
+color:orange;
+text-transform:uppercase;
+}
+
+.reject{
+background:orange;
+color:white;
+text-transform:uppercase;
+}
+
+.accept{
+background:orange;
+color:white;
+text-transform:uppercase;
+}
+
+.cookie-btn:hover{
+opacity:0.9;
+transform:scale(1.02);
+}
+
+</style>
 </body>
 </html>
