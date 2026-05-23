@@ -481,12 +481,12 @@ Providing modern technology to all people in the world to easily manage business
 <div class="stats">
 
 <div class="stat-box">
-<h1>50+</h1>
+<h1 class="counter" data-target="50">0</h1>
 <p>Projects Completed</p>
 </div>
 
 <div class="stat-box">
-<h1>6+</h1>
+<h1 class="counter" data-target="6">0</h1>
 <p>Years Experience</p>
 </div>
 
@@ -496,12 +496,70 @@ Providing modern technology to all people in the world to easily manage business
 </div>
 
 <div class="stat-box">
-<h1>100%</h1>
+<h1 class="counter" data-target="100">0</h1>
 <p>Transparency & Reliability</p>
 </div>
 
 </div>
 </section>
+
+<script>
+
+const counters = document.querySelectorAll('.counter');
+
+const startCounter = (counter) => {
+
+const target = +counter.getAttribute('data-target');
+
+let count = 0;
+
+const speed = target / 100;
+
+const updateCount = () => {
+
+count += speed;
+
+if(count < target){
+
+counter.innerText = Math.floor(count) + "+";
+
+requestAnimationFrame(updateCount);
+
+}else{
+
+counter.innerText = target + "+";
+
+}
+
+};
+
+updateCount();
+
+};
+
+const observer = new IntersectionObserver((entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+startCounter(entry.target);
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},{ threshold:0.5 });
+
+counters.forEach(counter => {
+
+observer.observe(counter);
+
+});
+
+</script>
 
 <!-- REVIEWS -->
 <section>
