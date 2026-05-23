@@ -745,19 +745,22 @@ document.body.classList.remove("devtools-open");
 <div class="cookie-icon">⌁</div>
 
 <p class="cookie-text">
-By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
-<a href="#">Cookie Policy</a>
+BY CLICKING “ACCEPT ALL COOKIES”, YOU AGREE TO THE STORING OF COOKIES ON YOUR DEVICE TO ENHANCE SITE NAVIGATION, ANALYZE SITE USAGE, AND ASSIST IN OUR MARKETING EFFORTS.
+<a href="#">COOKIE POLICY</a>
 </p>
 
-<button class="cookie-btn settings">
+<button class="cookie-btn settings"
+onclick="document.querySelector('.cookie-popup').style.display='none'">
 COOKIES SETTINGS
 </button>
 
-<button class="cookie-btn reject">
+<button class="cookie-btn reject"
+onclick="document.querySelector('.cookie-popup').style.display='none'">
 REJECT ALL
 </button>
 
-<button class="cookie-btn accept">
+<button class="cookie-btn accept"
+onclick="document.querySelector('.cookie-popup').style.display='none'">
 ACCEPT ALL COOKIES
 </button>
 
@@ -767,71 +770,72 @@ ACCEPT ALL COOKIES
 
 .cookie-popup{
 position:fixed;
-bottom:20px;
+bottom:15px;
 left:50%;
 transform:translateX(-50%);
-width:90%;
-max-width:420px;
+width:85%;
+max-width:340px;
 background:#f5f5f5;
-padding:25px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.25);
+padding:18px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.25);
 font-family:Arial,sans-serif;
 z-index:9999;
 }
 
 .cookie-icon{
-font-size:60px;
-margin-bottom:20px;
+font-size:38px;
+margin-bottom:12px;
 color:black;
+text-align:left;
 }
 
 .cookie-text{
-font-size:18px;
-line-height:1.8;
+font-size:11px;
+line-height:1.7;
 color:#111;
-margin-bottom:25px;
+margin-bottom:15px;
+text-transform:uppercase;
 }
 
 .cookie-text a{
 color:#333;
 font-weight:bold;
+text-decoration:underline;
 }
 
 .cookie-btn{
 width:100%;
-padding:18px;
-margin-top:15px;
+padding:11px;
+margin-top:10px;
 border:none;
-border-radius:8px;
-font-size:18px;
+border-radius:6px;
+font-size:11px;
 font-weight:bold;
 cursor:pointer;
 transition:0.3s;
+text-transform:uppercase;
+letter-spacing:1px;
 }
 
-/* small letters */
 .settings{
 background:white;
-border:2px solid orange;
+border:1.5px solid orange;
 color:orange;
-text-transform:uppercase;
 }
 
 .reject{
 background:orange;
 color:white;
-text-transform:uppercase;
 }
 
 .accept{
 background:orange;
 color:white;
-text-transform:uppercase;
 }
 
 .cookie-btn:hover{
-opacity:0.9;
+opacity:0.92;
 transform:scale(1.02);
 }
 
