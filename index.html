@@ -483,7 +483,150 @@ smart automation systems helping businesses improve productivity, reduce manual 
 
 </div>
 
+</section><!-- ANIMATED COMPANY STRIP -->
+
+<section class="animated-company-strip">
+
+<div class="strip-bg">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+
+<img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a">
+
+</div>
+
+<div class="strip-text">
+
+<div class="strip-track">
+
+NIROSH - SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY •
+
+NIROSH - SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY •
+
+NIROSH - SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY •
+
+</div>
+
+</div>
+
 </section>
+
+<style>
+
+.animated-company-strip{
+
+position:relative;
+width:100%;
+overflow:hidden;
+background:#000;
+padding:35px 0;
+margin-top:20px;
+margin-bottom:20px;
+border-top:1px solid rgba(255,255,255,0.08);
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+}
+
+/* BACKGROUND IMAGE ANIMATION */
+
+.strip-bg{
+
+position:absolute;
+top:0;
+left:0;
+width:200%;
+height:100%;
+display:flex;
+align-items:center;
+gap:50px;
+animation:bgScroll 10s linear infinite;
+opacity:0.16;
+
+}
+
+.strip-bg img{
+
+height:90px;
+width:auto;
+border-radius:14px;
+object-fit:cover;
+
+}
+
+/* MOVING TEXT */
+
+.strip-text{
+
+position:relative;
+z-index:2;
+white-space:nowrap;
+overflow:hidden;
+
+}
+
+.strip-track{
+
+display:inline-block;
+padding-left:100%;
+font-size:22px;
+font-weight:700;
+letter-spacing:2px;
+color:white;
+animation:textScroll 18s linear infinite;
+
+}
+
+/* TEXT ANIMATION */
+
+@keyframes textScroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-100%);
+}
+
+}
+
+/* BACKGROUND ANIMATION */
+
+@keyframes bgScroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.strip-track{
+
+font-size:15px;
+
+}
+
+.strip-bg img{
+
+height:65px;
+
+}
+
+}
+
+</style>
 <!-- WHY CHOOSE US -->
 <section>
 <h2 style="text-align:center;">Why Choose Us</h2>
