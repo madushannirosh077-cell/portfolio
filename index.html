@@ -311,6 +311,93 @@ filter:blur(10px);
 pointer-events:none;
 }
 </style>
+
+<style>
+
+/* SCROLL REVEAL ANIMATION */
+
+.card,
+.trust-card,
+.team-card,
+.stat-box,
+.tech,
+.about,
+.company-section{
+
+opacity:0;
+transition:all 1s ease;
+
+}
+
+.left{
+
+transform:translateX(-120px);
+
+}
+
+.right{
+
+transform:translateX(120px);
+
+}
+
+.show{
+
+opacity:1 !important;
+transform:translateX(0) !important;
+
+}
+
+</style>
+
+<script>
+
+/* SCROLL REVEAL ANIMATION */
+
+const hiddenElements =
+document.querySelectorAll(
+'.card, .trust-card, .team-card, .stat-box, .tech, .about, .company-section'
+);
+
+hiddenElements.forEach((el,index)=>{
+
+if(index % 2 === 0){
+
+el.classList.add("left");
+
+}else{
+
+el.classList.add("right");
+
+}
+
+});
+
+const revealObserver =
+new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:0.2
+});
+
+hiddenElements.forEach((el)=>{
+
+revealObserver.observe(el);
+
+});
+
+</script>
+
 </head>
 
 <body oncontextmenu="return false;">
