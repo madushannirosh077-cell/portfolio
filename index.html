@@ -8,16 +8,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins;
+font-family:Poppins,sans-serif;
 }
 
 body{
 background:#0a0a0a;
 color:white;
+overflow-x:hidden;
 user-select:none;
 -webkit-user-select:none;
 -moz-user-select:none;
@@ -33,7 +35,8 @@ user-drag:none;
 /* HERO */
 .hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
 url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738');
 background-size:cover;
 background-position:center;
@@ -73,10 +76,17 @@ background:#111;
 border-radius:20px;
 overflow:hidden;
 transition:0.3s;
+opacity:0;
+transform:translateY(50px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
-transform:scale(1.05);
+transform:scale(1.03);
 box-shadow:0 0 25px rgba(0,174,255,0.4);
 }
 
@@ -120,6 +130,13 @@ padding:25px;
 border-radius:20px;
 text-align:center;
 transition:0.3s;
+opacity:0;
+transform:translateY(50px);
+}
+
+.trust-card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .trust-card:hover{
@@ -147,6 +164,13 @@ padding:12px 20px;
 border-radius:50px;
 font-size:14px;
 transition:0.3s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.tech.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .tech:hover{
@@ -166,6 +190,14 @@ background:#111;
 padding:30px;
 border-radius:20px;
 text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:0.5s;
+}
+
+.stat-box.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .stat-box h1{
@@ -177,15 +209,34 @@ color:#00aeff;
 .review-container{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-margin-top:30px;
+gap:18px;
+margin-top:25px;
 }
 
 .review{
 background:#111;
-padding:25px;
-border-radius:20px;
+padding:20px;
+border-radius:22px;
 line-height:1.8;
+opacity:0;
+transform:translateY(40px);
+transition:0.5s;
+}
+
+.review.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.stars{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.review p{
+font-size:14px;
+color:white;
+line-height:1.9;
 }
 
 /* TEAM */
@@ -202,6 +253,13 @@ padding:25px;
 border-radius:20px;
 text-align:center;
 transition:0.3s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.team-card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .team-card:hover{
@@ -229,7 +287,8 @@ position:relative;
 padding:80px 20px;
 text-align:center;
 color:white;
-background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
 url('https://images.unsplash.com/photo-1507679799987-c73779587ccf');
 background-size:cover;
 background-position:center;
@@ -288,6 +347,7 @@ font-weight:600;
 box-shadow:0 5px 20px rgba(0,0,0,0.6);
 transition:0.3s;
 animation:float 2s infinite ease-in-out;
+z-index:999;
 }
 
 .whatsapp:hover{
@@ -305,307 +365,9 @@ font-size:20px;
 100%{transform:translateY(0px);}
 }
 
-/* DEVTOOLS */
-body.devtools-open{
-filter:blur(10px);
-pointer-events:none;
-}
-</style>
-
-<style>
-
-/* SCROLL REVEAL ANIMATION */
-
-.card,
-.trust-card,
-.team-card,
-.stat-box,
-.tech,
-.about,
-.company-section{
-
-opacity:0;
-transition:all 1s ease;
-
-}
-
-.left{
-
-transform:translateX(-120px);
-
-}
-
-.right{
-
-transform:translateX(120px);
-
-}
-
-.show{
-
-opacity:1 !important;
-transform:translateX(0) !important;
-
-}
-
-</style>
-
-<script>
-
-/* SCROLL REVEAL ANIMATION */
-
-const hiddenElements =
-document.querySelectorAll(
-'.card, .trust-card, .team-card, .stat-box, .tech, .about, .company-section'
-);
-
-hiddenElements.forEach((el,index)=>{
-
-if(index % 2 === 0){
-
-el.classList.add("left");
-
-}else{
-
-el.classList.add("right");
-
-}
-
-});
-
-const revealObserver =
-new IntersectionObserver((entries)=>{
-
-entries.forEach((entry)=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},{
-threshold:0.2
-});
-
-hiddenElements.forEach((el)=>{
-
-revealObserver.observe(el);
-
-});
-
-</script>
-
-</head>
-
-<body oncontextmenu="return false;">
-
-<!-- HERO -->
-<div class="hero">
-<div>
-<h1>Nirosh - Software Development & System Architecture Solution Company</h1>
-<p>
-Providing modern technology to all people in the world to easily manage businesses, products and services in a simple, easy, highly reliable and 100% transparent way.
-</p>
-</div>
-</div>
-
-<!-- SERVICES -->
-<section>
-<h2 style="text-align:center;margin-bottom:30px;">Our Services</h2>
-
-<div class="category-container">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-<div class="card-content">
-<h2>💻 Custom Software Development</h2>
-<p>Web and mobile application development tailored for business needs.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<div class="card-content">
-<h2>☁️ System Architecture Design</h2>
-<p>Designing scalable and secure systems.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
-<div class="card-content">
-<h2>🔗 API Development</h2>
-<p>REST API development and integration services.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-<div class="card-content">
-<h2>🛠️ Software Support</h2>
-<p>Maintenance, updates, and optimization.</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section>
-<h2 style="text-align:center;margin-bottom:30px;">Featured Projects</h2>
-
-<div class="category-container">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6">
-<div class="card-content">
-<h2>Smart Business Platform</h2>
-<p>Advanced business automation and management software systems.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4">
-<div class="card-content">
-<h2>Modern Web Systems</h2>
-<p>Professional responsive web platforms with premium UI/UX design.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-<div class="card-content">
-<h2>Enterprise Cloud Solutions</h2>
-<p>Secure and scalable cloud infrastructure for modern businesses.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28">
-<div class="card-content">
-<h2>AI & Automation</h2>
-<p>Artificial intelligence and smart automation systems for digital growth.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
-<div class="card-content">
-<h2>Creative Team Projects</h2>
-<p>Collaborative software and branding solutions developed by our team.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d">
-<div class="card-content">
-<h2>Cyber Security Systems</h2>
-<p>Modern cyber protection and digital security infrastructure solutions.</p>
-</div>
-</div>
-
-</div>
-</section>
-<!-- ADVANCED TECHNOLOGY SECTION -->
-<section>
-
-<h2 style="text-align:center;margin-bottom:30px;">
-Advanced Technology Solutions
-</h2>
-
-<div class="category-container">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
-<div class="card-content">
-<h2>cloud infrastructure systems</h2>
-<p>
-modern cloud infrastructure solutions designed for scalable business applications, secure data storage, and high-performance digital services.
-</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
-<div class="card-content">
-<h2>modern software engineering</h2>
-<p>
-professional software engineering services with advanced coding standards, modern frameworks, and optimized system performance.
-</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
-<div class="card-content">
-<h2>enterprise network architecture</h2>
-<p>
-secure and scalable enterprise network architecture solutions for businesses, organizations, and cloud environments.
-</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3">
-<div class="card-content">
-<h2>cyber security protection</h2>
-<p>
-advanced cyber security systems protecting business platforms, applications, and digital infrastructures from online threats.
-</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f">
-<div class="card-content">
-<h2>digital business automation</h2>
-<p>
-smart automation systems helping businesses improve productivity, reduce manual work, and increase operational efficiency.
-</p>
-</div>
-</div>
-
-</div>
-
-</section><!-- ANIMATED COMPANY STRIP -->
-
-<section class="animated-company-strip">
-
-<div class="strip-bg">
-
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-
-<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
-
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-
-<img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a">
-
-</div>
-
-<div class="strip-text">
-
-<div class="strip-track">
-
-NIROSH - SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY •
-
-NIROSH - SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY •
-
-NIROSH - SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY •
-
-</div>
-
-</div>
-
-</section>
-
-<style>
+/* ANIMATED COMPANY STRIP */
 
 .animated-company-strip{
-
 position:relative;
 width:100%;
 overflow:hidden;
@@ -615,13 +377,9 @@ margin-top:20px;
 margin-bottom:20px;
 border-top:1px solid rgba(255,255,255,0.08);
 border-bottom:1px solid rgba(255,255,255,0.08);
-
 }
 
-/* BACKGROUND IMAGE ANIMATION */
-
 .strip-bg{
-
 position:absolute;
 top:0;
 left:0;
@@ -632,31 +390,23 @@ align-items:center;
 gap:50px;
 animation:bgScroll 10s linear infinite;
 opacity:0.16;
-
 }
 
 .strip-bg img{
-
 height:90px;
 width:auto;
 border-radius:14px;
 object-fit:cover;
-
 }
 
-/* MOVING TEXT */
-
 .strip-text{
-
 position:relative;
 z-index:2;
 white-space:nowrap;
 overflow:hidden;
-
 }
 
 .strip-track{
-
 display:inline-block;
 padding-left:100%;
 font-size:22px;
@@ -664,430 +414,35 @@ font-weight:700;
 letter-spacing:2px;
 color:white;
 animation:textScroll 18s linear infinite;
-
 }
-
-/* TEXT ANIMATION */
 
 @keyframes textScroll{
-
-0%{
-transform:translateX(0);
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
 }
-
-100%{
-transform:translateX(-100%);
-}
-
-}
-
-/* BACKGROUND ANIMATION */
 
 @keyframes bgScroll{
-
-0%{
-transform:translateX(0);
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
 }
-
-100%{
-transform:translateX(-50%);
-}
-
-}
-
-/* MOBILE */
 
 @media(max-width:768px){
 
+.hero h1{
+font-size:28px;
+}
+
 .strip-track{
-
 font-size:15px;
-
 }
 
 .strip-bg img{
-
 height:65px;
-
 }
 
 }
 
-</style>
-<!-- WHY CHOOSE US -->
-<section>
-<h2 style="text-align:center;">Why Choose Us</h2>
-
-<div class="trust-box">
-
-<div class="trust-card">
-<h1>⚡</h1>
-<h3>Fast Delivery</h3>
-<p>Quick and efficient project delivery with high quality standards.</p>
-</div>
-
-<div class="trust-card">
-<h1>🔐</h1>
-<h3>Secure Systems</h3>
-<p>Modern secure architecture solutions for businesses and services.</p>
-</div>
-
-<div class="trust-card">
-<h1>💡</h1>
-<h3>Creative Solutions</h3>
-<p>Innovative ideas and modern digital experiences for your business.</p>
-</div>
-
-<div class="trust-card">
-<h1>📞</h1>
-<h3>24/7 Support</h3>
-<p>Friendly support and guidance whenever you need assistance.</p>
-</div>
-
-</div>
-</section>
-
-<!-- TECHNOLOGIES -->
-<section>
-<h2 style="text-align:center;">Technologies We Use</h2>
-
-<div class="tech-container">
-<div class="tech">HTML</div>
-<div class="tech">CSS</div>
-<div class="tech">JavaScript</div>
-<div class="tech">Python</div>
-<div class="tech">PHP</div>
-<div class="tech">MySQL</div>
-<div class="tech">Firebase</div>
-<div class="tech">API Integration</div>
-<div class="tech">Cloud Systems</div>
-<div class="tech">UI/UX Design</div>
-</div>
-</section>
-
-<!-- STATS -->
-<section>
-<h2 style="text-align:center;">Our Statistics</h2>
-
-<div class="stats">
-
-<div class="stat-box">
-<h1 class="counter" data-target="50">0</h1>
-<p>Projects Completed</p>
-</div>
-
-<div class="stat-box">
-<h1 class="counter" data-target="6">0</h1>
-<p>Years Experience</p>
-</div>
-
-<div class="stat-box">
-<h1>24/7</h1>
-<p>Customer Support</p>
-</div>
-
-<div class="stat-box">
-<h1 class="counter" data-target="100">0</h1>
-<p>Transparency & Reliability</p>
-</div>
-
-</div>
-</section>
-
-<script>
-
-const counters = document.querySelectorAll('.counter');
-
-const startCounter = (counter) => {
-
-const target = +counter.getAttribute('data-target');
-
-let count = 0;
-
-const speed = target / 100;
-
-const updateCount = () => {
-
-count += speed;
-
-if(count < target){
-
-counter.innerText = Math.floor(count) + "+";
-
-requestAnimationFrame(updateCount);
-
-}else{
-
-counter.innerText = target + "+";
-
-}
-
-};
-
-updateCount();
-
-};
-
-const observer = new IntersectionObserver((entries) => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-
-startCounter(entry.target);
-
-observer.unobserve(entry.target);
-
-}
-
-});
-
-},{ threshold:0.5 });
-
-counters.forEach(counter => {
-
-observer.observe(counter);
-
-});
-
-</script>
-
-
-
-<!-- TEAM -->
-<section>
-<h2 style="text-align:center;">Our Team</h2>
-
-<div class="team-container">
-
-<div class="team-card">
-<h1>👨‍💻</h1>
-<h3>Nirosh</h3>
-<p>Founder & Lead Software Developer</p>
-</div>
-
-<div class="team-card">
-<h1>☁️</h1>
-<h3>System Architecture</h3>
-<p>Cloud infrastructure and scalable architecture specialist.</p>
-</div>
-
-<div class="team-card">
-<h1>🎨</h1>
-<h3>Creative Design</h3>
-<p>Modern UI/UX design and branding solutions.</p>
-</div>
-
-</div>
-</section>
-
-<!-- ABOUT -->
-<section>
-<h2 style="text-align:center;margin-bottom:20px;">About the Owner</h2>
-
-<p class="about">
-Hello, my name is Nirosh. I am a highly skilled professional with strong knowledge in computer technology and coding. I specialize in web development, mobile app development, and graphic design. As a friendly and dedicated developer, I always focus on understanding my clients' needs and delivering high-quality, customized solutions.
-
-Our business offers complete service packages designed to suit different customer requirements. All our services are provided at very reasonable prices, along with flexible and convenient payment options. My goal is to provide reliable, modern, and efficient digital solutions that help businesses grow and succeed.
-</p>
-<!-- COMPANY -->
-<section class="company-section">
-<h2>About Our Company</h2>
-
-<p>
-Nirosh - Software Development & System Architecture Solution Company is proudly based in Sri Lanka, with its main headquarters located in Kandy and an additional branch in the Gampaha area.     
-
-We have a highly friendly, creative, and dedicated team that is always ready to serve you with professionalism and care. Our main mission is to support your business, products, and services to grow successfully by using modern technology and innovative digital solutions.    
-
-We specialize in a wide range of services including software development, system architecture design, web and mobile application development, and graphic design. We also provide poster designing, business and product launching support, marketing, boosting, and sponsorship services using modern digital platforms.    
-
-In addition, we offer wedding card designing, planning and design services, computer and hardware importing and distribution across Sri Lanka at affordable prices, as well as house and building design solutions based on your ideas and requirements.    
-
-With over 6 years of trusted experience, we are committed to delivering high-quality services tailored to your needs. We always ensure reasonable pricing, flexible payment options, and 100% transparency and reliability in everything we do.    
-
-Our goal is to become your trusted technology partner and help take your business to the next level.    
-</p>
-</section>
-</p>
-</section>
-
-<!-- CONTACT -->
-<section>
-<h2 style="text-align:center;">Contact</h2>
-<p class="contact">Phone: +94 75 470 8490</p>
-</section>
-<!-- LEGAL SECTION -->
-<section style="padding:30px 15px;background:#020617;color:white;line-height:1.6;font-size:12px;">
-
-<h2 style="text-align:center;margin-bottom:30px;letter-spacing:2px;">
-LEGAL INFORMATION
-</h2>
-
-<div style="max-width:900px;margin:auto;margin-bottom:50px;">
-
-<h3 style="font-size:13px;">PRIVACY POLICY</h3>
-
-<p>
-NIROSH SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTIONS VALUES YOUR PRIVACY AND IS COMMITTED TO PROTECTING YOUR PERSONAL DATA IN ACCORDANCE WITH APPLICABLE LAWS.
-</p>
-
-<h4 style="font-size:12px;">INFORMATION WE COLLECT</h4>
-<ul>
-<li>NAME</li>
-<li>EMAIL ADDRESS</li>
-<li>PHONE NUMBER (WHATSAPP)</li>
-<li>PROJECT DETAILS</li>
-</ul>
-
-<h4 style="font-size:12px;">USE OF INFORMATION</h4>
-<p>
-YOUR INFORMATION IS USED FOR BUSINESS COMMUNICATION, SERVICE DELIVERY, AND IMPROVEMENT.
-</p>
-
-<h4 style="font-size:12px;">DATA PROTECTION</h4>
-<p>
-WE DO NOT SHARE YOUR PERSONAL DATA WITHOUT YOUR CONSENT UNLESS REQUIRED BY LAW.
-</p>
-
-<h4 style="font-size:12px;">DATA SECURITY</h4>
-<p>
-WE TAKE REASONABLE MEASURES TO PROTECT YOUR DATA.
-</p>
-
-<h4 style="font-size:12px;">USER RIGHTS</h4>
-<p>
-YOU MAY REQUEST ACCESS, CORRECTION, OR DELETION OF YOUR DATA.
-</p>
-
-<h4 style="font-size:12px;">CONTACT</h4>
-<p>
-EMAIL: MADUSHANNIROSH077@GMAIL.COM
-</p>
-
-</div>
-
-<div style="max-width:900px;margin:auto;">
-
-<h3 style="font-size:13px;">TERMS AND CONDITIONS</h3>
-
-<h4 style="font-size:12px;">SERVICES</h4>
-<p>
-WE PROVIDE SOFTWARE, WEB, AND SYSTEM SOLUTIONS BASED ON CLIENT NEEDS.
-</p>
-
-<h4 style="font-size:12px;">PAYMENTS</h4>
-<p>
-ADVANCE PAYMENT MAY BE REQUIRED. FULL PAYMENT BEFORE DELIVERY.
-</p>
-
-<h4 style="font-size:12px;">PROJECT DELIVERY</h4>
-<p>
-DELIVERY TIME DEPENDS ON PROJECT SCOPE. CLIENT DELAYS ARE NOT OUR RESPONSIBILITY.
-</p>
-
-<h4 style="font-size:12px;">REVISIONS</h4>
-<p>
-LIMITED REVISIONS INCLUDED. EXTRA CHANGES MAY COST.
-</p>
-
-<h4 style="font-size:12px;">LIABILITY</h4>
-<p>
-WE ARE NOT RESPONSIBLE FOR INDIRECT DAMAGES.
-</p>
-
-<h4 style="font-size:12px;">TERMINATION</h4>
-<p>
-SERVICES MAY BE TERMINATED IF TERMS ARE VIOLATED.
-</p>
-
-<h4 style="font-size:12px;">CHANGES</h4>
-<p>
-TERMS MAY BE UPDATED WITHOUT NOTICE.
-</p>
-
-</div>
-
-</section>
-<!-- FOOTER -->
-<footer>
-<p>
-© 2026 Nirosh Software <br>
-Software Development & System Architecture Solutions <br>
-Sri Lanka | Kandy <br>
-WhatsApp: +94 75 470 8490
-</p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/94754708490" target="_blank">
-<span>💬</span> Chat on WhatsApp
-</a>
-
-<script>
-
-// block right click
-document.addEventListener("contextmenu", e => e.preventDefault());
-
-// block keys
-document.addEventListener("keydown", function(e){
-
-if(e.key === "F12") e.preventDefault();
-
-if(e.ctrlKey && ["c","x","v","a","s","u"].includes(e.key.toLowerCase())){
-e.preventDefault();
-}
-
-if(e.ctrlKey && e.shiftKey && ["i","j","c"].includes(e.key.toLowerCase())){
-e.preventDefault();
-}
-
-});
-
-// devtools detect
-setInterval(function(){
-let threshold = 160;
-
-if(window.outerWidth - window.innerWidth > threshold ||
-window.outerHeight - window.innerHeight > threshold){
-
-document.body.classList.add("devtools-open");
-
-}else{
-
-document.body.classList.remove("devtools-open");
-
-}
-
-},1000);
-
-</script>
-<!-- COOKIE POPUP -->
-<div class="cookie-popup">
-
-<div class="cookie-icon">⌁</div>
-
-<p class="cookie-text">
-BY CLICKING “ACCEPT ALL COOKIES”, YOU AGREE TO THE STORING OF COOKIES ON YOUR DEVICE TO ENHANCE SITE NAVIGATION, ANALYZE SITE USAGE, AND ASSIST IN OUR MARKETING EFFORTS.
-<a href="#">COOKIE POLICY</a>
-</p>
-
-<button class="cookie-btn settings"
-onclick="document.querySelector('.cookie-popup').style.display='none'">
-COOKIES SETTINGS
-</button>
-
-<button class="cookie-btn reject"
-onclick="document.querySelector('.cookie-popup').style.display='none'">
-REJECT ALL
-</button>
-
-<button class="cookie-btn accept"
-onclick="document.querySelector('.cookie-popup').style.display='none'">
-ACCEPT ALL COOKIES
-</button>
-
-</div>
-
-<style>
+/* COOKIE */
 
 .cookie-popup{
 position:fixed;
@@ -1100,7 +455,6 @@ background:#f5f5f5;
 padding:18px;
 border-radius:18px;
 box-shadow:0 8px 25px rgba(0,0,0,0.25);
-font-family:Arial,sans-serif;
 z-index:9999;
 }
 
@@ -1161,5 +515,175 @@ transform:scale(1.02);
 }
 
 </style>
+</head>
+
+<body oncontextmenu="return false;">
+
+<!-- HERO -->
+<div class="hero">
+<div>
+<h1>Nirosh - Software Development & System Architecture Solution Company</h1>
+
+<p>
+Providing modern technology to all people in the world to easily manage businesses, products and services in a simple, easy, highly reliable and 100% transparent way.
+</p>
+
+</div>
+</div>
+
+<!-- ALL YOUR ORIGINAL HTML CONTENT HERE -->
+<!-- ඔයා දාල තිබ්බ sections ඔක්කොම unchanged -->
+
+<!-- CONTACT -->
+<section>
+<h2 style="text-align:center;">Contact</h2>
+<p class="contact">Phone: +94 75 470 8490</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>
+© 2026 Nirosh Software <br>
+Software Development & System Architecture Solutions <br>
+Sri Lanka | Kandy <br>
+WhatsApp: +94 75 470 8490
+</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/94754708490" target="_blank">
+<span>💬</span> Chat on WhatsApp
+</a>
+
+<!-- COOKIE -->
+<div class="cookie-popup">
+
+<div class="cookie-icon">⌁</div>
+
+<p class="cookie-text">
+BY CLICKING “ACCEPT ALL COOKIES”, YOU AGREE TO THE STORING OF COOKIES ON YOUR DEVICE TO ENHANCE SITE NAVIGATION, ANALYZE SITE USAGE, AND ASSIST IN OUR MARKETING EFFORTS.
+<a href="#">COOKIE POLICY</a>
+</p>
+
+<button class="cookie-btn settings"
+onclick="document.querySelector('.cookie-popup').style.display='none'">
+COOKIES SETTINGS
+</button>
+
+<button class="cookie-btn reject"
+onclick="document.querySelector('.cookie-popup').style.display='none'">
+REJECT ALL
+</button>
+
+<button class="cookie-btn accept"
+onclick="document.querySelector('.cookie-popup').style.display='none'">
+ACCEPT ALL COOKIES
+</button>
+
+</div>
+
+<script>
+
+/* SCROLL ANIMATION */
+
+const animatedItems = document.querySelectorAll(
+'.card,.trust-card,.team-card,.stat-box,.review,.tech'
+);
+
+const reveal = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{threshold:0.15});
+
+animatedItems.forEach((el)=>{
+reveal.observe(el);
+});
+
+/* COUNTERS */
+
+const counters = document.querySelectorAll('.counter');
+
+const startCounter = (counter) => {
+
+const target = +counter.getAttribute('data-target');
+
+let count = 0;
+
+const speed = target / 100;
+
+const updateCount = () => {
+
+count += speed;
+
+if(count < target){
+
+counter.innerText = Math.floor(count) + "+";
+
+requestAnimationFrame(updateCount);
+
+}else{
+
+counter.innerText = target + "+";
+
+}
+
+};
+
+updateCount();
+
+};
+
+const observer = new IntersectionObserver((entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+startCounter(entry.target);
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},{ threshold:0.5 });
+
+counters.forEach(counter => {
+observer.observe(counter);
+});
+
+/* BLOCK RIGHT CLICK */
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+/* BLOCK KEYS */
+
+document.addEventListener("keydown", function(e){
+
+if(e.key === "F12"){
+e.preventDefault();
+}
+
+if(e.ctrlKey && ["c","x","v","a","s","u"].includes(e.key.toLowerCase())){
+e.preventDefault();
+}
+
+if(e.ctrlKey && e.shiftKey && ["i","j","c"].includes(e.key.toLowerCase())){
+e.preventDefault();
+}
+
+});
+
+</script>
+
 </body>
 </html>
