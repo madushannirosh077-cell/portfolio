@@ -328,224 +328,230 @@ Providing modern technology to all people in the world to easily manage business
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <style>
+
 :root{
-    --bg-color:#020817;
-    --card-color:#071225;
-    --primary:#18e0c4;
-    --text:#dbe4ff;
-    --border:#1d2a44;
+--bg-color:#020817;
+--primary:#18e0c4;
+--text:#dbe4ff;
 }
 
 .social-company-section{
-    width:100%;
-    background:var(--bg-color);
-    padding:40px 25px;
-    font-family:Arial, Helvetica, sans-serif;
+width:100%;
+background:#020817;
+padding:30px 20px;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 .company-title{
-    color:#ffffff;
-    font-size:38px;
-    font-weight:800;
-    line-height:1.3;
-    text-transform:lowercase;
-    margin-bottom:25px;
+color:#ffffff;
+font-size:13px;
+font-weight:800;
+line-height:1.8;
+text-transform:uppercase;
+letter-spacing:1px;
+margin-bottom:18px;
 }
 
 .company-title span{
-    color:var(--primary);
+color:var(--primary);
 }
 
 .company-description{
-    color:#94a3b8;
-    font-size:20px;
-    line-height:2;
-    margin-bottom:35px;
-    text-transform:lowercase;
+color:#94a3b8;
+font-size:9px;
+line-height:2;
+text-transform:uppercase;
+letter-spacing:1px;
+margin-bottom:22px;
 }
 
 .social-icons{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    flex-wrap:wrap;
-    margin-bottom:40px;
+display:flex;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:28px;
 }
 
 .social-icons a{
-    width:72px;
-    height:72px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(255,255,255,0.05);
-    border:2px solid rgba(255,255,255,0.08);
-    color:#b8c7ff;
-    font-size:28px;
-    text-decoration:none;
-    position:relative;
-    overflow:hidden;
-    transition:0.4s ease;
-    animation:floatIcon 3s ease-in-out infinite;
-    box-shadow:0 0 20px rgba(0,0,0,0.3);
-}
-
-.social-icons a::before{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:linear-gradient(135deg, transparent, rgba(24,224,196,0.25));
-    top:-100%;
-    left:-100%;
-    transition:0.5s;
-}
-
-.social-icons a:hover::before{
-    top:0;
-    left:0;
+width:38px;
+height:38px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+color:#b8c7ff;
+font-size:13px;
+text-decoration:none;
+transition:0.4s ease;
+animation:floatIcon 3s ease-in-out infinite;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
 }
 
 .social-icons a:hover{
-    transform:translateY(-8px) scale(1.08);
-    color:#ffffff;
-    border-color:var(--primary);
-    box-shadow:
-    0 0 15px rgba(24,224,196,0.5),
-    0 0 40px rgba(24,224,196,0.3);
+transform:translateY(-5px) scale(1.05);
+color:#ffffff;
+border-color:var(--primary);
+box-shadow:
+0 0 10px rgba(24,224,196,0.5),
+0 0 25px rgba(24,224,196,0.3);
 }
 
 .social-icons a:nth-child(2){
-    animation-delay:0.3s;
+animation-delay:0.3s;
 }
+
 .social-icons a:nth-child(3){
-    animation-delay:0.6s;
+animation-delay:0.6s;
 }
+
 .social-icons a:nth-child(4){
-    animation-delay:0.9s;
+animation-delay:0.9s;
 }
+
 .social-icons a:nth-child(5){
-    animation-delay:1.2s;
+animation-delay:1.2s;
 }
 
 @keyframes floatIcon{
-    0%{
-        transform:translateY(0px);
-    }
-    50%{
-        transform:translateY(-10px);
-    }
-    100%{
-        transform:translateY(0px);
-    }
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-6px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
 }
 
 .services-title{
-    color:#ffffff;
-    font-size:34px;
-    font-weight:800;
-    margin-bottom:25px;
-    letter-spacing:2px;
-    text-transform:lowercase;
+color:#ffffff;
+font-size:12px;
+font-weight:800;
+margin-bottom:18px;
+letter-spacing:2px;
+text-transform:uppercase;
 }
 
 .services-list{
-    list-style:none;
-    padding:0;
-    margin:0;
+list-style:none;
+padding:0;
+margin:0;
 }
 
 .services-list li{
-    color:#9fb1d1;
-    font-size:22px;
-    margin-bottom:18px;
-    transition:0.3s ease;
-    text-transform:lowercase;
+color:#9fb1d1;
+font-size:9px;
+margin-bottom:12px;
+transition:0.3s ease;
+text-transform:uppercase;
+letter-spacing:1px;
+line-height:1.8;
 }
 
 .services-list li:hover{
-    color:var(--primary);
-    transform:translateX(10px);
+color:var(--primary);
+transform:translateX(6px);
 }
 
 @media(max-width:768px){
 
 .company-title{
-    font-size:28px;
+font-size:11px;
 }
 
 .company-description{
-    font-size:18px;
-    line-height:1.8;
+font-size:8px;
 }
 
 .social-icons a{
-    width:62px;
-    height:62px;
-    font-size:24px;
+width:34px;
+height:34px;
+font-size:11px;
+}
+
+.services-title{
+font-size:11px;
 }
 
 .services-list li{
-    font-size:19px;
+font-size:8px;
 }
 
 }
+
 </style>
 
 <section class="social-company-section">
 
-    <h1 class="company-title">
-        nirosh - <span>software development & system architecture solution company</span>
-    </h1>
+<h1 class="company-title">
+NIROSH - <span>SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY</span>
+</h1>
 
-    <p class="company-description">
-        a sri lanka-based custom software development company building web apps,
-        mobile apps, enterprise software systems, and scalable digital solutions
-        that help businesses grow faster and smarter.
-    </p>
+<p class="company-description">
+A SRI LANKA-BASED CUSTOM SOFTWARE DEVELOPMENT COMPANY BUILDING WEB APPS,
+MOBILE APPS, ENTERPRISE SOFTWARE SYSTEMS, AND SCALABLE DIGITAL SOLUTIONS
+THAT HELP BUSINESSES GROW FASTER AND SMARTER.
+</p>
 
-    <!-- social media icons -->
-    <div class="social-icons">
+<div class="social-icons">
 
-        <a href="https://linkedin.com" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
+<a href="https://linkedin.com" target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
 
-        <a href="https://twitter.com" target="_blank">
-            <i class="fab fa-x-twitter"></i>
-        </a>
+<a href="https://twitter.com" target="_blank">
+<i class="fab fa-x-twitter"></i>
+</a>
 
-        <a href="https://github.com" target="_blank">
-            <i class="fab fa-github"></i>
-        </a>
+<a href="https://github.com" target="_blank">
+<i class="fab fa-github"></i>
+</a>
 
-        <a href="https://instagram.com" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
+<a href="https://instagram.com" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
 
-        <a href="https://youtube.com" target="_blank">
-            <i class="fab fa-youtube"></i>
-        </a>
+<a href="https://youtube.com" target="_blank">
+<i class="fab fa-youtube"></i>
+</a>
 
-    </div>
+</div>
 
-    <!-- services section -->
-    <h2 class="services-title">services</h2>
+<h2 class="services-title">SERVICES</h2>
 
-    <ul class="services-list">
-        <li>website development</li>
-        <li>mobile app development</li>
-        <li>e-commerce development</li>
-        <li>ui/ux design</li>
-        <li>custom software development</li>
-        <li>system architecture solutions</li>
-        <li>maintenance & support</li>
-        <li>web hosting & domain</li>
-        <li>ssl certification</li>
-        <li>business email setup</li>
-        <li>seo optimization</li>
-    </ul>
+<ul class="services-list">
+
+<li>WEBSITE DEVELOPMENT</li>
+
+<li>MOBILE APP DEVELOPMENT</li>
+
+<li>E-COMMERCE DEVELOPMENT</li>
+
+<li>UI / UX DESIGN</li>
+
+<li>CUSTOM SOFTWARE DEVELOPMENT</li>
+
+<li>SYSTEM ARCHITECTURE SOLUTIONS</li>
+
+<li>MAINTENANCE & SUPPORT</li>
+
+<li>WEB HOSTING & DOMAIN</li>
+
+<li>SSL CERTIFICATION</li>
+
+<li>BUSINESS EMAIL SETUP</li>
+
+<li>SEO OPTIMIZATION</li>
+
+</ul>
 
 </section>
 <!-- social media section end -->
