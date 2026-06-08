@@ -312,8 +312,8 @@ font-size:20px;
 body.devtools-open{
 filter:blur(10px);
 pointer-events:none;
-}.owner-info-section{
-height:700px;
+.owner-info-section{
+min-height:700px;
 overflow:hidden;
 position:relative;
 padding:30px;
@@ -321,9 +321,9 @@ background:#050505;
 }
 
 .owner-scroll{
-position:absolute;
+position:relative;
 width:100%;
-animation:ownerScroll 120s linear infinite;
+
 color:#4ff7ef;
 font-family:'Orbitron',sans-serif;
 text-transform:uppercase;
@@ -357,10 +357,7 @@ padding-left:0;
 content:"• ";
 }
 
-@keyframes ownerScroll{
-from{transform:translateY(100%);}
-to{transform:translateY(-100%);}
-}
+
 </style>
 </head>
 
@@ -1199,7 +1196,7 @@ margin-right:6px;
 
 <div class="careers-container">
 
-<div class="join-badge"><section class="owner-info-section">
+<section class="owner-info-section">
 
 <div class="owner-scroll">
 
@@ -1236,7 +1233,7 @@ margin-right:6px;
 </div>
 
 </section>
-JOIN OUR TEAM
+
 </div>
 
 <h2 class="careers-title">
