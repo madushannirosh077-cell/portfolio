@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nirosh Software</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -312,6 +312,54 @@ font-size:20px;
 body.devtools-open{
 filter:blur(10px);
 pointer-events:none;
+}.owner-info-section{
+height:700px;
+overflow:hidden;
+position:relative;
+padding:30px;
+background:#050505;
+}
+
+.owner-scroll{
+position:absolute;
+width:100%;
+animation:ownerScroll 120s linear infinite;
+color:#4ff7ef;
+font-family:'Orbitron',sans-serif;
+text-transform:uppercase;
+text-shadow:0 0 5px #4ff7ef,0 0 10px #4ff7ef;
+}
+
+.owner-scroll h2{
+font-size:22px;
+text-align:center;
+margin-bottom:30px;
+}
+
+.owner-scroll h3{
+font-size:16px;
+margin-top:25px;
+margin-bottom:15px;
+}
+
+.owner-scroll p,
+.owner-scroll li{
+font-size:13px;
+line-height:2;
+}
+
+.owner-scroll ul{
+list-style:none;
+padding-left:0;
+}
+
+.owner-scroll li::before{
+content:"• ";
+}
+
+@keyframes ownerScroll{
+from{transform:translateY(100%);}
+to{transform:translateY(-100%);}
 }
 </style>
 </head>
@@ -1151,7 +1199,43 @@ margin-right:6px;
 
 <div class="careers-container">
 
-<div class="join-badge">
+<div class="join-badge"><section class="owner-info-section">
+
+<div class="owner-scroll">
+
+<h2>BUSINESS OWNER INFORMATION</h2>
+
+<p><strong>OWNER :</strong> NIROSH</p>
+<p><strong>POSITION :</strong> FOUNDER & SYSTEM ARCHITECT</p>
+<p><strong>BUSINESS NAME :</strong> NIROSH SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY</p>
+<p><strong>LOCATION :</strong> KANDY / GAMPAHA AREA, SRI LANKA</p>
+<p><strong>EMAIL :</strong> MADUSHANNIROSH077@GMAIL.COM</p>
+<p><strong>PHONE :</strong> +94 75 470 8490</p>
+
+<h3>OWNER DECLARATION</h3>
+
+<p>I AM NIROSH, THE OWNER AND FOUNDER OF NIROSH SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY.</p>
+
+<p>AS THE FOUNDER AND SYSTEM ARCHITECT, I PROVIDE DIRECT LEADERSHIP, STRATEGIC DIRECTION, AND PROFESSIONAL OVERSIGHT FOR THE ORGANIZATION'S OPERATIONS.</p>
+
+<p>TOGETHER WITH OUR PROFESSIONAL TEAM, WE DESIGN, DEVELOP, MAINTAIN, AND SUPPORT MODERN DIGITAL SOLUTIONS.</p>
+
+<p>OUR MISSION IS TO DELIVER ADVANCED SOFTWARE SOLUTIONS AND SYSTEM ARCHITECTURE SERVICES.</p>
+
+<h3>PROFESSIONAL VALUES</h3>
+
+<ul>
+<li>TRUST</li>
+<li>INNOVATION</li>
+<li>SECURITY</li>
+<li>TRANSPARENCY</li>
+<li>ACCOUNTABILITY</li>
+<li>PROFESSIONAL EXCELLENCE</li>
+</ul>
+
+</div>
+
+</section>
 JOIN OUR TEAM
 </div>
 
