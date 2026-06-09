@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nirosh Software</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -313,66 +313,6 @@ body.devtools-open{
 filter:blur(10px);
 pointer-events:none;
 }
-
-.owner-scroll{
-position:relative;
-width:100%;
-
-color:#4ff7ef;
-font-family:'Orbitron',sans-serif;
-
-text-transform:uppercase;
-letter-spacing:2px;
-
-font-size:10px;
-
-text-shadow:
-0 0 5px #4ff7ef,
-0 0 10px #4ff7ef,
-0 0 20px #4ff7ef;
-
-animation:ownerUp 10s linear infinite;
-}
-
-.owner-scroll h2{
-font-size:14px;
-text-align:center;
-margin-bottom:20px;
-}
-
-.owner-scroll h3{
-font-size:11px;
-margin-top:20px;
-margin-bottom:10px;
-}
-
-.owner-scroll p,
-.owner-scroll li{
-font-size:9px;
-line-height:1.5;
-letter-spacing:1px;
-}
-
-.owner-scroll ul{
-list-style:none;
-padding-left:0;
-}
-
-.owner-scroll li::before{
-content:"• ";
-}@keyframes ownerUp{
-
-0%{
-transform:translateY(100%);
-}
-
-100%{
-transform:translateY(-120%);
-}
-
-}
-
-
 </style>
 </head>
 
@@ -811,20 +751,7 @@ NIROSH - SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY •
 </section>
 
 <style>
-.owner-info-section{
-width:100%;
-overflow:hidden;
-position:relative;
-background:#111;
-padding:20px 0;
-}
 
-.owner-scroll{
-display:inline-block;
-white-space:nowrap;
-animation:textScroll 25s linear infinite;
-will-change:transform;
-}
 .animated-company-strip{
 
 position:relative;
@@ -879,25 +806,25 @@ overflow:hidden;
 .strip-track{
 
 display:inline-block;
-white-space:nowrap;
+padding-left:100%;
 font-size:22px;
 font-weight:700;
 letter-spacing:2px;
 color:white;
-animation:verticalScroll 12s linear infinite;
+animation:textScroll 18s linear infinite;
 
 }
 
 /* TEXT ANIMATION */
 
-@keyframes verticalScroll{
+@keyframes textScroll{
 
 0%{
-transform:translateY(100%);
+transform:translateX(0);
 }
 
 100%{
-transform:translateY(-100%);
+transform:translateX(-100%);
 }
 
 }
@@ -1224,44 +1151,8 @@ margin-right:6px;
 
 <div class="careers-container">
 
-<section class="owner-info-section">
-
-<div class="owner-scroll">
-
-<h2>BUSINESS OWNER INFORMATION</h2>
-
-<p><strong>OWNER :</strong> NIROSH</p>
-<p><strong>POSITION :</strong> FOUNDER & SYSTEM ARCHITECT</p>
-<p><strong>BUSINESS NAME :</strong> NIROSH SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY</p>
-<p><strong>LOCATION :</strong> KANDY / GAMPAHA AREA, SRI LANKA</p>
-<p><strong>EMAIL :</strong> MADUSHANNIROSH077@GMAIL.COM</p>
-<p><strong>PHONE :</strong> +94 75 470 8490</p>
-
-<h3>OWNER DECLARATION</h3>
-
-<p>I AM NIROSH, THE OWNER AND FOUNDER OF NIROSH SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY.</p>
-
-<p>AS THE FOUNDER AND SYSTEM ARCHITECT, I PROVIDE DIRECT LEADERSHIP, STRATEGIC DIRECTION, AND PROFESSIONAL OVERSIGHT FOR THE ORGANIZATION'S OPERATIONS.</p>
-
-<p>TOGETHER WITH OUR PROFESSIONAL TEAM, WE DESIGN, DEVELOP, MAINTAIN, AND SUPPORT MODERN DIGITAL SOLUTIONS.</p>
-
-<p>OUR MISSION IS TO DELIVER ADVANCED SOFTWARE SOLUTIONS AND SYSTEM ARCHITECTURE SERVICES.</p>
-
-<h3>PROFESSIONAL VALUES</h3>
-
-<ul>
-<li>TRUST</li>
-<li>INNOVATION</li>
-<li>SECURITY</li>
-<li>TRANSPARENCY</li>
-<li>ACCOUNTABILITY</li>
-<li>PROFESSIONAL EXCELLENCE</li>
-</ul>
-
-</div>
-
-</section>
-
+<div class="join-badge">
+JOIN OUR TEAM
 </div>
 
 <h2 class="careers-title">
