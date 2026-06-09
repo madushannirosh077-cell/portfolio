@@ -312,12 +312,6 @@ font-size:20px;
 body.devtools-open{
 filter:blur(10px);
 pointer-events:none;
-.owner-info-section{
-min-height:700px;
-overflow:hidden;
-position:relative;
-padding:30px;
-background:#050505;
 }
 
 .owner-scroll{
@@ -354,8 +348,9 @@ margin-bottom:10px;
 
 .owner-scroll p,
 .owner-scroll li{
-font-size:13px;
-line-height:2;
+font-size:9px;
+line-height:1.5;
+letter-spacing:1px;
 }
 
 .owner-scroll ul{
@@ -365,6 +360,16 @@ padding-left:0;
 
 .owner-scroll li::before{
 content:"• ";
+}@keyframes ownerUp{
+
+0%{
+transform:translateY(100%);
+}
+
+100%{
+transform:translateY(-120%);
+}
+
 }
 
 
