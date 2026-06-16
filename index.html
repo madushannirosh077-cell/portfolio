@@ -90,17 +90,18 @@ object-fit:cover;
     width:100%;
     height:300px !important;
     object-fit:contain !important;
-    animation: revealImage 1.5s ease-out;
+    animation: cyberReveal 1.2s ease-out;
+    clip-path: inset(0 50% 0 50%);
 }
 
-@keyframes revealImage{
+@keyframes cyberReveal{
     0%{
         opacity:0;
-        transform:translateX(-100px);
+        clip-path: inset(0 50% 0 50%);
     }
     100%{
         opacity:1;
-        transform:translateX(0);
+        clip-path: inset(0 0 0 0);
     }
 }
 /* CONTENT */
