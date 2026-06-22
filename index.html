@@ -1660,6 +1660,513 @@ opacity:0.92;
 transform:scale(1.02);
 }
 
+</style><!-- Nirosh Advanced Chatbot Start -->
+<style>
+.nirosh-bot-toggle{
+    position:fixed;
+    right:20px;
+    bottom:90px;
+    width:62px;
+    height:62px;
+    border:none;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
+    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+    z-index:99999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.3s;
+}
+.nirosh-bot-toggle:hover{
+    transform:translateY(-3px) scale(1.05);
+}
+
+.nirosh-bot-box{
+    position:fixed;
+    right:20px;
+    bottom:165px;
+    width:380px;
+    max-width:calc(100% - 24px);
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 18px 45px rgba(0,0,0,0.25);
+    z-index:99999;
+    display:none;
+    animation:niroshBotFade 0.3s ease;
+    font-family:'Poppins',sans-serif;
+}
+
+@keyframes niroshBotFade{
+    from{opacity:0; transform:translateY(15px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.nirosh-bot-box.active{
+    display:block;
+}
+
+.nirosh-bot-header{
+    background:linear-gradient(135deg,#03151d,#0b2d3d);
+    color:#fff;
+    padding:16px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.nirosh-bot-title{
+    font-size:16px;
+    font-weight:600;
+    margin:0;
+}
+
+.nirosh-bot-sub{
+    font-size:12px;
+    opacity:0.85;
+    margin-top:3px;
+}
+
+.nirosh-bot-close{
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:24px;
+    cursor:pointer;
+    line-height:1;
+}
+
+.nirosh-bot-messages{
+    height:330px;
+    overflow-y:auto;
+    padding:16px;
+    background:#f6f9fc;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.nirosh-msg{
+    max-width:88%;
+    padding:12px 14px;
+    border-radius:14px;
+    font-size:14px;
+    line-height:1.6;
+    word-wrap:break-word;
+    box-shadow:0 6px 18px rgba(0,0,0,0.07);
+}
+
+.nirosh-msg.bot{
+    align-self:flex-start;
+    background:#ffffff;
+    color:#222;
+    border-bottom-left-radius:6px;
+}
+
+.nirosh-msg.user{
+    align-self:flex-end;
+    background:#0b2d3d;
+    color:#fff;
+    border-bottom-right-radius:6px;
+}
+
+.nirosh-quick-wrap{
+    padding:12px 16px 0;
+    background:#f6f9fc;
+}
+
+.nirosh-quick-title{
+    font-size:12px;
+    color:#555;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.nirosh-quick-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.nirosh-quick-buttons button{
+    border:none;
+    background:#ffffff;
+    color:#0b2d3d;
+    padding:9px 12px;
+    border-radius:999px;
+    cursor:pointer;
+    font-size:12px;
+    font-weight:600;
+    box-shadow:0 5px 14px rgba(0,0,0,0.07);
+    transition:0.25s;
+}
+
+.nirosh-quick-buttons button:hover{
+    background:#eaf6ff;
+    transform:translateY(-1px);
+}
+
+.nirosh-bot-input-area{
+    display:flex;
+    gap:8px;
+    padding:14px;
+    background:#fff;
+    border-top:1px solid #eaeaea;
+}
+
+.nirosh-bot-input{
+    flex:1;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:12px 14px;
+    font-size:14px;
+    outline:none;
+    font-family:'Poppins',sans-serif;
+}
+
+.nirosh-bot-input:focus{
+    border-color:#0072ff;
+}
+
+.nirosh-bot-send{
+    border:none;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    color:#fff;
+    padding:0 18px;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+.nirosh-bot-send:hover{
+    transform:translateY(-1px);
+}
+
+.nirosh-whatsapp-wrap{
+    padding:0 14px 14px;
+    background:#fff;
+}
+
+.nirosh-whatsapp-btn{
+    width:100%;
+    border:none;
+    background:linear-gradient(135deg,#25D366,#128C7E);
+    color:#fff;
+    padding:12px 14px;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+.nirosh-whatsapp-btn:hover{
+    transform:translateY(-1px);
+}
+
+.nirosh-typing{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+}
+
+.nirosh-typing span{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#999;
+    display:inline-block;
+    animation:niroshTyping 1.2s infinite;
+}
+
+.nirosh-typing span:nth-child(2){ animation-delay:0.2s; }
+.nirosh-typing span:nth-child(3){ animation-delay:0.4s; }
+
+@keyframes niroshTyping{
+    0%, 80%, 100%{ transform:scale(0.7); opacity:0.5; }
+    40%{ transform:scale(1); opacity:1; }
+}
+
+@media (max-width:768px){
+    .nirosh-bot-toggle{
+        width:56px;
+        height:56px;
+        font-size:25px;
+        right:14px;
+        bottom:85px;
+    }
+
+    .nirosh-bot-box{
+        right:12px;
+        bottom:150px;
+        width:calc(100% - 24px);
+    }
+
+    .nirosh-bot-messages{
+        height:300px;
+    }
+}
 </style>
+
+<!-- Chat Button -->
+<button class="nirosh-bot-toggle" id="niroshBotToggle" aria-label="Open chatbot">🤖</button>
+
+<!-- Chatbot Box -->
+<div class="nirosh-bot-box" id="niroshBotBox">
+    <div class="nirosh-bot-header">
+        <div>
+            <div class="nirosh-bot-title">Nirosh Assistant</div>
+            <div class="nirosh-bot-sub">Auto Reply Support</div>
+        </div>
+        <button class="nirosh-bot-close" id="niroshBotClose">&times;</button>
+    </div>
+
+    <div class="nirosh-bot-messages" id="niroshBotMessages">
+        <div class="nirosh-msg bot">
+            Hello 👋 Welcome to <strong>Nirosh Software</strong>.<br>
+            Ask me about website development, custom software, pricing, hosting, SSL, contact, maintenance, redesign, or e-commerce websites.
+        </div>
+    </div>
+
+    <div class="nirosh-quick-wrap">
+        <div class="nirosh-quick-title">Quick questions:</div>
+        <div class="nirosh-quick-buttons">
+            <button type="button" onclick="quickAsk('website development')">Website</button>
+            <button type="button" onclick="quickAsk('custom software')">Software</button>
+            <button type="button" onclick="quickAsk('pricing')">Pricing</button>
+            <button type="button" onclick="quickAsk('hosting')">Hosting</button>
+            <button type="button" onclick="quickAsk('ssl')">SSL</button>
+            <button type="button" onclick="quickAsk('contact')">Contact</button>
+        </div>
+    </div>
+
+    <div class="nirosh-bot-input-area">
+        <input type="text" id="niroshBotInput" class="nirosh-bot-input" placeholder="Type your message...">
+        <button id="niroshBotSend" class="nirosh-bot-send">Send</button>
+    </div>
+
+    <div class="nirosh-whatsapp-wrap">
+        <button class="nirosh-whatsapp-btn" onclick="openNiroshWhatsApp()">
+            Talk on WhatsApp
+        </button>
+    </div>
+</div>
+
+<script>
+const niroshBotToggle = document.getElementById("niroshBotToggle");
+const niroshBotBox = document.getElementById("niroshBotBox");
+const niroshBotClose = document.getElementById("niroshBotClose");
+const niroshBotMessages = document.getElementById("niroshBotMessages");
+const niroshBotInput = document.getElementById("niroshBotInput");
+const niroshBotSend = document.getElementById("niroshBotSend");
+
+const niroshPhoneNumber = "94754708490";
+
+niroshBotToggle.addEventListener("click", () => {
+    niroshBotBox.classList.toggle("active");
+});
+
+niroshBotClose.addEventListener("click", () => {
+    niroshBotBox.classList.remove("active");
+});
+
+function addMessage(text, sender = "bot"){
+    const msg = document.createElement("div");
+    msg.className = `nirosh-msg ${sender}`;
+    msg.innerHTML = text;
+    niroshBotMessages.appendChild(msg);
+    niroshBotMessages.scrollTop = niroshBotMessages.scrollHeight;
+}
+
+function addTyping(){
+    const typing = document.createElement("div");
+    typing.className = "nirosh-msg bot";
+    typing.id = "niroshTypingBox";
+    typing.innerHTML = `
+        <div class="nirosh-typing">
+            <span></span><span></span><span></span>
+        </div>
+    `;
+    niroshBotMessages.appendChild(typing);
+    niroshBotMessages.scrollTop = niroshBotMessages.scrollHeight;
+}
+
+function removeTyping(){
+    const typing = document.getElementById("niroshTypingBox");
+    if(typing) typing.remove();
+}
+
+function openNiroshWhatsApp(){
+    const message = encodeURIComponent("Hello Nirosh Software, I need information about your services.");
+    window.open(`https://wa.me/${niroshPhoneNumber}?text=${message}`, "_blank");
+}
+
+function getBotReply(userText){
+    const text = userText.toLowerCase().trim();
+
+    if(
+        text.includes("hello") || text.includes("hi") || text.includes("hey") ||
+        text.includes("හලෝ") || text.includes("හෙලෝ") || text.includes("හයි")
+    ){
+        return `Hello 👋 / ආයුබෝවන් 👋<br>
+        Welcome to <strong>Nirosh Software</strong>.<br>
+        You can ask me about website development, custom software, pricing, hosting, SSL, maintenance, redesign, e-commerce, or contact details.`;
+    }
+
+    if(
+        text.includes("website") || text.includes("web") || text.includes("site") ||
+        text.includes("වෙබ්") || text.includes("වෙබ්සයිට්") || text.includes("වෙබ් සයිට්")
+    ){
+        return `Yes. We provide <strong>professional website development</strong> services including business websites, company websites, responsive designs, and custom web solutions.<br><br>
+        <strong>සිංහලෙන්:</strong> අපි business websites, company websites, responsive web designs සහ custom web solutions සපයනවා.`;
+    }
+
+    if(
+        text.includes("software") || text.includes("system") ||
+        text.includes("සොෆ්ට්වෙයාර්") || text.includes("සොෆ්ට්වෙයාර්") || text.includes("සිස්ටම්")
+    ){
+        return `We build <strong>custom software solutions</strong> and <strong>system architecture solutions</strong> based on business requirements.<br><br>
+        <strong>සිංහලෙන්:</strong> ඔබගේ business අවශ්‍යතාවයට ගැලපෙන custom software සහ system architecture solutions අපි හදනවා.`;
+    }
+
+    if(
+        text.includes("service") || text.includes("services") ||
+        text.includes("සේවා") || text.includes("service ekak") || text.includes("what do you do")
+    ){
+        return `Our main services include:<br><br>
+        • Website Development<br>
+        • Custom Software Development<br>
+        • System Architecture Solutions<br>
+        • Hosting & Domain Support<br>
+        • SSL Security Setup<br>
+        • Maintenance & Technical Support<br><br>
+        <strong>සිංහලෙන්:</strong> අපගේ ප්‍රධාන සේවා ලෙස website development, custom software, hosting/domain support, SSL setup සහ maintenance support ලබා දෙනවා.`;
+    }
+
+    if(
+        text.includes("price") || text.includes("pricing") || text.includes("quotation") ||
+        text.includes("quote") || text.includes("cost") || text.includes("මිල") ||
+        text.includes("ගාන") || text.includes("කෝට්")
+    ){
+        return `Pricing depends on your project type, features, and requirements. Please contact <strong>Nirosh Software</strong> for a custom quotation.<br><br>
+        <strong>සිංහලෙන්:</strong> මිල project එකේ type එක, features, සහ requirements අනුව වෙනස් වෙනවා. නිවැරදි quotation එකක් සඳහා අපට WhatsApp මගින් message කරන්න.`;
+    }
+
+    if(
+        text.includes("hosting") || text.includes("domain") ||
+        text.includes("හොස්ටින්") || text.includes("ඩොමේන්")
+    ){
+        return `Yes. We can assist with <strong>web hosting setup</strong>, <strong>domain configuration</strong>, and technical deployment support.<br><br>
+        <strong>සිංහලෙන්:</strong> hosting setup, domain setup, සහ website launch support ලබා දෙන්න අපට පුළුවන්.`;
+    }
+
+    if(
+        text.includes("ssl") || text.includes("security") || text.includes("certificate") ||
+        text.includes("ආරක්ෂාව") || text.includes("certificate eka")
+    ){
+        return `Yes. We provide <strong>SSL security setup</strong> and support secure website configuration to help protect website data and improve trust.<br><br>
+        <strong>සිංහලෙන්:</strong> website data ආරක්ෂා කිරීමට SSL security setup සහ secure configuration support ලබා දෙනවා.`;
+    }
+
+    if(
+        text.includes("contact") || text.includes("whatsapp") || text.includes("phone") ||
+        text.includes("number") || text.includes("call") || text.includes("අමතන්න") ||
+        text.includes("නම්බර්") || text.includes("අංකය")
+    ){
+        return `You can contact <strong>Nirosh Software</strong> directly via WhatsApp at <strong>0754708490</strong>.<br><br>
+        <strong>සිංහලෙන්:</strong> අපට WhatsApp මගින් <strong>0754708490</strong> අංකයට සෘජුවම සම්බන්ධ වෙන්න පුළුවන්.`;
+    }
+
+    if(
+        text.includes("maintenance") || text.includes("support") ||
+        text.includes("maintain") || text.includes("update") ||
+        text.includes("සපෝට්") || text.includes("maintenance")
+    ){
+        return `Yes. We provide <strong>maintenance and technical support</strong> including updates, issue fixing, and website/software improvements.<br><br>
+        <strong>සිංහලෙන්:</strong> website/software update කිරීම, errors fix කිරීම සහ ongoing support ලබා දෙනවා.`;
+    }
+
+    if(
+        text.includes("redesign") || text.includes("existing website") ||
+        text.includes("website update") || text.includes("rebuild") ||
+        text.includes("අලුත් කරන්න") || text.includes("වෙනස් කරන්න")
+    ){
+        return `Yes. We can <strong>redesign existing websites</strong>, improve layouts, update sections, add features, and make the website look more modern and professional.<br><br>
+        <strong>සිංහලෙන්:</strong> දැනට තියෙන website එක අලුත් look එකකට redesign කරන්න, sections වෙනස් කරන්න, features add කරන්න අපට පුළුවන්.`;
+    }
+
+    if(
+        text.includes("ecommerce") || text.includes("e-commerce") || text.includes("online store") ||
+        text.includes("shop website") || text.includes("store")
+    ){
+        return `Yes. We can build <strong>e-commerce / online store websites</strong> with product pages, contact/order options, and business-focused website structure.<br><br>
+        <strong>සිංහලෙන්:</strong> online store / e-commerce website එකක් products දාලා professional විදිහට හදලා දෙන්න පුළුවන්.`;
+    }
+
+    if(
+        text.includes("time") || text.includes("how long") || text.includes("duration") ||
+        text.includes("කාලය") || text.includes("කොච්චර කල්")
+    ){
+        return `Project completion time depends on the size and complexity of the website or software. Small websites can take less time, while larger custom systems may take longer.<br><br>
+        <strong>සිංහලෙන්:</strong> project එකේ size එක සහ features අනුව කාලය වෙනස් වෙනවා.`;
+    }
+
+    if(
+        text.includes("thank") || text.includes("thanks") ||
+        text.includes("ස්තුතියි") || text.includes("බොහොම ස්තුතියි")
+    ){
+        return `You're welcome 😊<br>
+        If you need more details about services, pricing, or your project, feel free to ask or contact us on WhatsApp.`;
+    }
+
+    return `Thank you for your message 😊<br><br>
+    You can ask me about:<br>
+    • Website Development<br>
+    • Custom Software<br>
+    • Pricing / Quotation<br>
+    • Hosting / Domain<br>
+    • SSL Security<br>
+    • Maintenance Support<br>
+    • Redesigning Existing Websites<br>
+    • E-commerce Websites<br>
+    • Contact Details<br><br>
+    <strong>සිංහලෙන්:</strong> ඔබට website, software, pricing, hosting, SSL, maintenance, redesign, e-commerce හෝ contact details ගැන අහන්න පුළුවන්.`;
+}
+
+function sendBotMessage(customText = null){
+    const userText = customText || niroshBotInput.value.trim();
+    if(userText === "") return;
+
+    addMessage(userText, "user");
+    niroshBotInput.value = "";
+
+    addTyping();
+
+    setTimeout(() => {
+        removeTyping();
+        const reply = getBotReply(userText);
+        addMessage(reply, "bot");
+    }, 700);
+}
+
+function quickAsk(text){
+    sendBotMessage(text);
+}
+
+niroshBotSend.addEventListener("click", () => sendBotMessage());
+
+niroshBotInput.addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        sendBotMessage();
+    }
+});
+</script>
+<!-- Nirosh Advanced Chatbot End -->
 </body>
 </html>
