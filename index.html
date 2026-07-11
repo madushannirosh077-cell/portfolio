@@ -2434,6 +2434,19 @@ niroshBotInput.addEventListener("keypress", function(e){
         sendBotMessage();
     }
 });
+    function toggleBlog(id, btn) {
+
+    var x = document.getElementById(id);
+
+    if (x.style.display === "block") {
+        x.style.display = "none";
+        btn.innerHTML = "READ MORE";
+    } else {
+        x.style.display = "block";
+        btn.innerHTML = "SHOW LESS";
+    }
+
+}
 </script>
 <!-- Nirosh Advanced Chatbot End -->
 </body>
