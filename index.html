@@ -502,6 +502,91 @@ font-size:8px;
 }
 .more-text{
     display:none;
+}/* ===== GOOGLE REVIEW SECTION ===== */
+
+.google-review-section{
+    padding:70px 20px;
+    background:linear-gradient(135deg,#0d1117,#161b22);
+    text-align:center;
+}
+
+.google-review-section .review-container{
+    max-width:800px;
+    margin:0 auto;
+    background:#1c2128;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:45px 30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+}
+
+.google-review-section h2{
+    color:#ffffff;
+    font-size:32px;
+    margin-bottom:15px;
+    letter-spacing:1px;
+}
+
+.google-review-section p{
+    color:#c9d1d9;
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.review-stars{
+    font-size:32px;
+    letter-spacing:6px;
+    margin-bottom:30px;
+}
+
+.review-btn{
+    display:inline-block;
+    background:#18e0c4;
+    color:#020817;
+    padding:16px 38px;
+    border-radius:12px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:700;
+    transition:all .3s ease;
+}
+
+.review-btn:hover{
+    background:#ffffff;
+    color:#020817;
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(24,224,196,.35);
+}
+
+@media (max-width:768px){
+
+    .google-review-section{
+        padding:50px 15px;
+    }
+
+    .google-review-section .review-container{
+        padding:30px 20px;
+    }
+
+    .google-review-section h2{
+        font-size:24px;
+    }
+
+    .google-review-section p{
+        font-size:15px;
+    }
+
+    .review-stars{
+        font-size:26px;
+    }
+
+    .review-btn{
+        width:100%;
+        font-size:16px;
+        padding:14px 20px;
+    }
+
 }
 </style>
 
@@ -1955,7 +2040,32 @@ Sri Lanka | Kandy <br>
 WhatsApp: +94 75 470 8490
 </p>
 </footer>
+<!-- GOOGLE REVIEW SECTION -->
+<section class="google-review-section">
 
+    <div class="review-container">
+
+        <h2>⭐ LOVE OUR SERVICE?</h2>
+
+        <p>
+            Your feedback helps us improve and allows other businesses
+            to confidently choose our software development services.
+        </p>
+
+        <div class="review-stars">
+            ⭐⭐⭐⭐⭐
+        </div>
+
+        <a href="https://g.page/r/CSBsuhahQPX7EBM/review"
+           target="_blank"
+           class="review-btn">
+            Leave a 5-Star Google Review
+        </a>
+
+    </div>
+
+</section>
+<!-- END GOOGLE REVIEW SECTION -->
 <a class="whatsapp" href="https://wa.me/94754708490" target="_blank">
 <span>💬</span> Chat on WhatsApp
 </a>
