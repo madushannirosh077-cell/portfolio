@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Benefits & Rights | Nirosh Company</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: white;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+            user-drag: none;
+        }
+
+
+        /* =========================================
+           NIROSH | EMPLOYEE BENEFITS
+        ========================================= */
+
+        .employee-benefits-section {
+            min-height: 100vh;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .employee-benefits-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .employee-benefits-badge {
+            width: fit-content;
+            margin: 0 auto 18px;
+            padding: 8px 16px;
+
+            border: 1px solid rgba(0,200,255,.25);
+            border-radius: 50px;
+
+            color: #00c8ff;
+            background: rgba(0,200,255,.04);
+
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .employee-benefits-header {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .employee-benefits-header h2 {
+            margin: 0 0 18px;
+
+            color: #fff;
+
+            font-size: clamp(34px,5vw,55px);
+            line-height: 1.1;
+        }
+
+        .employee-benefits-header h2 span {
+            color: #00c8ff;
+        }
+
+        .employee-benefits-header p {
+            color: rgba(255,255,255,.58);
+
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+
+        /* 60+ EMPLOYEES */
+
+        .employee-team-highlight {
+            display: flex;
+            align-items: center;
+
+            gap: 25px;
+
+            margin: 55px 0 35px;
+            padding: 30px;
+
+            border: 1px solid rgba(0,200,255,.15);
+            border-radius: 25px;
+
+            background: rgba(0,200,255,.035);
+        }
+
+        .employee-team-icon {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            border-radius: 18px;
+
+            background: rgba(0,200,255,.08);
+
+            font-size: 28px;
+        }
+
+        .employee-team-highlight span {
+            color: #00c8ff;
+
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .employee-team-highlight h3 {
+            margin: 6px 0;
+
+            color: #fff;
+
+            font-size: 27px;
+        }
+
+        .employee-team-highlight p {
+            margin: 0;
+
+            color: rgba(255,255,255,.52);
+
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* BENEFIT CARDS */
+
+        .employee-benefits-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+        }
+
+        .employee-benefit-card {
+            padding: 28px;
+
+            border: 1px solid rgba(255,255,255,.07);
+            border-radius: 22px;
+
+            background: rgba(255,255,255,.025);
+
+            transition: .35s ease;
+        }
+
+        .employee-benefit-card:hover {
+            transform: translateY(-7px);
+
+            border-color:
+                rgba(0,200,255,.25);
+        }
+
+        .employee-benefit-icon {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 18px;
+
+            border-radius: 15px;
+
+            background: rgba(0,200,255,.07);
+
+            font-size: 24px;
+        }
+
+        .employee-benefit-card h3 {
+            margin: 0 0 10px;
+
+            color: #fff;
+
+            font-size: 18px;
+        }
+
+        .employee-benefit-card p {
+            margin: 0;
+
+            color: rgba(255,255,255,.5);
+
+            font-size: 12px;
+            line-height: 1.75;
+        }
+
+
+        /* FOOTER */
+
+        .employee-benefits-footer {
+            margin-top: 35px;
+            padding: 28px;
+
+            text-align: center;
+
+            border-top: 1px solid rgba(255,255,255,.07);
+        }
+
+        .employee-benefits-footer strong {
+            color: #00c8ff;
+
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .employee-benefits-footer p {
+            max-width: 700px;
+
+            margin: 10px auto 0;
+
+            color: rgba(255,255,255,.45);
+
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .employee-benefits-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .employee-benefits-section {
+                padding: 75px 15px;
+            }
+
+            .employee-benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .employee-team-highlight {
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NIROSH | EMPLOYEE BENEFITS & RIGHTS
+========================================= -->
+
+<section class="employee-benefits-section">
+
+    <div class="employee-benefits-container">
+
+        <div class="employee-benefits-badge">
+            OUR PEOPLE • OUR TEAM
+        </div>
+
+        <div class="employee-benefits-header">
+
+            <h2>
+                Employee Benefits
+                <span>& Rights</span>
+            </h2>
+
+            <p>
+                At Nirosh Company Team, we value our employees and
+                are committed to maintaining a professional, fair
+                and supportive working environment for our growing
+                team of more than 60 employees.
+            </p>
+
+        </div>
+
+
+        <!-- 60+ EMPLOYEES -->
+
+        <div class="employee-team-highlight">
+
+            <div class="employee-team-icon">
+                👥
+            </div>
+
+            <div>
+
+                <span>
+                    OUR PROFESSIONAL TEAM
+                </span>
+
+                <h3>
+                    60+ Employees
+                </h3>
+
+                <p>
+                    Our growing team consists of more than 60 employees
+                    working together to deliver reliable technology,
+                    business and digital solutions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BENEFITS -->
+
+        <div class="employee-benefits-grid">
+
+
+            <div class="employee-benefit-card">
+
+                <div class="employee-benefit-icon">
+                    💰
+                </div>
+
+                <h3>
+                    Salary & Allowances
+                </h3>
+
+                <p>
+                    Employees receive salaries and applicable allowances
+                    according to their employment terms, responsibilities
+                    and applicable requirements.
+                </p>
+
+            </div>
+
+
+            <div class="employee-benefit-card">
+
+                <div class="employee-benefit-icon">
+                    ⏱️
+                </div>
+
+                <h3>
+                    Overtime Benefits
+                </h3>
+
+                <p>
+                    Applicable overtime work is managed and compensated
+                    according to the relevant employment terms and
+                    applicable Sri Lankan requirements.
+                </p>
+
+            </div>
+
+
+            <div class="employee-benefit-card">
+
+                <div class="employee-benefit-icon">
+                    📅
+                </div>
+
+                <h3>
+                    Leave & Time Off
+                </h3>
+
+                <p>
+                    Employees are provided with applicable leave and
+                    time-off arrangements in accordance with employment
+                    terms and applicable requirements.
+                </p>
+
+            </div>
+
+
+            <div class="employee-benefit-card">
+
+                <div class="employee-benefit-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Employee Rights
+                </h3>
+
+                <p>
+                    We support a professional working environment where
+                    employee rights, dignity and fair workplace practices
+                    are respected.
+                </p>
+
+            </div>
+
+
+            <div class="employee-benefit-card">
+
+                <div class="employee-benefit-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Employee Welfare
+                </h3>
+
+                <p>
+                    We value employee wellbeing and encourage a positive,
+                    respectful and collaborative workplace culture.
+                </p>
+
+            </div>
+
+
+            <div class="employee-benefit-card">
+
+                <div class="employee-benefit-icon">
+                    📋
+                </div>
+
+                <h3>
+                    Employment Records
+                </h3>
+
+                <p>
+                    Employee information, payroll-related records and
+                    applicable employment documentation are maintained
+                    through structured administrative processes.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="employee-benefits-footer">
+
+            <strong>
+                PEOPLE ARE AT THE HEART OF OUR COMPANY.
+            </strong>
+
+            <p>
+                Nirosh Company Team is committed to building a professional
+                environment where our employees can contribute, grow and
+                work together towards a shared future.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</body>
+</html>
