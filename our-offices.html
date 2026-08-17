@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Our Offices & Service Access | Nirosh Company</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+
+
+        body {
+            background: #0a0a0a;
+            color: white;
+        }
+
+
+        /* =========================================
+           NIROSH | OUR OFFICES & SERVICE ACCESS
+        ========================================= */
+
+        .nirosh-access-section {
+            padding: 100px 20px;
+            overflow: hidden;
+        }
+
+        .nirosh-access-container {
+            width: 100%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+
+        /* =========================================
+           BADGE
+        ========================================= */
+
+        .nirosh-access-badge {
+            width: fit-content;
+            margin: 0 auto 18px;
+
+            padding: 8px 17px;
+
+            border-radius: 50px;
+
+            border: 1px solid rgba(0, 200, 255, .25);
+
+            color: #00c8ff;
+
+            font-size: 9px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .nirosh-access-header {
+            max-width: 800px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .nirosh-access-header h2 {
+            margin: 0 0 18px;
+
+            color: #fff;
+
+            font-size: clamp(34px, 5vw, 55px);
+
+            line-height: 1.1;
+        }
+
+        .nirosh-access-header h2 span {
+            color: #00c8ff;
+        }
+
+        .nirosh-access-header p {
+            color: rgba(255, 255, 255, .55);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           OFFICE GRID
+        ========================================= */
+
+        .nirosh-office-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 22px;
+
+            margin-top: 55px;
+        }
+
+
+        /* =========================================
+           OFFICE CARD
+        ========================================= */
+
+        .nirosh-office-card {
+            padding: 35px;
+
+            border-radius: 26px;
+
+            border: 1px solid rgba(255, 255, 255, .08);
+
+            background: rgba(255, 255, 255, .025);
+
+            transition: .35s ease;
+        }
+
+        .nirosh-office-card:hover {
+            transform: translateY(-7px);
+
+            border-color: rgba(0, 200, 255, .3);
+        }
+
+
+        /* KANDY FEATURED */
+
+        .featured-office {
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(0, 200, 255, .08),
+                    rgba(255, 255, 255, .025)
+                );
+
+            border-color: rgba(0, 200, 255, .2);
+        }
+
+
+        /* =========================================
+           OFFICE ICON
+        ========================================= */
+
+        .nirosh-office-icon {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 20px;
+
+            border-radius: 18px;
+
+            background: rgba(0, 200, 255, .07);
+
+            font-size: 28px;
+        }
+
+
+        /* =========================================
+           OFFICE LABEL
+        ========================================= */
+
+        .nirosh-office-label {
+            color: #00c8ff;
+
+            font-size: 9px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* =========================================
+           OFFICE TITLE
+        ========================================= */
+
+        .nirosh-office-card h3 {
+            margin: 5px 0 0;
+
+            color: #fff;
+
+            font-size: 32px;
+
+            line-height: 1.2;
+        }
+
+        .nirosh-office-card h4 {
+            margin: 3px 0 15px;
+
+            color: rgba(255, 255, 255, .65);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           OFFICE DESCRIPTION
+        ========================================= */
+
+        .nirosh-office-card p {
+            color: rgba(255, 255, 255, .5);
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           OFFICE STATUS
+        ========================================= */
+
+        .nirosh-office-status {
+            display: inline-block;
+
+            margin-top: 12px;
+
+            padding: 8px 12px;
+
+            border-radius: 8px;
+
+            background: rgba(0, 200, 255, .06);
+
+            color: #00c8ff;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: .5px;
+        }
+
+
+        /* =========================================
+           ONLINE SERVICE
+        ========================================= */
+
+        .nirosh-online-service {
+            display: flex;
+
+            align-items: center;
+
+            gap: 22px;
+
+            margin-top: 25px;
+
+            padding: 30px;
+
+            border-radius: 25px;
+
+            border: 1px solid rgba(255, 255, 255, .08);
+
+            background: rgba(255, 255, 255, .025);
+        }
+
+        .nirosh-online-icon {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            border-radius: 18px;
+
+            background: rgba(0, 200, 255, .07);
+
+            font-size: 27px;
+        }
+
+        .nirosh-online-content {
+            flex: 1;
+        }
+
+        .nirosh-online-content > span {
+            color: #00c8ff;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+        .nirosh-online-content h3 {
+            margin: 6px 0 8px;
+
+            color: #fff;
+
+            font-size: 24px;
+        }
+
+        .nirosh-online-content p {
+            margin: 0;
+
+            color: rgba(255, 255, 255, .5);
+
+            font-size: 12px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           ONLINE TAGS
+        ========================================= */
+
+        .nirosh-online-tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 14px;
+        }
+
+        .nirosh-online-tags b {
+            padding: 6px 9px;
+
+            border-radius: 7px;
+
+            background: rgba(255, 255, 255, .04);
+
+            color: rgba(255, 255, 255, .48);
+
+            font-size: 9px;
+        }
+
+
+        /* =========================================
+           APPOINTMENT SECTION
+        ========================================= */
+
+        .nirosh-appointment-section {
+            margin-top: 55px;
+
+            padding: 40px;
+
+            border-radius: 28px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(0, 200, 255, .05),
+                    rgba(255, 255, 255, .02)
+                );
+
+            border: 1px solid rgba(0, 200, 255, .12);
+        }
+
+
+        /* =========================================
+           APPOINTMENT HEADER
+        ========================================= */
+
+        .nirosh-appointment-header {
+            max-width: 750px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .nirosh-appointment-header > span {
+            color: #00c8ff;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+        .nirosh-appointment-header h3 {
+            margin: 7px 0 10px;
+
+            color: #fff;
+
+            font-size: 30px;
+        }
+
+        .nirosh-appointment-header p {
+            color: rgba(255, 255, 255, .5);
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           CONTACT INFORMATION
+        ========================================= */
+
+        .nirosh-contact-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+
+            margin-top: 30px;
+        }
+
+        .nirosh-contact-info {
+            display: flex;
+
+            align-items: center;
+
+            gap: 17px;
+
+            padding: 23px;
+
+            border-radius: 19px;
+
+            background: rgba(255, 255, 255, .03);
+
+            border: 1px solid rgba(255, 255, 255, .07);
+        }
+
+
+        /* CONTACT ICON */
+
+        .nirosh-contact-icon {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            border-radius: 15px;
+
+            background: rgba(0, 200, 255, .07);
+
+            font-size: 23px;
+        }
+
+
+        /* CONTACT TEXT */
+
+        .nirosh-contact-info span {
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: #00c8ff;
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+        }
+
+        .nirosh-contact-info strong {
+            display: block;
+
+            color: #fff;
+
+            font-size: 15px;
+
+            line-height: 1.4;
+
+            word-break: break-word;
+        }
+
+        .nirosh-contact-info p {
+            margin: 5px 0 0;
+
+            color: rgba(255, 255, 255, .4);
+
+            font-size: 10px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           SERVICE ACCESS HIGHLIGHT
+        ========================================= */
+
+        .nirosh-service-access-highlight {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+        .nirosh-service-access-item {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 20px;
+
+            border-radius: 18px;
+
+            background: rgba(255, 255, 255, .025);
+
+            border: 1px solid rgba(255, 255, 255, .07);
+        }
+
+        .nirosh-service-access-icon {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            border-radius: 13px;
+
+            background: rgba(0, 200, 255, .07);
+
+            font-size: 20px;
+        }
+
+        .nirosh-service-access-item strong {
+            display: block;
+
+            color: #fff;
+
+            font-size: 12px;
+        }
+
+        .nirosh-service-access-item p {
+            margin: 5px 0 0;
+
+            color: rgba(255, 255, 255, .4);
+
+            font-size: 10px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           FOOTER MESSAGE
+        ========================================= */
+
+        .nirosh-access-footer {
+            margin-top: 40px;
+
+            text-align: center;
+        }
+
+        .nirosh-access-footer strong {
+            color: #00c8ff;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+        }
+
+        .nirosh-access-footer p {
+            max-width: 650px;
+
+            margin: 10px auto 0;
+
+            color: rgba(255, 255, 255, .43);
+
+            font-size: 11px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 750px) {
+
+            .nirosh-access-section {
+                padding: 75px 15px;
+            }
+
+            .nirosh-office-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nirosh-contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nirosh-service-access-highlight {
+                grid-template-columns: 1fr;
+            }
+
+            .nirosh-appointment-section {
+                padding: 28px 18px;
+            }
+
+            .nirosh-online-service {
+                align-items: flex-start;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 450px) {
+
+            .nirosh-online-service {
+                flex-direction: column;
+            }
+
+            .nirosh-contact-info {
+                align-items: flex-start;
+            }
+
+            .nirosh-contact-info strong {
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NIROSH | OUR OFFICES & SERVICE ACCESS
+========================================= -->
+
+<section class="nirosh-access-section">
+
+    <div class="nirosh-access-container">
+
+
+        <!-- SECTION BADGE -->
+
+        <div class="nirosh-access-badge">
+            OUR LOCATIONS • SERVICE ACCESS
+        </div>
+
+
+        <!-- SECTION HEADER -->
+
+        <div class="nirosh-access-header">
+
+            <h2>
+                Our Offices
+                <span>& Service Access</span>
+            </h2>
+
+            <p>
+                Nirosh Company Team provides professional technology,
+                software and digital services through our physical
+                office locations, while convenient online services
+                are available for customers who are located far away.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================
+             OFFICE CARDS
+        ====================================== -->
+
+        <div class="nirosh-office-grid">
+
+
+            <!-- KANDY HEAD OFFICE -->
+
+            <div class="nirosh-office-card featured-office">
+
+                <div class="nirosh-office-icon">
+                    🏢
+                </div>
+
+                <div class="nirosh-office-label">
+                    HEAD OFFICE
+                </div>
+
+                <h3>
+                    Kandy
+                </h3>
+
+                <h4>
+                    Kandy Main Office
+                </h4>
+
+                <p>
+                    Customers can visit our Kandy Head Office and
+                    meet the Nirosh Company Team directly to discuss
+                    their software, technology, computer equipment
+                    and other digital service requirements.
+                </p>
+
+                <div class="nirosh-office-status">
+                    ✓ IN-PERSON SERVICES AVAILABLE
+                </div>
+
+            </div>
+
+
+            <!-- GAMPAHA BRANCH -->
+
+            <div class="nirosh-office-card">
+
+                <div class="nirosh-office-icon">
+                    📍
+                </div>
+
+                <div class="nirosh-office-label">
+                    BRANCH OFFICE
+                </div>
+
+                <h3>
+                    Gampaha
+                </h3>
+
+                <h4>
+                    Gampaha Branch
+                </h4>
+
+                <p>
+                    Customers can also visit our Gampaha Branch
+                    and meet the Nirosh Company Team directly to
+                    discuss their requirements and receive available
+                    services at the branch.
+                </p>
+
+                <div class="nirosh-office-status">
+                    ✓ IN-PERSON SERVICES AVAILABLE
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             ONLINE SERVICES
+        ====================================== -->
+
+        <div class="nirosh-online-service">
+
+            <div class="nirosh-online-icon">
+                🌐
+            </div>
+
+            <div class="nirosh-online-content">
+
+                <span>
+                    FOR CUSTOMERS LIVING FAR AWAY
+                </span>
+
+                <h3>
+                    Online Services
+                </h3>
+
+                <p>
+                    Customers who live far away from our Kandy Head
+                    Office or Gampaha Branch can receive available
+                    services and support online without travelling
+                    to our physical locations.
+                </p>
+
+                <div class="nirosh-online-tags">
+
+                    <b>Online Consultation</b>
+                    <b>Remote Services</b>
+                    <b>Digital Communication</b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             APPOINTMENT INFORMATION
+        ====================================== -->
+
+        <div class="nirosh-appointment-section">
+
+            <div class="nirosh-appointment-header">
+
+                <span>
+                    PLAN YOUR VISIT
+                </span>
+
+                <h3>
+                    Appointments & Contact
+                </h3>
+
+                <p>
+                    Customers who wish to visit our Kandy Head Office
+                    or Gampaha Branch can contact the Nirosh Company
+                    Team in advance through WhatsApp or Email and
+                    arrange a convenient appointment time.
+                </p>
+
+            </div>
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="nirosh-contact-grid">
+
+
+                <!-- PHONE / WHATSAPP -->
+
+                <div class="nirosh-contact-info">
+
+                    <div class="nirosh-contact-icon">
+                        📱
+                    </div>
+
+                    <div>
+
+                        <span>
+                            PHONE / WHATSAPP
+                        </span>
+
+                        <strong>
+                            075 470 8490
+                        </strong>
+
+                        <p>
+                            Available for inquiries and
+                            appointment arrangements.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="nirosh-contact-info">
+
+                    <div class="nirosh-contact-icon">
+                        📧
+                    </div>
+
+                    <div>
+
+                        <span>
+                            EMAIL
+                        </span>
+
+                        <strong>
+                            MADUSHANNIROSH077@GMAIL.COM
+                        </strong>
+
+                        <p>
+                            Contact us by email for inquiries
+                            and appointment arrangements.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             SERVICE ACCESS HIGHLIGHT
+        ====================================== -->
+
+        <div class="nirosh-service-access-highlight">
+
+
+            <!-- PHYSICAL SERVICE -->
+
+            <div class="nirosh-service-access-item">
+
+                <div class="nirosh-service-access-icon">
+                    🏢
+                </div>
+
+                <div>
+
+                    <strong>
+                        Direct In-Person Services
+                    </strong>
+
+                    <p>
+                        Visit our Kandy Head Office or
+                        Gampaha Branch.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ONLINE SERVICE -->
+
+            <div class="nirosh-service-access-item">
+
+                <div class="nirosh-service-access-icon">
+                    🌐
+                </div>
+
+                <div>
+
+                    <strong>
+                        Online Services for Distant Customers
+                    </strong>
+
+                    <p>
+                        Convenient online access for customers
+                        located far away.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             FINAL MESSAGE
+        ====================================== -->
+
+        <div class="nirosh-access-footer">
+
+            <strong>
+                IN-PERSON OR ONLINE — WE ARE HERE TO SERVE YOU.
+            </strong>
+
+            <p>
+                Visit our Kandy Head Office or Gampaha Branch
+                for direct services, or choose online service
+                access if you are located far away.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</body>
+
+</html>
