@@ -1343,88 +1343,191 @@ SUBMIT YOUR CV
 </section>
 
 <!-- CAREERS SECTION END -->
-    <div style="display:flex;
-            flex-wrap:wrap;
-            justify-content:center;
-            align-items:center;
-            gap:14px;
-            margin:45px 20px;">
+ <style>
+.nirosh-modern-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 45px 20px;
+}
+
+.nirosh-modern-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(100%, 330px);
+    min-height: 56px;
+    padding: 0 22px;
+
+    border: 1px solid rgba(0, 200, 255, 0.55);
+    border-radius: 16px;
+
+    color: #00c8ff;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 200, 255, 0.08),
+        rgba(255, 255, 255, 0.025)
+    );
+
+    box-shadow:
+        0 0 0 rgba(0, 200, 255, 0),
+        inset 0 0 18px rgba(0, 200, 255, 0.025);
+
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+
+    overflow: hidden;
+
+    animation: niroshButtonPulse 2.8s ease-in-out infinite;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.nirosh-modern-button:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.nirosh-modern-button:nth-child(3) {
+    animation-delay: 1.6s;
+}
+
+.nirosh-modern-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 55%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 200, 255, 0.12),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    animation: niroshButtonScan 3.5s ease-in-out infinite;
+}
+
+.nirosh-modern-button span {
+    position: relative;
+    z-index: 2;
+}
+
+.nirosh-modern-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.nirosh-modern-button:hover,
+.nirosh-modern-button:active {
+    color: #000;
+    background: #00c8ff;
+    border-color: #00c8ff;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 18px rgba(0, 200, 255, 0.45),
+        0 0 40px rgba(0, 200, 255, 0.18);
+}
+
+.nirosh-modern-button:hover .nirosh-modern-arrow,
+.nirosh-modern-button:active .nirosh-modern-arrow {
+    transform: translateX(5px);
+}
+
+@keyframes niroshButtonPulse {
+
+    0%, 100% {
+        border-color: rgba(0, 200, 255, 0.35);
+
+        box-shadow:
+            0 0 0 rgba(0, 200, 255, 0),
+            inset 0 0 18px rgba(0, 200, 255, 0.02);
+    }
+
+    50% {
+        border-color: rgba(0, 200, 255, 0.95);
+
+        box-shadow:
+            0 0 18px rgba(0, 200, 255, 0.22),
+            inset 0 0 22px rgba(0, 200, 255, 0.06);
+    }
+}
+
+@keyframes niroshButtonScan {
+
+    0% {
+        left: -100%;
+    }
+
+    45%, 100% {
+        left: 150%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .nirosh-modern-buttons {
+        margin: 35px 15px;
+        gap: 14px;
+    }
+
+    .nirosh-modern-button {
+        width: min(100%, 330px);
+        min-height: 54px;
+        padding: 0 19px;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+}
+</style>
+
+
+<div class="nirosh-modern-buttons">
 
     <a href="employee-benefits.html"
-       style="display:inline-flex;
-              align-items:center;
-              justify-content:center;
-              gap:10px;
-              min-width:245px;
-              padding:15px 24px;
-              border:1px solid rgba(0,200,255,0.45);
-              border-radius:50px;
-              color:#00c8ff;
-              background:linear-gradient(135deg,rgba(0,200,255,0.08),rgba(255,255,255,0.025));
-              box-shadow:0 8px 25px rgba(0,0,0,0.25),inset 0 0 15px rgba(0,200,255,0.035);
-              text-decoration:none;
-              font-family:Poppins,sans-serif;
-              font-size:12px;
-              font-weight:600;
-              letter-spacing:1px;
-              transition:all 0.35s ease;"
-       onmouseover="this.style.background='#00c8ff';this.style.color='#000';this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(0,200,255,0.25)'"
-       onmouseout="this.style.background='linear-gradient(135deg,rgba(0,200,255,0.08),rgba(255,255,255,0.025))';this.style.color='#00c8ff';this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.25),inset 0 0 15px rgba(0,200,255,0.035)'">
+       class="nirosh-modern-button">
+
         <span>EMPLOYEE BENEFITS &amp; RIGHTS</span>
-        <span style="font-size:16px;">→</span>
+
+        <span class="nirosh-modern-arrow">→</span>
+
     </a>
 
 
     <a href="epf-etf.html"
-       style="display:inline-flex;
-              align-items:center;
-              justify-content:center;
-              gap:10px;
-              min-width:170px;
-              padding:15px 24px;
-              border:1px solid rgba(0,200,255,0.45);
-              border-radius:50px;
-              color:#00c8ff;
-              background:linear-gradient(135deg,rgba(0,200,255,0.08),rgba(255,255,255,0.025));
-              box-shadow:0 8px 25px rgba(0,0,0,0.25),inset 0 0 15px rgba(0,200,255,0.035);
-              text-decoration:none;
-              font-family:Poppins,sans-serif;
-              font-size:12px;
-              font-weight:600;
-              letter-spacing:1px;
-              transition:all 0.35s ease;"
-       onmouseover="this.style.background='#00c8ff';this.style.color='#000';this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(0,200,255,0.25)'"
-       onmouseout="this.style.background='linear-gradient(135deg,rgba(0,200,255,0.08),rgba(255,255,255,0.025))';this.style.color='#00c8ff';this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.25),inset 0 0 15px rgba(0,200,255,0.035)'">
+       class="nirosh-modern-button">
+
         <span>EPF &amp; ETF</span>
-        <span style="font-size:16px;">→</span>
+
+        <span class="nirosh-modern-arrow">→</span>
+
     </a>
 
 
     <a href="our-offices.html"
-       style="display:inline-flex;
-              align-items:center;
-              justify-content:center;
-              gap:10px;
-              min-width:235px;
-              padding:15px 24px;
-              border:1px solid rgba(0,200,255,0.45);
-              border-radius:50px;
-              color:#00c8ff;
-              background:linear-gradient(135deg,rgba(0,200,255,0.08),rgba(255,255,255,0.025));
-              box-shadow:0 8px 25px rgba(0,0,0,0.25),inset 0 0 15px rgba(0,200,255,0.035);
-              text-decoration:none;
-              font-family:Poppins,sans-serif;
-              font-size:12px;
-              font-weight:600;
-              letter-spacing:1px;
-              transition:all 0.35s ease;"
-       onmouseover="this.style.background='#00c8ff';this.style.color='#000';this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 30px rgba(0,200,255,0.25)'"
-       onmouseout="this.style.background='linear-gradient(135deg,rgba(0,200,255,0.08),rgba(255,255,255,0.025))';this.style.color='#00c8ff';this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.25),inset 0 0 15px rgba(0,200,255,0.035)'">
+       class="nirosh-modern-button">
+
         <span>OUR OFFICES &amp; SERVICE ACCESS</span>
-        <span style="font-size:16px;">→</span>
+
+        <span class="nirosh-modern-arrow">→</span>
+
     </a>
 
-</div>
+</div>   
 <!-- ABOUT -->
 
 <section>
