@@ -1,0 +1,767 @@
+<!-- =========================================================
+     NIROSH SOFTWARE
+     GLOBAL BUSINESS & TECHNOLOGY SOLUTIONS
+     GLASSMORPHISM / PREMIUM CORPORATE SECTION
+========================================================= -->
+
+<style>
+
+    /* =====================================================
+       GLOBAL BUSINESS SECTION
+    ===================================================== */
+
+    .global-business-section {
+        position: relative;
+        width: 100%;
+        padding: 110px 20px;
+        background:
+            linear-gradient(
+                135deg,
+                rgba(0, 0, 0, 0.82),
+                rgba(8, 8, 8, 0.72)
+            ),
+            url("global-business-bg.jpg") center center / cover no-repeat;
+
+        background-attachment: fixed;
+        overflow: hidden;
+        isolation: isolate;
+    }
+
+
+    /* Dark premium overlay */
+
+    .global-business-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background:
+            radial-gradient(
+                circle at 20% 20%,
+                rgba(255, 255, 255, 0.08),
+                transparent 32%
+            ),
+            radial-gradient(
+                circle at 80% 80%,
+                rgba(255, 255, 255, 0.05),
+                transparent 30%
+            );
+
+        pointer-events: none;
+        z-index: -1;
+    }
+
+
+    /* =====================================================
+       MAIN CONTAINER
+    ===================================================== */
+
+    .global-business-container {
+        position: relative;
+        max-width: 1250px;
+        margin: auto;
+    }
+
+
+    /* =====================================================
+       SECTION BADGE
+    ===================================================== */
+
+    .global-business-badge {
+        width: fit-content;
+        margin: 0 auto 22px;
+
+        padding: 9px 18px;
+
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        border-radius: 50px;
+
+        background: rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        color: rgba(255, 255, 255, 0.82);
+
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-align: center;
+
+        box-shadow:
+            0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .global-business-header {
+        max-width: 850px;
+        margin: 0 auto 65px;
+        text-align: center;
+    }
+
+
+    .global-business-header h2 {
+        margin: 0 0 18px;
+
+        color: #ffffff;
+
+        font-size: clamp(34px, 5vw, 58px);
+        font-weight: 700;
+        line-height: 1.1;
+
+        letter-spacing: -1px;
+    }
+
+
+    .global-business-header h2 span {
+        display: block;
+
+        background: linear-gradient(
+            90deg,
+            #ffffff,
+            #bdbdbd,
+            #ffffff
+        );
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+
+    .global-business-header p {
+        margin: 0 auto;
+
+        max-width: 720px;
+
+        color: rgba(255, 255, 255, 0.70);
+
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 400;
+    }
+
+
+    /* =====================================================
+       INTRO GLASS PANEL
+    ===================================================== */
+
+    .global-business-intro {
+        position: relative;
+
+        margin-bottom: 35px;
+        padding: 38px;
+
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 24px;
+
+        background: rgba(255, 255, 255, 0.075);
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+        overflow: hidden;
+    }
+
+
+    .global-business-intro::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.45),
+            transparent
+        );
+    }
+
+
+    .global-business-intro h3 {
+        margin: 0 0 15px;
+
+        color: #ffffff;
+
+        font-size: 23px;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+
+    .global-business-intro p {
+        margin: 8px 0 0;
+
+        color: rgba(255,255,255,0.68);
+
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       GLASS CARDS GRID
+    ===================================================== */
+
+    .global-business-content {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 24px;
+    }
+
+
+    /* =====================================================
+       GLASS CARD
+    ===================================================== */
+
+    .global-business-card {
+        position: relative;
+
+        padding: 32px;
+
+        min-height: 245px;
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 24px;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255, 255, 255, 0.095),
+                rgba(255, 255, 255, 0.035)
+            );
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        box-shadow:
+            0 18px 55px rgba(0, 0, 0, 0.38),
+            inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+        transition:
+            transform 0.35s ease,
+            border-color 0.35s ease,
+            background 0.35s ease,
+            box-shadow 0.35s ease;
+
+        overflow: hidden;
+    }
+
+
+    /* Glass reflection */
+
+    .global-business-card::before {
+        content: "";
+
+        position: absolute;
+
+        top: -100px;
+        left: -120px;
+
+        width: 220px;
+        height: 220px;
+
+        background: rgba(255,255,255,0.055);
+
+        border-radius: 50%;
+
+        filter: blur(40px);
+
+        pointer-events: none;
+    }
+
+
+    /* Top glass line */
+
+    .global-business-card::after {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: 10%;
+        right: 10%;
+
+        height: 1px;
+
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.35),
+            transparent
+        );
+
+        opacity: 0.8;
+    }
+
+
+    /* Hover */
+
+    .global-business-card:hover {
+        transform: translateY(-7px);
+
+        border-color: rgba(255, 255, 255, 0.30);
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255, 255, 255, 0.13),
+                rgba(255, 255, 255, 0.055)
+            );
+
+        box-shadow:
+            0 25px 70px rgba(0, 0, 0, 0.48),
+            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+
+    /* =====================================================
+       CARD ICON
+    ===================================================== */
+
+    .global-business-icon {
+        width: 54px;
+        height: 54px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 22px;
+
+        border-radius: 16px;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        font-size: 24px;
+
+        box-shadow:
+            inset 0 1px 0 rgba(255,255,255,0.10),
+            0 10px 30px rgba(0,0,0,0.20);
+    }
+
+
+    /* =====================================================
+       CARD TEXT
+    ===================================================== */
+
+    .global-business-card h3 {
+        margin: 0 0 12px;
+
+        color: #ffffff;
+
+        font-size: 20px;
+        font-weight: 600;
+
+        line-height: 1.4;
+    }
+
+
+    .global-business-card p {
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.64);
+
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+
+    /* =====================================================
+       FOOTER GLASS PANEL
+    ===================================================== */
+
+    .global-business-footer {
+        position: relative;
+
+        margin-top: 35px;
+        padding: 35px 40px;
+
+        text-align: center;
+
+        border-radius: 24px;
+
+        border: 1px solid rgba(255,255,255,0.15);
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(255,255,255,0.09),
+                rgba(255,255,255,0.035)
+            );
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        box-shadow:
+            0 20px 60px rgba(0,0,0,0.35),
+            inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+
+
+    .global-business-footer h3 {
+        margin: 0 0 12px;
+
+        color: #ffffff;
+
+        font-size: 20px;
+        font-weight: 600;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    .global-business-footer p {
+        max-width: 800px;
+
+        margin: auto;
+
+        color: rgba(255,255,255,0.62);
+
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+        .global-business-section {
+            padding: 85px 18px;
+        }
+
+        .global-business-content {
+            grid-template-columns: 1fr;
+        }
+
+        .global-business-header {
+            margin-bottom: 50px;
+        }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+        .global-business-section {
+            padding: 70px 14px;
+
+            background-attachment: scroll;
+        }
+
+
+        .global-business-badge {
+            font-size: 9px;
+            letter-spacing: 1.2px;
+
+            padding: 8px 13px;
+        }
+
+
+        .global-business-header h2 {
+            font-size: 34px;
+        }
+
+
+        .global-business-header p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        .global-business-intro {
+            padding: 25px;
+
+            border-radius: 20px;
+        }
+
+
+        .global-business-intro h3 {
+            font-size: 19px;
+        }
+
+
+        .global-business-intro p {
+            font-size: 13px;
+        }
+
+
+        .global-business-card {
+            padding: 26px;
+
+            min-height: auto;
+
+            border-radius: 20px;
+        }
+
+
+        .global-business-card h3 {
+            font-size: 18px;
+        }
+
+
+        .global-business-card p {
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        .global-business-footer {
+            padding: 28px 22px;
+
+            border-radius: 20px;
+        }
+
+
+        .global-business-footer h3 {
+            font-size: 17px;
+        }
+
+
+        .global-business-footer p {
+            font-size: 13px;
+        }
+
+    }
+
+</style>
+
+
+<!-- =========================================================
+     HTML
+========================================================= -->
+
+<section class="global-business-section" id="global-business">
+
+    <div class="global-business-container">
+
+
+        <!-- SECTION BADGE -->
+
+        <div class="global-business-badge">
+            GLOBAL BUSINESS • TECHNOLOGY • INTERNATIONAL SERVICES
+        </div>
+
+
+        <!-- SECTION HEADER -->
+
+        <div class="global-business-header">
+
+            <h2>
+                Global Business &
+                <span>Technology Solutions</span>
+            </h2>
+
+            <p>
+                Connecting Sri Lankan technology expertise with
+                clients, businesses and opportunities worldwide.
+            </p>
+
+        </div>
+
+
+        <!-- COMPANY INTRO -->
+
+        <div class="global-business-intro">
+
+            <h3>
+                Nirosh Software Development & System Architecture Solution Company
+            </h3>
+
+            <p>
+                A Sri Lanka-based technology company delivering
+                professional software development, system architecture
+                and digital technology solutions for local and
+                international clients.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             GLASS CARDS
+        ================================================= -->
+
+        <div class="global-business-content">
+
+
+            <!-- INTERNATIONAL CLIENTS -->
+
+            <div class="global-business-card">
+
+                <div class="global-business-icon">
+                    🌍
+                </div>
+
+                <h3>
+                    International Client Services
+                </h3>
+
+                <p>
+                    Delivering professional software and technology
+                    solutions to clients and businesses across
+                    international markets.
+                </p>
+
+            </div>
+
+
+            <!-- INTERNATIONAL PAYMENTS -->
+
+            <div class="global-business-card">
+
+                <div class="global-business-icon">
+                    💳
+                </div>
+
+                <h3>
+                    International Payments
+                </h3>
+
+                <p>
+                    Enabling international clients to make payments
+                    for our services through appropriate business
+                    payment and banking channels in relevant
+                    foreign currencies, with applicable conversion
+                    into Sri Lankan Rupees (LKR).
+                </p>
+
+            </div>
+
+
+            <!-- SOFTWARE TECHNOLOGY -->
+
+            <div class="global-business-card">
+
+                <div class="global-business-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Software & Digital Technology
+                </h3>
+
+                <p>
+                    Custom software, websites, mobile applications,
+                    system architecture, cloud technologies,
+                    business automation and digital solutions.
+                </p>
+
+            </div>
+
+
+            <!-- COMPUTER IMPORTS -->
+
+            <div class="global-business-card">
+
+                <div class="global-business-icon">
+                    🖥️
+                </div>
+
+                <h3>
+                    Premium Computer & Hardware
+                </h3>
+
+                <p>
+                    Sourcing and importing high-quality desktop
+                    computers, laptops, hardware components and
+                    related technology products, subject to
+                    applicable regulations.
+                </p>
+
+            </div>
+
+
+            <!-- GLOBAL PARTNERSHIPS -->
+
+            <div class="global-business-card">
+
+                <div class="global-business-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Global Business Partnerships
+                </h3>
+
+                <p>
+                    Building trusted relationships with international
+                    clients, technology providers, suppliers and
+                    business partners for long-term collaboration.
+                </p>
+
+            </div>
+
+
+            <!-- GLOBAL VISION -->
+
+            <div class="global-business-card">
+
+                <div class="global-business-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Sri Lanka to the Global Market
+                </h3>
+
+                <p>
+                    Expanding Sri Lankan technology capabilities
+                    toward global markets through innovation,
+                    professional service and reliable digital
+                    solutions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER MESSAGE
+        ================================================= -->
+
+        <div class="global-business-footer">
+
+            <h3>
+                Sri Lanka Based • Globally Connected • Technology Driven
+            </h3>
+
+            <p>
+                Nirosh Software Development & System Architecture
+                Solution Company is committed to delivering trusted,
+                professional and innovative technology solutions
+                for businesses locally and internationally.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
