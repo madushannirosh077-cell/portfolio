@@ -995,6 +995,75 @@ height:65px;
 </div>
 </section>
 
+<!-- GLOBAL BUSINESS LINK BUTTON -->
+
+<a href="global-business.html" class="global-business-link-btn">
+    <span>Explore Global Business</span>
+    <span class="global-business-arrow">→</span>
+</a>
+
+
+<style>
+
+.global-business-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    margin-top: 20px;
+    padding: 14px 24px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 14px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.global-business-link-btn:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.13);
+
+    border-color: rgba(255, 255, 255, 0.40);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.40),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.global-business-arrow {
+    font-size: 20px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+.global-business-link-btn:hover .global-business-arrow {
+    transform: translateX(5px);
+}
+
+</style>    
 <!-- TECHNOLOGIES -->
 <section>
 
