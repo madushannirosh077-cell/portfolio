@@ -14,21 +14,27 @@
         position: relative;
         width: 100%;
         padding: 110px 20px;
+
         background:
-    linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.28),
-        rgba(0, 0, 0, 0.18)
-    ),
-  url("global-business-backgroundjpg.jpeg")center center / cover no-repeat;
+            linear-gradient(
+                135deg,
+                rgba(0, 0, 0, 0.32),
+                rgba(0, 0, 0, 0.22)
+            ),
+            url("global-business-backgroundjpg.jpeg")
+            center center / cover no-repeat;
 
         background-attachment: fixed;
         overflow: hidden;
         isolation: isolate;
+
+        font-family: Arial, Helvetica, sans-serif;
     }
 
 
-    /* Dark premium overlay */
+    /* =====================================================
+       DARK PREMIUM OVERLAY
+    ===================================================== */
 
     .global-business-section::before {
         content: "";
@@ -38,12 +44,12 @@
         background:
             radial-gradient(
                 circle at 20% 20%,
-                rgba(255, 255, 255, 0.08),
+                rgba(255, 255, 255, 0.07),
                 transparent 32%
             ),
             radial-gradient(
                 circle at 80% 80%,
-                rgba(255, 255, 255, 0.05),
+                rgba(0, 110, 255, 0.08),
                 transparent 30%
             );
 
@@ -71,93 +77,144 @@
         width: fit-content;
         margin: 0 auto 22px;
 
-        padding: 9px 18px;
+        padding: 10px 19px;
 
-        border: 1px solid rgba(255, 255, 255, 0.20);
+        border: 1px solid rgba(255, 255, 255, 0.22);
         border-radius: 50px;
 
-        background: rgba(255, 255, 255, 0.07);
+        background: rgba(255, 255, 255, 0.075);
+
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
 
-        color: rgba(255, 255, 255, 0.82);
+        color: rgba(255, 255, 255, 0.95);
 
         font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 2px;
+        font-weight: 700;
+        letter-spacing: 2.2px;
+
         text-align: center;
 
         box-shadow:
-            0 8px 30px rgba(0, 0, 0, 0.25);
+            0 8px 30px rgba(0, 0, 0, 0.28);
+
+        text-shadow:
+            0 2px 8px rgba(0, 0, 0, 0.55);
     }
 
 
     /* =====================================================
-       HEADER
+       HEADER GLASS CARD
     ===================================================== */
 
     .global-business-header {
         max-width: 850px;
+
         margin: 0 auto 65px;
+
+        padding: 42px 34px;
+
         text-align: center;
-         padding: 38px 30px;
 
-border: 1px solid rgba(255, 255, 255, 0.16);
-border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 26px;
 
-background: rgba(20, 20, 20, 0.52);
+        background:
+            linear-gradient(
+                135deg,
+                rgba(20, 25, 35, 0.68),
+                rgba(15, 18, 25, 0.48)
+            );
 
-backdrop-filter: blur(18px);
--webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
 
-box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        box-shadow:
+            0 22px 65px rgba(0, 0, 0, 0.40),
+            inset 0 1px 0 rgba(255, 255, 255, 0.10);
 
-position: relative;
-overflow: hidden;
+        position: relative;
+        overflow: hidden;
     }
 
 
+    .global-business-header::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: 8%;
+        right: 8%;
+
+        height: 1px;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.55),
+                transparent
+            );
+    }
+
+
+    /* =====================================================
+       MAIN HEADER TITLE
+    ===================================================== */
+
     .global-business-header h2 {
-        margin: 0 0 18px;
+        margin: 0 0 20px;
 
-        color: #ffffff;
+        color: #42a5ff;
 
-        font-size: clamp(34px, 5vw, 58px);
+        font-size: clamp(38px, 5vw, 62px);
+
         font-weight: 700;
-        line-height: 1.1;
 
-        letter-spacing: -1px;
+        line-height: 1.12;
+
+        letter-spacing: -0.5px;
+
+        text-shadow:
+            0 3px 15px rgba(0, 0, 0, 0.55);
     }
 
 
     .global-business-header h2 span {
         display: block;
 
-        background: linear-gradient(
-            90deg,
-            #ffffff,
-            #bdbdbd,
-            #ffffff
-        );
+        color: #42a5ff;
 
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        background: none;
+
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
+        background-clip: initial;
     }
 
+
+    /* =====================================================
+       HEADER DESCRIPTION
+    ===================================================== */
 
     .global-business-header p {
         margin: 0 auto;
 
         max-width: 720px;
 
-        color: rgba(255, 255, 255, 0.95);
+        color: rgba(255, 255, 255, 0.96);
 
-        font-size: 16px;
+        font-size: 17px;
+
         line-height: 1.8;
+
         font-weight: 400;
+
+        letter-spacing: 0.2px;
+
+        text-shadow:
+            0 2px 8px rgba(0, 0, 0, 0.60);
     }
 
 
@@ -169,18 +226,25 @@ overflow: hidden;
         position: relative;
 
         margin-bottom: 35px;
-        padding: 38px;
 
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        border-radius: 24px;
+        padding: 40px;
 
-        background: rgba(255, 255, 255, 0.075);
+        border: 1px solid rgba(255, 255, 255, 0.17);
+
+        border-radius: 25px;
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(18, 22, 30, 0.68),
+                rgba(20, 20, 20, 0.50)
+            );
 
         backdrop-filter: blur(18px);
         -webkit-backdrop-filter: blur(18px);
 
         box-shadow:
-            0 20px 60px rgba(0, 0, 0, 0.35),
+            0 20px 60px rgba(0, 0, 0, 0.38),
             inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
         overflow: hidden;
@@ -191,39 +255,64 @@ overflow: hidden;
         content: "";
 
         position: absolute;
+
         top: 0;
         left: 0;
 
         width: 100%;
         height: 1px;
 
-        background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,0.45),
-            transparent
-        );
+        background:
+            linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.48),
+                transparent
+            );
     }
 
+
+    /* =====================================================
+       INTRO TITLE
+    ===================================================== */
 
     .global-business-intro h3 {
-        margin: 0 0 15px;
+        margin: 0 0 16px;
 
-        color: #ffffff;
+        color: #42a5ff;
 
-        font-size: 23px;
-        font-weight: 600;
+        font-size: 25px;
+
+        font-weight: 700;
+
         line-height: 1.4;
+
+        letter-spacing: 0.2px;
+
+        text-shadow:
+            0 3px 12px rgba(0, 0, 0, 0.55);
     }
 
+
+    /* =====================================================
+       INTRO DESCRIPTION
+    ===================================================== */
 
     .global-business-intro p {
         margin: 8px 0 0;
 
-        color: rgba(255,255,255,0.92);
+        color: rgba(255, 255, 255, 0.94);
 
         font-size: 15px;
-        line-height: 1.8;
+
+        line-height: 1.85;
+
+        font-weight: 400;
+
+        letter-spacing: 0.15px;
+
+        text-shadow:
+            0 2px 7px rgba(0, 0, 0, 0.55);
     }
 
 
@@ -247,20 +336,26 @@ overflow: hidden;
     .global-business-card {
         position: relative;
 
-        padding: 32px;
+        padding: 34px;
 
         min-height: 245px;
 
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
 
-        background: rgba(20, 20, 20, 0.52);
+        border-radius: 25px;
 
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
+        background:
+            linear-gradient(
+                135deg,
+                rgba(18, 22, 30, 0.68),
+                rgba(20, 20, 20, 0.52)
+            );
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
 
         box-shadow:
-            0 18px 55px rgba(0, 0, 0, 0.38),
+            0 18px 55px rgba(0, 0, 0, 0.40),
             inset 0 1px 0 rgba(255, 255, 255, 0.07);
 
         transition:
@@ -273,7 +368,9 @@ overflow: hidden;
     }
 
 
-    /* Glass reflection */
+    /* =====================================================
+       GLASS REFLECTION
+    ===================================================== */
 
     .global-business-card::before {
         content: "";
@@ -286,7 +383,8 @@ overflow: hidden;
         width: 220px;
         height: 220px;
 
-        background: rgba(255,255,255,0.055);
+        background:
+            rgba(255, 255, 255, 0.055);
 
         border-radius: 50%;
 
@@ -296,7 +394,9 @@ overflow: hidden;
     }
 
 
-    /* Top glass line */
+    /* =====================================================
+       TOP GLASS LINE
+    ===================================================== */
 
     .global-business-card::after {
         content: "";
@@ -309,33 +409,38 @@ overflow: hidden;
 
         height: 1px;
 
-        background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,0.35),
-            transparent
-        );
+        background:
+            linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.38),
+                transparent
+            );
 
         opacity: 0.8;
     }
 
 
-    /* Hover */
+    /* =====================================================
+       HOVER
+    ===================================================== */
 
     .global-business-card:hover {
         transform: translateY(-7px);
 
-        border-color: rgba(255, 255, 255, 0.30);
+        border-color:
+            rgba(66, 165, 255, 0.38);
 
         background:
             linear-gradient(
                 145deg,
-                rgba(255, 255, 255, 0.13),
-                rgba(255, 255, 255, 0.055)
+                rgba(30, 38, 52, 0.76),
+                rgba(15, 18, 25, 0.62)
             );
 
         box-shadow:
-            0 25px 70px rgba(0, 0, 0, 0.48),
+            0 25px 70px rgba(0, 0, 0, 0.50),
+            0 0 25px rgba(40, 140, 255, 0.08),
             inset 0 1px 0 rgba(255, 255, 255, 0.12);
     }
 
@@ -349,6 +454,7 @@ overflow: hidden;
         height: 54px;
 
         display: flex;
+
         align-items: center;
         justify-content: center;
 
@@ -356,9 +462,11 @@ overflow: hidden;
 
         border-radius: 16px;
 
-        background: rgba(255, 255, 255, 0.08);
+        background:
+            rgba(255, 255, 255, 0.08);
 
-        border: 1px solid rgba(255, 255, 255, 0.15);
+        border:
+            1px solid rgba(255, 255, 255, 0.16);
 
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -367,7 +475,29 @@ overflow: hidden;
 
         box-shadow:
             inset 0 1px 0 rgba(255,255,255,0.10),
-            0 10px 30px rgba(0,0,0,0.20);
+            0 10px 30px rgba(0,0,0,0.22);
+    }
+
+
+    /* =====================================================
+       CARD TITLES
+    ===================================================== */
+
+    .global-business-card h3 {
+        margin: 0 0 13px;
+
+        color: #42a5ff;
+
+        font-size: 22px;
+
+        font-weight: 700;
+
+        line-height: 1.4;
+
+        letter-spacing: 0.25px;
+
+        text-shadow:
+            0 3px 12px rgba(0, 0, 0, 0.55);
     }
 
 
@@ -375,25 +505,21 @@ overflow: hidden;
        CARD TEXT
     ===================================================== */
 
-    .global-business-card h3 {
-        margin: 0 0 12px;
-
-        color: #ffffff;
-
-        font-size: 20px;
-        font-weight: 600;
-
-        line-height: 1.4;
-    }
-
-
     .global-business-card p {
         margin: 0;
 
-        color: rgba(255, 255, 255, 0.90);
+        color: rgba(255, 255, 255, 0.94);
 
         font-size: 14px;
-        line-height: 1.75;
+
+        line-height: 1.8;
+
+        font-weight: 400;
+
+        letter-spacing: 0.15px;
+
+        text-shadow:
+            0 2px 7px rgba(0, 0, 0, 0.55);
     }
 
 
@@ -405,51 +531,74 @@ overflow: hidden;
         position: relative;
 
         margin-top: 35px;
-        padding: 35px 40px;
+
+        padding: 38px 40px;
 
         text-align: center;
 
-        border-radius: 24px;
+        border-radius: 25px;
 
-        border: 1px solid rgba(255,255,255,0.15);
+        border: 1px solid rgba(255,255,255,0.16);
 
         background:
             linear-gradient(
                 135deg,
-                rgba(255,255,255,0.09),
-                rgba(255,255,255,0.035)
+                rgba(20, 25, 35, 0.68),
+                rgba(15, 18, 25, 0.48)
             );
 
         backdrop-filter: blur(18px);
         -webkit-backdrop-filter: blur(18px);
 
         box-shadow:
-            0 20px 60px rgba(0,0,0,0.35),
+            0 20px 60px rgba(0,0,0,0.38),
             inset 0 1px 0 rgba(255,255,255,0.08);
     }
 
 
+    /* =====================================================
+       FOOTER TITLE
+    ===================================================== */
+
     .global-business-footer h3 {
-        margin: 0 0 12px;
+        margin: 0 0 13px;
 
-        color: #ffffff;
+        color: #42a5ff;
 
-        font-size: 20px;
-        font-weight: 600;
+        font-size: 22px;
 
-        letter-spacing: 0.5px;
+        font-weight: 700;
+
+        line-height: 1.4;
+
+        letter-spacing: 0.6px;
+
+        text-shadow:
+            0 3px 12px rgba(0, 0, 0, 0.55);
     }
 
+
+    /* =====================================================
+       FOOTER DESCRIPTION
+    ===================================================== */
 
     .global-business-footer p {
         max-width: 800px;
 
         margin: auto;
 
-        color: rgba(255,255,255,0.90);
+        color: rgba(255,255,255,0.94);
 
         font-size: 14px;
-        line-height: 1.8;
+
+        line-height: 1.85;
+
+        font-weight: 400;
+
+        letter-spacing: 0.15px;
+
+        text-shadow:
+            0 2px 7px rgba(0, 0, 0, 0.55);
     }
 
 
@@ -471,6 +620,18 @@ overflow: hidden;
             margin-bottom: 50px;
         }
 
+        .global-business-header h2 {
+            font-size: 46px;
+        }
+
+        .global-business-intro h3 {
+            font-size: 23px;
+        }
+
+        .global-business-card h3 {
+            font-size: 21px;
+        }
+
     }
 
 
@@ -487,76 +648,128 @@ overflow: hidden;
         }
 
 
+        /* BADGE */
+
         .global-business-badge {
             font-size: 9px;
-            letter-spacing: 1.2px;
+
+            letter-spacing: 1.25px;
 
             padding: 8px 13px;
+
+            line-height: 1.5;
+        }
+
+
+        /* HEADER */
+
+        .global-business-header {
+            padding: 30px 22px;
+
+            margin-bottom: 42px;
+
+            border-radius: 22px;
         }
 
 
         .global-business-header h2 {
-            font-size: 34px;
+            font-size: 35px;
+
+            line-height: 1.16;
+
+            letter-spacing: -0.2px;
         }
 
 
         .global-business-header p {
             font-size: 14px;
-            line-height: 1.7;
+
+            line-height: 1.75;
+
+            letter-spacing: 0.1px;
         }
 
 
-        .global-business-intro {
-            padding: 25px;
+        /* INTRO */
 
-            border-radius: 20px;
+        .global-business-intro {
+            padding: 27px 24px;
+
+            border-radius: 21px;
         }
 
 
         .global-business-intro h3 {
-            font-size: 19px;
+            font-size: 20px;
+
+            line-height: 1.45;
         }
 
 
         .global-business-intro p {
             font-size: 13px;
+
+            line-height: 1.8;
         }
 
 
+        /* CARDS */
+
         .global-business-card {
-            padding: 26px;
+            padding: 27px 25px;
 
             min-height: auto;
 
-            border-radius: 20px;
+            border-radius: 21px;
+        }
+
+
+        .global-business-icon {
+            width: 52px;
+            height: 52px;
+
+            margin-bottom: 20px;
+
+            font-size: 23px;
         }
 
 
         .global-business-card h3 {
-            font-size: 18px;
+            font-size: 19px;
+
+            line-height: 1.45;
+
+            margin-bottom: 12px;
         }
 
 
         .global-business-card p {
             font-size: 13px;
-            line-height: 1.7;
+
+            line-height: 1.78;
         }
 
 
-        .global-business-footer {
-            padding: 28px 22px;
+        /* FOOTER */
 
-            border-radius: 20px;
+        .global-business-footer {
+            padding: 29px 22px;
+
+            border-radius: 21px;
         }
 
 
         .global-business-footer h3 {
-            font-size: 17px;
+            font-size: 18px;
+
+            line-height: 1.5;
         }
 
 
         .global-business-footer p {
             font-size: 13px;
+
+            line-height: 1.8;
         }
 
     }
@@ -756,7 +969,7 @@ overflow: hidden;
 
         <!-- =================================================
              FOOTER MESSAGE
-        ================================================= -->
+        ========================================================= -->
 
         <div class="global-business-footer">
 
