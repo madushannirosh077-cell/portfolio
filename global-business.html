@@ -25,19 +25,23 @@
             center center / cover no-repeat;
 
         background-attachment: fixed;
+
         overflow: hidden;
         isolation: isolate;
 
         font-family: Arial, Helvetica, sans-serif;
+
+        text-transform: uppercase;
     }
 
 
     /* =====================================================
-       DARK PREMIUM OVERLAY
+       PREMIUM OVERLAY
     ===================================================== */
 
     .global-business-section::before {
         content: "";
+
         position: absolute;
         inset: 0;
 
@@ -54,6 +58,7 @@
             );
 
         pointer-events: none;
+
         z-index: -1;
     }
 
@@ -64,7 +69,9 @@
 
     .global-business-container {
         position: relative;
+
         max-width: 1250px;
+
         margin: auto;
     }
 
@@ -75,11 +82,13 @@
 
     .global-business-badge {
         width: fit-content;
+
         margin: 0 auto 22px;
 
         padding: 10px 19px;
 
         border: 1px solid rgba(255, 255, 255, 0.22);
+
         border-radius: 50px;
 
         background: rgba(255, 255, 255, 0.075);
@@ -90,7 +99,9 @@
         color: rgba(255, 255, 255, 0.95);
 
         font-size: 12px;
+
         font-weight: 700;
+
         letter-spacing: 2.2px;
 
         text-align: center;
@@ -104,19 +115,21 @@
 
 
     /* =====================================================
-       HEADER GLASS CARD
+       MAIN HEADER GLASS CARD
     ===================================================== */
 
     .global-business-header {
-        max-width: 850px;
+
+        max-width: 1050px;
 
         margin: 0 auto 65px;
 
-        padding: 42px 34px;
+        padding: 42px 45px;
 
         text-align: center;
 
         border: 1px solid rgba(255, 255, 255, 0.18);
+
         border-radius: 26px;
 
         background:
@@ -134,17 +147,23 @@
             inset 0 1px 0 rgba(255, 255, 255, 0.10);
 
         position: relative;
+
         overflow: hidden;
     }
 
 
+    /* HEADER GLASS LINE */
+
     .global-business-header::before {
+
         content: "";
 
         position: absolute;
 
         top: 0;
+
         left: 8%;
+
         right: 8%;
 
         height: 1px;
@@ -160,13 +179,15 @@
 
 
     /* =====================================================
-       MAIN HEADER TITLE
+       MAIN HEADING 01
+       WHITE
     ===================================================== */
 
     .global-business-header h2 {
+
         margin: 0 0 20px;
 
-        color: #42a5ff;
+        color: #ffffff;
 
         font-size: clamp(38px, 5vw, 62px);
 
@@ -181,27 +202,37 @@
     }
 
 
+    /* SECOND LINE OF MAIN HEADING
+       ALSO WHITE */
+
     .global-business-header h2 span {
+
         display: block;
 
-        color: #42a5ff;
+        color: #ffffff;
 
         background: none;
 
         -webkit-background-clip: initial;
-        -webkit-text-fill-color: initial;
+
+        -webkit-text-fill-color: #ffffff;
+
         background-clip: initial;
     }
 
 
     /* =====================================================
-       HEADER DESCRIPTION
+       MAIN HEADER DESCRIPTION
+       WIDE / HORIZONTAL
     ===================================================== */
 
     .global-business-header p {
-        margin: 0 auto;
 
-        max-width: 720px;
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0 auto;
 
         color: rgba(255, 255, 255, 0.96);
 
@@ -213,16 +244,19 @@
 
         letter-spacing: 0.2px;
 
+        text-align: center;
+
         text-shadow:
             0 2px 8px rgba(0, 0, 0, 0.60);
     }
 
 
     /* =====================================================
-       INTRO GLASS PANEL
+       COMPANY INTRO GLASS PANEL
     ===================================================== */
 
     .global-business-intro {
+
         position: relative;
 
         margin-bottom: 35px;
@@ -251,15 +285,20 @@
     }
 
 
+    /* TOP LINE */
+
     .global-business-intro::before {
+
         content: "";
 
         position: absolute;
 
         top: 0;
+
         left: 0;
 
         width: 100%;
+
         height: 1px;
 
         background:
@@ -273,13 +312,15 @@
 
 
     /* =====================================================
-       INTRO TITLE
+       MAIN HEADING 02
+       WHITE
     ===================================================== */
 
     .global-business-intro h3 {
+
         margin: 0 0 16px;
 
-        color: #42a5ff;
+        color: #ffffff;
 
         font-size: 25px;
 
@@ -294,11 +335,12 @@
     }
 
 
-    /* =====================================================
-       INTRO DESCRIPTION
-    ===================================================== */
+    /* INTRO DESCRIPTION */
 
     .global-business-intro p {
+
+        width: 100%;
+
         margin: 8px 0 0;
 
         color: rgba(255, 255, 255, 0.94);
@@ -321,6 +363,7 @@
     ===================================================== */
 
     .global-business-content {
+
         display: grid;
 
         grid-template-columns: repeat(2, 1fr);
@@ -334,6 +377,7 @@
     ===================================================== */
 
     .global-business-card {
+
         position: relative;
 
         padding: 34px;
@@ -373,14 +417,17 @@
     ===================================================== */
 
     .global-business-card::before {
+
         content: "";
 
         position: absolute;
 
         top: -100px;
+
         left: -120px;
 
         width: 220px;
+
         height: 220px;
 
         background:
@@ -399,12 +446,15 @@
     ===================================================== */
 
     .global-business-card::after {
+
         content: "";
 
         position: absolute;
 
         top: 0;
+
         left: 10%;
+
         right: 10%;
 
         height: 1px;
@@ -422,10 +472,11 @@
 
 
     /* =====================================================
-       HOVER
+       CARD HOVER
     ===================================================== */
 
     .global-business-card:hover {
+
         transform: translateY(-7px);
 
         border-color:
@@ -450,12 +501,15 @@
     ===================================================== */
 
     .global-business-icon {
+
         width: 54px;
+
         height: 54px;
 
         display: flex;
 
         align-items: center;
+
         justify-content: center;
 
         margin-bottom: 22px;
@@ -480,13 +534,56 @@
 
 
     /* =====================================================
+       BLUE HEADINGS
+       SOFT ON / OFF GLOW ANIMATION
+    ===================================================== */
+
+    .global-business-card h3,
+    .global-business-footer h3 {
+
+        color: #42a5ff;
+
+        animation:
+            globalBlueGlow 2.8s ease-in-out infinite;
+    }
+
+
+    @keyframes globalBlueGlow {
+
+        0% {
+
+            color: #42a5ff;
+
+            text-shadow:
+                0 0 0 rgba(66, 165, 255, 0);
+        }
+
+        50% {
+
+            color: #66b7ff;
+
+            text-shadow:
+                0 0 8px rgba(66, 165, 255, 0.35),
+                0 0 18px rgba(66, 165, 255, 0.18);
+        }
+
+        100% {
+
+            color: #42a5ff;
+
+            text-shadow:
+                0 0 0 rgba(66, 165, 255, 0);
+        }
+    }
+
+
+    /* =====================================================
        CARD TITLES
     ===================================================== */
 
     .global-business-card h3 {
-        margin: 0 0 13px;
 
-        color: #42a5ff;
+        margin: 0 0 13px;
 
         font-size: 22px;
 
@@ -495,17 +592,15 @@
         line-height: 1.4;
 
         letter-spacing: 0.25px;
-
-        text-shadow:
-            0 3px 12px rgba(0, 0, 0, 0.55);
     }
 
 
     /* =====================================================
-       CARD TEXT
+       CARD DESCRIPTION
     ===================================================== */
 
     .global-business-card p {
+
         margin: 0;
 
         color: rgba(255, 255, 255, 0.94);
@@ -528,6 +623,7 @@
     ===================================================== */
 
     .global-business-footer {
+
         position: relative;
 
         margin-top: 35px;
@@ -561,9 +657,8 @@
     ===================================================== */
 
     .global-business-footer h3 {
-        margin: 0 0 13px;
 
-        color: #42a5ff;
+        margin: 0 0 13px;
 
         font-size: 22px;
 
@@ -572,9 +667,6 @@
         line-height: 1.4;
 
         letter-spacing: 0.6px;
-
-        text-shadow:
-            0 3px 12px rgba(0, 0, 0, 0.55);
     }
 
 
@@ -583,7 +675,10 @@
     ===================================================== */
 
     .global-business-footer p {
-        max-width: 800px;
+
+        width: 100%;
+
+        max-width: 100%;
 
         margin: auto;
 
@@ -603,41 +698,43 @@
 
 
     /* =====================================================
-       ALL TEXT — CAPITAL LETTERS
-    ===================================================== */
-
-    .global-business-section {
-        text-transform: uppercase;
-    }
-
-
-    /* =====================================================
        TABLET
     ===================================================== */
 
     @media (max-width: 900px) {
 
         .global-business-section {
+
             padding: 85px 18px;
         }
 
+
         .global-business-content {
+
             grid-template-columns: 1fr;
         }
 
+
         .global-business-header {
+
             margin-bottom: 50px;
         }
 
+
         .global-business-header h2 {
+
             font-size: 46px;
         }
 
+
         .global-business-intro h3 {
+
             font-size: 23px;
         }
 
+
         .global-business-card h3 {
+
             font-size: 21px;
         }
 
@@ -651,6 +748,7 @@
     @media (max-width: 600px) {
 
         .global-business-section {
+
             padding: 70px 14px;
 
             background-attachment: scroll;
@@ -660,6 +758,7 @@
         /* BADGE */
 
         .global-business-badge {
+
             font-size: 9px;
 
             letter-spacing: 1.25px;
@@ -673,6 +772,7 @@
         /* HEADER */
 
         .global-business-header {
+
             padding: 30px 22px;
 
             margin-bottom: 42px;
@@ -682,6 +782,7 @@
 
 
         .global-business-header h2 {
+
             font-size: 35px;
 
             line-height: 1.16;
@@ -691,17 +792,17 @@
 
 
         .global-business-header p {
+
             font-size: 14px;
 
             line-height: 1.75;
-
-            letter-spacing: 0.1px;
         }
 
 
         /* INTRO */
 
         .global-business-intro {
+
             padding: 27px 24px;
 
             border-radius: 21px;
@@ -709,6 +810,7 @@
 
 
         .global-business-intro h3 {
+
             font-size: 20px;
 
             line-height: 1.45;
@@ -716,6 +818,7 @@
 
 
         .global-business-intro p {
+
             font-size: 13px;
 
             line-height: 1.8;
@@ -725,6 +828,7 @@
         /* CARDS */
 
         .global-business-card {
+
             padding: 27px 25px;
 
             min-height: auto;
@@ -734,7 +838,9 @@
 
 
         .global-business-icon {
+
             width: 52px;
+
             height: 52px;
 
             margin-bottom: 20px;
@@ -744,6 +850,7 @@
 
 
         .global-business-card h3 {
+
             font-size: 19px;
 
             line-height: 1.45;
@@ -753,6 +860,7 @@
 
 
         .global-business-card p {
+
             font-size: 13px;
 
             line-height: 1.78;
@@ -762,6 +870,7 @@
         /* FOOTER */
 
         .global-business-footer {
+
             padding: 29px 22px;
 
             border-radius: 21px;
@@ -769,6 +878,7 @@
 
 
         .global-business-footer h3 {
+
             font-size: 18px;
 
             line-height: 1.5;
@@ -776,6 +886,7 @@
 
 
         .global-business-footer p {
+
             font-size: 13px;
 
             line-height: 1.8;
