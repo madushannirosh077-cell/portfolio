@@ -112,7 +112,7 @@
 
 
 /* =========================================================
-   MAIN HEADER GLASS PANEL
+   SECTION HEADER GLASS PANEL
 ========================================================= */
 
 .global-business-header {
@@ -172,8 +172,7 @@
 
 
 /* =========================================================
-   MAIN HEADING 01
-   WHITE
+   MAIN HEADING
 ========================================================= */
 
 .global-business-header h2 {
@@ -194,8 +193,6 @@
 }
 
 
-/* SECOND LINE ALSO WHITE */
-
 .global-business-header h2 span {
     display: block;
 
@@ -213,7 +210,6 @@
 
 /* =========================================================
    HEADER DESCRIPTION
-   WIDE HORIZONTAL TEXT
 ========================================================= */
 
 .global-business-header p {
@@ -297,8 +293,7 @@
 
 
 /* =========================================================
-   MAIN HEADING 02
-   WHITE
+   COMPANY INTRO TITLE
 ========================================================= */
 
 .global-business-intro h3 {
@@ -319,7 +314,9 @@
 }
 
 
-/* INTRO DESCRIPTION */
+/* =========================================================
+   COMPANY INTRO DESCRIPTION
+========================================================= */
 
 .global-business-intro p {
     width: 100%;
@@ -365,13 +362,15 @@
 
     width: 100%;
 
-    min-height: 145px;
+    min-height: 155px;
 
     padding: 25px 30px;
 
     display: grid;
 
-    grid-template-columns: 70px 270px 1fr;
+    grid-template-columns: 70px 1fr;
+
+    grid-template-rows: auto auto;
 
     align-items: center;
 
@@ -406,7 +405,7 @@
 
 
 /* =========================================================
-   CARD REFLECTION
+   GLASS REFLECTION
 ========================================================= */
 
 .global-business-card::before {
@@ -458,30 +457,6 @@
 
 
 /* =========================================================
-   CARD HOVER
-========================================================= */
-
-.global-business-card:hover {
-    transform: translateY(-4px);
-
-    border-color:
-        rgba(66,165,255,0.35);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(28,36,50,0.76),
-            rgba(15,18,25,0.62)
-        );
-
-    box-shadow:
-        0 22px 60px rgba(0,0,0,0.46),
-        0 0 28px rgba(40,140,255,0.08),
-        inset 0 1px 0 rgba(255,255,255,0.11);
-}
-
-
-/* =========================================================
    CARD ICON
 ========================================================= */
 
@@ -493,6 +468,8 @@
 
     align-items: center;
     justify-content: center;
+
+    grid-row: 1 / span 2;
 
     border-radius: 16px;
 
@@ -514,13 +491,10 @@
 
 
 /* =========================================================
-   BLUE HEADINGS
-   STRONGER PROFESSIONAL ON/OFF GLOW
+   BLUE ANIMATED CARD TITLES
 ========================================================= */
 
-.global-business-card h3,
-.global-business-footer h3 {
-
+.global-business-card h3 {
     color: #39a9ff;
 
     animation:
@@ -579,6 +553,7 @@
 
 /* =========================================================
    CARD TITLE
+   SAME SIZE — NOT INCREASED
 ========================================================= */
 
 .global-business-card h3 {
@@ -596,17 +571,17 @@
 
 /* =========================================================
    CARD DESCRIPTION
-   WIDE HORIZONTAL
+   ONLY THIS TEXT IS INCREASED
 ========================================================= */
 
 .global-business-card p {
-    margin: 0;
+    margin: 7px 0 0;
 
     width: 100%;
 
     color: rgba(255,255,255,0.91);
 
-    font-size: 12px;
+    font-size: 15px;
 
     line-height: 1.75;
 
@@ -666,6 +641,11 @@
     line-height: 1.45;
 
     letter-spacing: 0.45px;
+
+    color: #39a9ff;
+
+    animation:
+        globalProfessionalBlueGlow 2.1s ease-in-out infinite;
 }
 
 
@@ -707,9 +687,7 @@
 
 
     .global-business-card {
-
-        grid-template-columns:
-            65px 230px 1fr;
+        grid-template-columns: 65px 1fr;
 
         column-gap: 20px;
 
@@ -723,7 +701,7 @@
 
 
     .global-business-card p {
-        font-size: 11.5px;
+        font-size: 14px;
     }
 
 }
@@ -813,7 +791,6 @@
 
     /* =====================================================
        MOBILE CARD
-       STILL HORIZONTAL
     ===================================================== */
 
     .global-business-card {
@@ -826,9 +803,11 @@
 
         grid-template-columns: 52px 1fr;
 
+        grid-template-rows: auto auto;
+
         column-gap: 16px;
 
-        row-gap: 7px;
+        row-gap: 6px;
 
         align-items: start;
 
@@ -860,11 +839,15 @@
     }
 
 
+    /* MOBILE DESCRIPTION — SLIGHTLY LARGER */
+
     .global-business-card p {
 
         grid-column: 2;
 
-        font-size: 11px;
+        margin-top: 2px;
+
+        font-size: 13px;
 
         line-height: 1.7;
     }
