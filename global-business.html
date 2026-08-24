@@ -491,14 +491,14 @@
 
 
 /* =========================================================
-   BLUE ANIMATED CARD TITLES
+   STRONGER BLUE ANIMATED CARD TITLES
 ========================================================= */
 
 .global-business-card h3 {
     color: #39a9ff;
 
     animation:
-        globalProfessionalBlueGlow 2.1s ease-in-out infinite;
+        globalProfessionalBlueGlow 1.35s ease-in-out infinite;
 
     will-change:
         color,
@@ -509,44 +509,62 @@
 @keyframes globalProfessionalBlueGlow {
 
     0% {
-        color: #2498ee;
+        color: #1688e8;
 
         text-shadow:
-            0 0 2px rgba(36,152,238,0.10),
-            0 0 5px rgba(36,152,238,0.05);
+            0 0 3px rgba(36,152,238,0.22),
+            0 0 7px rgba(36,152,238,0.12);
     }
 
-    25% {
-        color: #45adff;
+    20% {
+        color: #32a5ff;
 
         text-shadow:
-            0 0 5px rgba(45,165,255,0.35),
-            0 0 12px rgba(45,165,255,0.25);
+            0 0 7px rgba(45,165,255,0.55),
+            0 0 16px rgba(45,165,255,0.38);
+    }
+
+    40% {
+        color: #65c0ff;
+
+        text-shadow:
+            0 0 10px rgba(70,175,255,0.82),
+            0 0 24px rgba(55,165,255,0.62),
+            0 0 42px rgba(40,145,255,0.34);
     }
 
     50% {
-        color: #69beff;
+        color: #8ad0ff;
 
         text-shadow:
-            0 0 8px rgba(70,175,255,0.60),
-            0 0 20px rgba(55,165,255,0.42),
-            0 0 34px rgba(40,145,255,0.20);
+            0 0 13px rgba(90,190,255,0.95),
+            0 0 30px rgba(55,170,255,0.75),
+            0 0 50px rgba(40,145,255,0.45);
     }
 
-    75% {
-        color: #45adff;
+    60% {
+        color: #65c0ff;
 
         text-shadow:
-            0 0 5px rgba(45,165,255,0.35),
-            0 0 12px rgba(45,165,255,0.25);
+            0 0 10px rgba(70,175,255,0.82),
+            0 0 24px rgba(55,165,255,0.62),
+            0 0 42px rgba(40,145,255,0.34);
+    }
+
+    80% {
+        color: #32a5ff;
+
+        text-shadow:
+            0 0 7px rgba(45,165,255,0.55),
+            0 0 16px rgba(45,165,255,0.38);
     }
 
     100% {
-        color: #2498ee;
+        color: #1688e8;
 
         text-shadow:
-            0 0 2px rgba(36,152,238,0.10),
-            0 0 5px rgba(36,152,238,0.05);
+            0 0 3px rgba(36,152,238,0.22),
+            0 0 7px rgba(36,152,238,0.12);
     }
 }
 
@@ -571,7 +589,7 @@
 
 /* =========================================================
    CARD DESCRIPTION
-   ONLY THIS TEXT IS INCREASED
+   SAME SIZE AS FOOTER DESCRIPTION
 ========================================================= */
 
 .global-business-card p {
@@ -581,7 +599,7 @@
 
     color: rgba(255,255,255,0.91);
 
-    font-size: 15px;
+    font-size: 12px;
 
     line-height: 1.75;
 
@@ -645,12 +663,13 @@
     color: #39a9ff;
 
     animation:
-        globalProfessionalBlueGlow 2.1s ease-in-out infinite;
+        globalProfessionalBlueGlow 1.35s ease-in-out infinite;
 }
 
 
 /* =========================================================
    FOOTER DESCRIPTION
+   UNCHANGED
 ========================================================= */
 
 .global-business-footer p {
@@ -701,7 +720,7 @@
 
 
     .global-business-card p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
 }
@@ -783,7 +802,7 @@
 
     .global-business-intro p {
 
-        font-size: 11.5px;
+        font-size: 11px;
 
         line-height: 1.75;
     }
@@ -839,7 +858,7 @@
     }
 
 
-    /* MOBILE DESCRIPTION — SLIGHTLY LARGER */
+    /* MOBILE DESCRIPTION — SAME SIZE AS FOOTER */
 
     .global-business-card p {
 
@@ -847,7 +866,7 @@
 
         margin-top: 2px;
 
-        font-size: 13px;
+        font-size: 11px;
 
         line-height: 1.7;
     }
