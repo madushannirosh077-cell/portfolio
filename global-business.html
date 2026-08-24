@@ -1,898 +1,901 @@
 <!-- =========================================================
      NIROSH SOFTWARE
      GLOBAL BUSINESS & TECHNOLOGY SOLUTIONS
-     GLASSMORPHISM / PREMIUM CORPORATE SECTION
+     PREMIUM CORPORATE GLASSMORPHISM SECTION
 ========================================================= -->
 
 <style>
 
-    /* =====================================================
-       GLOBAL BUSINESS SECTION
-    ===================================================== */
+/* =========================================================
+   GLOBAL BUSINESS SECTION
+========================================================= */
 
-    .global-business-section {
-        position: relative;
-        width: 100%;
-        padding: 110px 20px;
+.global-business-section {
+    position: relative;
+    width: 100%;
+    padding: 95px 20px;
 
-        background:
-            linear-gradient(
-                135deg,
-                rgba(0, 0, 0, 0.32),
-                rgba(0, 0, 0, 0.22)
-            ),
-            url("global-business-backgroundjpg.jpeg")
-            center center / cover no-repeat;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.38),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("global-business-backgroundjpg.jpeg")
+        center center / cover no-repeat;
 
-        background-attachment: fixed;
+    background-attachment: fixed;
 
-        overflow: hidden;
-        isolation: isolate;
+    overflow: hidden;
+    isolation: isolate;
 
-        font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-        text-transform: uppercase;
-    }
-
-
-    /* =====================================================
-       PREMIUM OVERLAY
-    ===================================================== */
-
-    .global-business-section::before {
-        content: "";
-
-        position: absolute;
-        inset: 0;
-
-        background:
-            radial-gradient(
-                circle at 20% 20%,
-                rgba(255, 255, 255, 0.07),
-                transparent 32%
-            ),
-            radial-gradient(
-                circle at 80% 80%,
-                rgba(0, 110, 255, 0.08),
-                transparent 30%
-            );
-
-        pointer-events: none;
-
-        z-index: -1;
-    }
+    text-transform: uppercase;
+}
 
 
-    /* =====================================================
-       MAIN CONTAINER
-    ===================================================== */
+/* =========================================================
+   PREMIUM BACKGROUND LIGHT
+========================================================= */
 
-    .global-business-container {
-        position: relative;
+.global-business-section::before {
+    content: "";
 
-        max-width: 1250px;
+    position: absolute;
+    inset: 0;
 
-        margin: auto;
-    }
+    background:
+        radial-gradient(
+            circle at 18% 18%,
+            rgba(255,255,255,0.075),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 82% 78%,
+            rgba(30,130,255,0.075),
+            transparent 32%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+}
 
 
-    /* =====================================================
-       SECTION BADGE
-    ===================================================== */
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
 
-    .global-business-badge {
-        width: fit-content;
+.global-business-container {
+    position: relative;
 
-        margin: 0 auto 22px;
+    max-width: 1250px;
 
-        padding: 10px 19px;
+    margin: 0 auto;
+}
 
-        border: 1px solid rgba(255, 255, 255, 0.22);
 
-        border-radius: 50px;
+/* =========================================================
+   SECTION BADGE
+========================================================= */
 
-        background: rgba(255, 255, 255, 0.075);
+.global-business-badge {
+    width: fit-content;
 
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+    margin: 0 auto 20px;
 
-        color: rgba(255, 255, 255, 0.95);
+    padding: 8px 17px;
 
-        font-size: 12px;
+    border: 1px solid rgba(255,255,255,0.20);
 
-        font-weight: 700;
+    border-radius: 50px;
 
-        letter-spacing: 2.2px;
+    background: rgba(255,255,255,0.065);
 
-        text-align: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
-        box-shadow:
-            0 8px 30px rgba(0, 0, 0, 0.28);
+    color: rgba(255,255,255,0.88);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 28px rgba(0,0,0,0.25);
+}
+
+
+/* =========================================================
+   MAIN HEADER GLASS PANEL
+========================================================= */
+
+.global-business-header {
+    position: relative;
+
+    max-width: 1080px;
+
+    margin: 0 auto 45px;
+
+    padding: 34px 42px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255,255,255,0.17);
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20,25,35,0.68),
+            rgba(15,18,25,0.48)
+        );
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.38),
+        inset 0 1px 0 rgba(255,255,255,0.09);
+
+    overflow: hidden;
+}
+
+
+/* TOP GLASS LINE */
+
+.global-business-header::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 8%;
+    right: 8%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.50),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   MAIN HEADING 01
+   WHITE
+========================================================= */
+
+.global-business-header h2 {
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.3px;
+
+    text-shadow:
+        0 3px 14px rgba(0,0,0,0.55);
+}
+
+
+/* SECOND LINE ALSO WHITE */
+
+.global-business-header h2 span {
+    display: block;
+
+    color: #ffffff;
+
+    background: none;
+
+    -webkit-background-clip: initial;
+
+    -webkit-text-fill-color: #ffffff;
+
+    background-clip: initial;
+}
+
+
+/* =========================================================
+   HEADER DESCRIPTION
+   WIDE HORIZONTAL TEXT
+========================================================= */
+
+.global-business-header p {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    color: rgba(255,255,255,0.92);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    font-weight: 400;
+
+    letter-spacing: 0.15px;
+
+    text-align: center;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,0.55);
+}
+
+
+/* =========================================================
+   COMPANY INTRO GLASS PANEL
+========================================================= */
+
+.global-business-intro {
+    position: relative;
+
+    margin-bottom: 25px;
+
+    padding: 27px 32px;
+
+    border: 1px solid rgba(255,255,255,0.16);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20,24,32,0.68),
+            rgba(20,20,20,0.50)
+        );
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 18px 55px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+
+    overflow: hidden;
+}
+
+
+/* TOP LINE */
+
+.global-business-intro::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 8%;
+    right: 8%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.42),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   MAIN HEADING 02
+   WHITE
+========================================================= */
+
+.global-business-intro h3 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.15px;
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,0.55);
+}
+
+
+/* INTRO DESCRIPTION */
+
+.global-business-intro p {
+    width: 100%;
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.90);
+
+    font-size: 12px;
+
+    line-height: 1.75;
+
+    font-weight: 400;
+
+    letter-spacing: 0.12px;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,0.50);
+}
+
+
+/* =========================================================
+   HORIZONTAL GLASS CARDS
+========================================================= */
+
+.global-business-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   HORIZONTAL GLASS CARD
+========================================================= */
+
+.global-business-card {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 145px;
+
+    padding: 25px 30px;
+
+    display: grid;
+
+    grid-template-columns: 70px 270px 1fr;
+
+    align-items: center;
+
+    column-gap: 25px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(18,22,30,0.72),
+            rgba(20,20,20,0.52)
+        );
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 16px 48px rgba(0,0,0,0.36),
+        inset 0 1px 0 rgba(255,255,255,0.07);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD REFLECTION
+========================================================= */
+
+.global-business-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -100px;
+    left: -120px;
+
+    width: 220px;
+    height: 220px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+    border-radius: 50%;
+
+    filter: blur(42px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TOP GLASS LINE
+========================================================= */
+
+.global-business-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 8%;
+    right: 8%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.32),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.global-business-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(66,165,255,0.35);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(28,36,50,0.76),
+            rgba(15,18,25,0.62)
+        );
+
+    box-shadow:
+        0 22px 60px rgba(0,0,0,0.46),
+        0 0 28px rgba(40,140,255,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.11);
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.global-business-icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        rgba(255,255,255,0.075);
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    font-size: 22px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.10),
+        0 8px 25px rgba(0,0,0,0.20);
+}
+
+
+/* =========================================================
+   BLUE HEADINGS
+   STRONGER PROFESSIONAL ON/OFF GLOW
+========================================================= */
+
+.global-business-card h3,
+.global-business-footer h3 {
+
+    color: #39a9ff;
+
+    animation:
+        globalProfessionalBlueGlow 2.1s ease-in-out infinite;
+
+    will-change:
+        color,
+        text-shadow;
+}
+
+
+@keyframes globalProfessionalBlueGlow {
+
+    0% {
+        color: #2498ee;
 
         text-shadow:
-            0 2px 8px rgba(0, 0, 0, 0.55);
+            0 0 2px rgba(36,152,238,0.10),
+            0 0 5px rgba(36,152,238,0.05);
+    }
+
+    25% {
+        color: #45adff;
+
+        text-shadow:
+            0 0 5px rgba(45,165,255,0.35),
+            0 0 12px rgba(45,165,255,0.25);
+    }
+
+    50% {
+        color: #69beff;
+
+        text-shadow:
+            0 0 8px rgba(70,175,255,0.60),
+            0 0 20px rgba(55,165,255,0.42),
+            0 0 34px rgba(40,145,255,0.20);
+    }
+
+    75% {
+        color: #45adff;
+
+        text-shadow:
+            0 0 5px rgba(45,165,255,0.35),
+            0 0 12px rgba(45,165,255,0.25);
+    }
+
+    100% {
+        color: #2498ee;
+
+        text-shadow:
+            0 0 2px rgba(36,152,238,0.10),
+            0 0 5px rgba(36,152,238,0.05);
+    }
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.global-business-card h3 {
+    margin: 0;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.25px;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   WIDE HORIZONTAL
+========================================================= */
+
+.global-business-card p {
+    margin: 0;
+
+    width: 100%;
+
+    color: rgba(255,255,255,0.91);
+
+    font-size: 12px;
+
+    line-height: 1.75;
+
+    font-weight: 400;
+
+    letter-spacing: 0.12px;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,0.55);
+}
+
+
+/* =========================================================
+   FOOTER GLASS PANEL
+========================================================= */
+
+.global-business-footer {
+    position: relative;
+
+    margin-top: 25px;
+
+    padding: 28px 35px;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20,25,35,0.68),
+            rgba(15,18,25,0.48)
+        );
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 18px 55px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+
+/* =========================================================
+   FOOTER TITLE
+========================================================= */
+
+.global-business-footer h3 {
+    margin: 0 0 10px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    line-height: 1.45;
+
+    letter-spacing: 0.45px;
+}
+
+
+/* =========================================================
+   FOOTER DESCRIPTION
+========================================================= */
+
+.global-business-footer p {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    color: rgba(255,255,255,0.90);
+
+    font-size: 12px;
+
+    line-height: 1.75;
+
+    font-weight: 400;
+
+    letter-spacing: 0.12px;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,0.50);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .global-business-section {
+        padding: 80px 18px;
     }
 
 
-    /* =====================================================
-       MAIN HEADER GLASS CARD
-    ===================================================== */
+    .global-business-card {
+
+        grid-template-columns:
+            65px 230px 1fr;
+
+        column-gap: 20px;
+
+        padding: 23px 24px;
+    }
+
+
+    .global-business-card h3 {
+        font-size: 16px;
+    }
+
+
+    .global-business-card p {
+        font-size: 11.5px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .global-business-section {
+
+        padding: 65px 13px;
+
+        background-attachment: scroll;
+    }
+
+
+    /* BADGE */
+
+    .global-business-badge {
+
+        font-size: 8px;
+
+        letter-spacing: 1.1px;
+
+        padding: 7px 11px;
+    }
+
+
+    /* MAIN HEADER */
 
     .global-business-header {
 
-        max-width: 1050px;
-
-        margin: 0 auto 65px;
-
-        padding: 42px 45px;
-
-        text-align: center;
-
-        border: 1px solid rgba(255, 255, 255, 0.18);
-
-        border-radius: 26px;
-
-        background:
-            linear-gradient(
-                135deg,
-                rgba(20, 25, 35, 0.68),
-                rgba(15, 18, 25, 0.48)
-            );
-
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-
-        box-shadow:
-            0 22px 65px rgba(0, 0, 0, 0.40),
-            inset 0 1px 0 rgba(255, 255, 255, 0.10);
-
-        position: relative;
-
-        overflow: hidden;
-    }
-
-
-    /* HEADER GLASS LINE */
-
-    .global-business-header::before {
-
-        content: "";
-
-        position: absolute;
-
-        top: 0;
-
-        left: 8%;
-
-        right: 8%;
-
-        height: 1px;
-
-        background:
-            linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.55),
-                transparent
-            );
-    }
-
-
-    /* =====================================================
-       MAIN HEADING 01
-       WHITE
-    ===================================================== */
-
-    .global-business-header h2 {
-
-        margin: 0 0 20px;
-
-        color: #ffffff;
-
-        font-size: clamp(38px, 5vw, 62px);
-
-        font-weight: 700;
-
-        line-height: 1.12;
-
-        letter-spacing: -0.5px;
-
-        text-shadow:
-            0 3px 15px rgba(0, 0, 0, 0.55);
-    }
-
-
-    /* SECOND LINE OF MAIN HEADING
-       ALSO WHITE */
-
-    .global-business-header h2 span {
-
-        display: block;
-
-        color: #ffffff;
-
-        background: none;
-
-        -webkit-background-clip: initial;
-
-        -webkit-text-fill-color: #ffffff;
-
-        background-clip: initial;
-    }
-
-
-    /* =====================================================
-       MAIN HEADER DESCRIPTION
-       WIDE / HORIZONTAL
-    ===================================================== */
-
-    .global-business-header p {
-
-        width: 100%;
-
-        max-width: 100%;
-
-        margin: 0 auto;
-
-        color: rgba(255, 255, 255, 0.96);
-
-        font-size: 17px;
-
-        line-height: 1.8;
-
-        font-weight: 400;
-
-        letter-spacing: 0.2px;
-
-        text-align: center;
-
-        text-shadow:
-            0 2px 8px rgba(0, 0, 0, 0.60);
-    }
-
-
-    /* =====================================================
-       COMPANY INTRO GLASS PANEL
-    ===================================================== */
-
-    .global-business-intro {
-
-        position: relative;
+        padding: 28px 20px;
 
         margin-bottom: 35px;
 
-        padding: 40px;
-
-        border: 1px solid rgba(255, 255, 255, 0.17);
-
-        border-radius: 25px;
-
-        background:
-            linear-gradient(
-                135deg,
-                rgba(18, 22, 30, 0.68),
-                rgba(20, 20, 20, 0.50)
-            );
-
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
-
-        box-shadow:
-            0 20px 60px rgba(0, 0, 0, 0.38),
-            inset 0 1px 0 rgba(255, 255, 255, 0.08);
-
-        overflow: hidden;
+        border-radius: 21px;
     }
 
 
-    /* TOP LINE */
+    .global-business-header h2 {
 
-    .global-business-intro::before {
+        font-size: 30px;
 
-        content: "";
-
-        position: absolute;
-
-        top: 0;
-
-        left: 0;
-
-        width: 100%;
-
-        height: 1px;
-
-        background:
-            linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.48),
-                transparent
-            );
+        line-height: 1.17;
     }
 
 
-    /* =====================================================
-       MAIN HEADING 02
-       WHITE
-    ===================================================== */
+    .global-business-header p {
+
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+
+    /* INTRO */
+
+    .global-business-intro {
+
+        padding: 23px 21px;
+
+        border-radius: 20px;
+
+        margin-bottom: 20px;
+    }
+
 
     .global-business-intro h3 {
 
-        margin: 0 0 16px;
+        font-size: 17px;
 
-        color: #ffffff;
-
-        font-size: 25px;
-
-        font-weight: 700;
-
-        line-height: 1.4;
-
-        letter-spacing: 0.2px;
-
-        text-shadow:
-            0 3px 12px rgba(0, 0, 0, 0.55);
+        line-height: 1.45;
     }
 
-
-    /* INTRO DESCRIPTION */
 
     .global-business-intro p {
 
-        width: 100%;
+        font-size: 11.5px;
 
-        margin: 8px 0 0;
-
-        color: rgba(255, 255, 255, 0.94);
-
-        font-size: 15px;
-
-        line-height: 1.85;
-
-        font-weight: 400;
-
-        letter-spacing: 0.15px;
-
-        text-shadow:
-            0 2px 7px rgba(0, 0, 0, 0.55);
+        line-height: 1.75;
     }
 
 
     /* =====================================================
-       GLASS CARDS GRID
-    ===================================================== */
-
-    .global-business-content {
-
-        display: grid;
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 24px;
-    }
-
-
-    /* =====================================================
-       GLASS CARD
+       MOBILE CARD
+       STILL HORIZONTAL
     ===================================================== */
 
     .global-business-card {
 
-        position: relative;
+        min-height: 0;
 
-        padding: 34px;
+        padding: 22px 20px;
 
-        min-height: 245px;
+        display: grid;
 
-        border: 1px solid rgba(255, 255, 255, 0.16);
+        grid-template-columns: 52px 1fr;
 
-        border-radius: 25px;
+        column-gap: 16px;
 
-        background:
-            linear-gradient(
-                135deg,
-                rgba(18, 22, 30, 0.68),
-                rgba(20, 20, 20, 0.52)
-            );
+        row-gap: 7px;
 
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
+        align-items: start;
 
-        box-shadow:
-            0 18px 55px rgba(0, 0, 0, 0.40),
-            inset 0 1px 0 rgba(255, 255, 255, 0.07);
-
-        transition:
-            transform 0.35s ease,
-            border-color 0.35s ease,
-            background 0.35s ease,
-            box-shadow 0.35s ease;
-
-        overflow: hidden;
+        border-radius: 20px;
     }
 
-
-    /* =====================================================
-       GLASS REFLECTION
-    ===================================================== */
-
-    .global-business-card::before {
-
-        content: "";
-
-        position: absolute;
-
-        top: -100px;
-
-        left: -120px;
-
-        width: 220px;
-
-        height: 220px;
-
-        background:
-            rgba(255, 255, 255, 0.055);
-
-        border-radius: 50%;
-
-        filter: blur(40px);
-
-        pointer-events: none;
-    }
-
-
-    /* =====================================================
-       TOP GLASS LINE
-    ===================================================== */
-
-    .global-business-card::after {
-
-        content: "";
-
-        position: absolute;
-
-        top: 0;
-
-        left: 10%;
-
-        right: 10%;
-
-        height: 1px;
-
-        background:
-            linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.38),
-                transparent
-            );
-
-        opacity: 0.8;
-    }
-
-
-    /* =====================================================
-       CARD HOVER
-    ===================================================== */
-
-    .global-business-card:hover {
-
-        transform: translateY(-7px);
-
-        border-color:
-            rgba(66, 165, 255, 0.38);
-
-        background:
-            linear-gradient(
-                145deg,
-                rgba(30, 38, 52, 0.76),
-                rgba(15, 18, 25, 0.62)
-            );
-
-        box-shadow:
-            0 25px 70px rgba(0, 0, 0, 0.50),
-            0 0 25px rgba(40, 140, 255, 0.08),
-            inset 0 1px 0 rgba(255, 255, 255, 0.12);
-    }
-
-
-    /* =====================================================
-       CARD ICON
-    ===================================================== */
 
     .global-business-icon {
 
-        width: 54px;
+        width: 48px;
 
-        height: 54px;
+        height: 48px;
 
-        display: flex;
+        grid-row: 1 / span 2;
 
-        align-items: center;
+        font-size: 20px;
 
-        justify-content: center;
-
-        margin-bottom: 22px;
-
-        border-radius: 16px;
-
-        background:
-            rgba(255, 255, 255, 0.08);
-
-        border:
-            1px solid rgba(255, 255, 255, 0.16);
-
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-
-        font-size: 24px;
-
-        box-shadow:
-            inset 0 1px 0 rgba(255,255,255,0.10),
-            0 10px 30px rgba(0,0,0,0.22);
+        border-radius: 14px;
     }
 
-
-    /* =====================================================
-       BLUE HEADINGS
-       SOFT ON / OFF GLOW ANIMATION
-    ===================================================== */
-
-    .global-business-card h3,
-    .global-business-footer h3 {
-
-        color: #42a5ff;
-
-        animation:
-            globalBlueGlow 2.8s ease-in-out infinite;
-    }
-
-
-    @keyframes globalBlueGlow {
-
-        0% {
-
-            color: #42a5ff;
-
-            text-shadow:
-                0 0 0 rgba(66, 165, 255, 0);
-        }
-
-        50% {
-
-            color: #66b7ff;
-
-            text-shadow:
-                0 0 8px rgba(66, 165, 255, 0.35),
-                0 0 18px rgba(66, 165, 255, 0.18);
-        }
-
-        100% {
-
-            color: #42a5ff;
-
-            text-shadow:
-                0 0 0 rgba(66, 165, 255, 0);
-        }
-    }
-
-
-    /* =====================================================
-       CARD TITLES
-    ===================================================== */
 
     .global-business-card h3 {
 
-        margin: 0 0 13px;
-
-        font-size: 22px;
-
-        font-weight: 700;
+        font-size: 15px;
 
         line-height: 1.4;
 
-        letter-spacing: 0.25px;
+        align-self: center;
     }
 
-
-    /* =====================================================
-       CARD DESCRIPTION
-    ===================================================== */
 
     .global-business-card p {
 
-        margin: 0;
+        grid-column: 2;
 
-        color: rgba(255, 255, 255, 0.94);
+        font-size: 11px;
 
-        font-size: 14px;
-
-        line-height: 1.8;
-
-        font-weight: 400;
-
-        letter-spacing: 0.15px;
-
-        text-shadow:
-            0 2px 7px rgba(0, 0, 0, 0.55);
+        line-height: 1.7;
     }
 
 
-    /* =====================================================
-       FOOTER GLASS PANEL
-    ===================================================== */
+    /* FOOTER */
 
     .global-business-footer {
 
-        position: relative;
+        padding: 24px 19px;
 
-        margin-top: 35px;
-
-        padding: 38px 40px;
-
-        text-align: center;
-
-        border-radius: 25px;
-
-        border: 1px solid rgba(255,255,255,0.16);
-
-        background:
-            linear-gradient(
-                135deg,
-                rgba(20, 25, 35, 0.68),
-                rgba(15, 18, 25, 0.48)
-            );
-
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
-
-        box-shadow:
-            0 20px 60px rgba(0,0,0,0.38),
-            inset 0 1px 0 rgba(255,255,255,0.08);
+        border-radius: 20px;
     }
 
-
-    /* =====================================================
-       FOOTER TITLE
-    ===================================================== */
 
     .global-business-footer h3 {
 
-        margin: 0 0 13px;
+        font-size: 15px;
 
-        font-size: 22px;
-
-        font-weight: 700;
-
-        line-height: 1.4;
-
-        letter-spacing: 0.6px;
+        line-height: 1.5;
     }
 
-
-    /* =====================================================
-       FOOTER DESCRIPTION
-    ===================================================== */
 
     .global-business-footer p {
 
-        width: 100%;
+        font-size: 11px;
 
-        max-width: 100%;
-
-        margin: auto;
-
-        color: rgba(255,255,255,0.94);
-
-        font-size: 14px;
-
-        line-height: 1.85;
-
-        font-weight: 400;
-
-        letter-spacing: 0.15px;
-
-        text-shadow:
-            0 2px 7px rgba(0, 0, 0, 0.55);
+        line-height: 1.75;
     }
 
-
-    /* =====================================================
-       TABLET
-    ===================================================== */
-
-    @media (max-width: 900px) {
-
-        .global-business-section {
-
-            padding: 85px 18px;
-        }
-
-
-        .global-business-content {
-
-            grid-template-columns: 1fr;
-        }
-
-
-        .global-business-header {
-
-            margin-bottom: 50px;
-        }
-
-
-        .global-business-header h2 {
-
-            font-size: 46px;
-        }
-
-
-        .global-business-intro h3 {
-
-            font-size: 23px;
-        }
-
-
-        .global-business-card h3 {
-
-            font-size: 21px;
-        }
-
-    }
-
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
-
-    @media (max-width: 600px) {
-
-        .global-business-section {
-
-            padding: 70px 14px;
-
-            background-attachment: scroll;
-        }
-
-
-        /* BADGE */
-
-        .global-business-badge {
-
-            font-size: 9px;
-
-            letter-spacing: 1.25px;
-
-            padding: 8px 13px;
-
-            line-height: 1.5;
-        }
-
-
-        /* HEADER */
-
-        .global-business-header {
-
-            padding: 30px 22px;
-
-            margin-bottom: 42px;
-
-            border-radius: 22px;
-        }
-
-
-        .global-business-header h2 {
-
-            font-size: 35px;
-
-            line-height: 1.16;
-
-            letter-spacing: -0.2px;
-        }
-
-
-        .global-business-header p {
-
-            font-size: 14px;
-
-            line-height: 1.75;
-        }
-
-
-        /* INTRO */
-
-        .global-business-intro {
-
-            padding: 27px 24px;
-
-            border-radius: 21px;
-        }
-
-
-        .global-business-intro h3 {
-
-            font-size: 20px;
-
-            line-height: 1.45;
-        }
-
-
-        .global-business-intro p {
-
-            font-size: 13px;
-
-            line-height: 1.8;
-        }
-
-
-        /* CARDS */
-
-        .global-business-card {
-
-            padding: 27px 25px;
-
-            min-height: auto;
-
-            border-radius: 21px;
-        }
-
-
-        .global-business-icon {
-
-            width: 52px;
-
-            height: 52px;
-
-            margin-bottom: 20px;
-
-            font-size: 23px;
-        }
-
-
-        .global-business-card h3 {
-
-            font-size: 19px;
-
-            line-height: 1.45;
-
-            margin-bottom: 12px;
-        }
-
-
-        .global-business-card p {
-
-            font-size: 13px;
-
-            line-height: 1.78;
-        }
-
-
-        /* FOOTER */
-
-        .global-business-footer {
-
-            padding: 29px 22px;
-
-            border-radius: 21px;
-        }
-
-
-        .global-business-footer h3 {
-
-            font-size: 18px;
-
-            line-height: 1.5;
-        }
-
-
-        .global-business-footer p {
-
-            font-size: 13px;
-
-            line-height: 1.8;
-        }
-
-    }
+}
 
 </style>
 
@@ -949,7 +952,7 @@
 
 
         <!-- =================================================
-             GLASS CARDS
+             HORIZONTAL GLASS CARDS
         ================================================= -->
 
         <div class="global-business-content">
