@@ -1593,14 +1593,16 @@ background-repeat: no-repeat;
 }
 
 
-/* FOUNDER */
+/* =========================================================
+   FOUNDER - CLEAR PROFESSIONAL DESIGN
+   ========================================================= */
 
 .founder-section {
-
     margin-bottom: 75px;
-
 }
 
+
+/* FOUNDER MAIN CARD */
 
 .founder-card {
 
@@ -1610,7 +1612,7 @@ background-repeat: no-repeat;
 
     align-items: center;
 
-    gap: 45px;
+    gap: 0;
 
     padding: 45px;
 
@@ -1622,8 +1624,8 @@ background-repeat: no-repeat;
 
     background-image:
         linear-gradient(
-            rgba(0,0,0,.42),
-            rgba(0,0,0,.42)
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.12)
         ),
         url('https://madushannirosh077-cell.github.io/portfolio/founder-backgroundjpg.jpeg');
 
@@ -1633,18 +1635,14 @@ background-repeat: no-repeat;
 
     background-repeat: no-repeat;
 
-    backdrop-filter: blur(18px);
-
-    -webkit-backdrop-filter: blur(18px);
-
     box-shadow:
-        0 25px 70px rgba(0,0,0,.32),
-        inset 0 1px 0 rgba(255,255,255,.15);
+        0 25px 70px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.18);
 
 }
 
 
-/* GLASS OVERLAY */
+/* REMOVE BLUR FROM BACKGROUND */
 
 .founder-card::before {
 
@@ -1656,14 +1654,10 @@ background-repeat: no-repeat;
 
     background:
         linear-gradient(
-            135deg,
-            rgba(255,255,255,.13),
-            rgba(255,255,255,.035)
+            90deg,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.18)
         );
-
-    backdrop-filter: blur(3px);
-
-    -webkit-backdrop-filter: blur(3px);
 
     pointer-events: none;
 
@@ -1672,7 +1666,7 @@ background-repeat: no-repeat;
 }
 
 
-/* KEEP CONTENT ABOVE GLASS */
+/* KEEP CONTENT ABOVE BACKGROUND */
 
 .founder-card > * {
 
@@ -1682,137 +1676,226 @@ background-repeat: no-repeat;
 
 }
 
+
+/* REMOVE LAPTOP ICON BOX */
+
 .founder-photo {
 
-    min-width: 190px;
-
-    height: 190px;
-
-    border-radius: 22px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: rgba(255,255,255,.08);
-
-    border: 1px solid rgba(255,255,255,.20);
-
-    backdrop-filter: blur(14px);
-
-    -webkit-backdrop-filter: blur(14px);
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.12),
-        0 12px 30px rgba(0,0,0,.18);
-
-}
-
-.founder-photo span {
-
-    font-size: 68px;
-
-    filter: grayscale(1);
+    display: none;
 
 }
 
 
-.profile-label {
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-    opacity: .62;
-
-}
+/* FOUNDER INFORMATION */
 
 .founder-information {
 
     position: relative;
 
-    padding: 25px 30px;
+    width: 100%;
+
+    padding: 28px 32px;
 
     border-radius: 20px;
 
-    background: rgba(255,255,255,.075);
+    background: rgba(0,0,0,.38);
 
-    border: 1px solid rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.28);
 
-    backdrop-filter: blur(14px);
+    backdrop-filter: none;
 
-    -webkit-backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: none;
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.10),
-        0 12px 35px rgba(0,0,0,.20);
+        0 15px 40px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.15);
 
 }
+
+
+/* OWNER & FOUNDER */
+
+.profile-label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    opacity: 1;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.8);
+
+}
+
+
+/* NAME */
+
 .founder-information h3 {
 
-    margin: 10px 0 6px;
+    margin: 8px 0 8px;
+
+    color: #ffffff;
 
     font-size: 32px;
 
+    font-weight: 900;
+
+    line-height: 1.2;
+
+    text-shadow:
+        0 3px 10px rgba(0,0,0,.9);
+
 }
 
+
+/* POSITION */
 
 .founder-information h4 {
 
-    margin: 0 0 18px;
+    margin: 0 0 20px;
 
-    font-size: 15px;
+    color: #ffffff;
 
-    font-weight: 600;
+    font-size: 16px;
 
-    opacity: .72;
+    font-weight: 800;
+
+    line-height: 1.5;
+
+    opacity: 1;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.9);
 
 }
 
+
+/* DESCRIPTION */
 
 .founder-information p {
 
-    max-width: 780px;
+    max-width: 850px;
 
-    line-height: 1.8;
+    margin: 0;
 
-    opacity: .68;
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.9;
+
+    opacity: 1;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.9);
 
 }
 
+
+/* PROFILE TAGS */
 
 .profile-tags {
 
     display: flex;
 
-    gap: 9px;
+    gap: 10px;
 
     flex-wrap: wrap;
 
-    margin-top: 22px;
+    margin-top: 24px;
 
 }
 
+
+/* TAG */
 
 .profile-tags span {
 
-    padding: 8px 13px;
+    padding: 9px 14px;
 
     border-radius: 50px;
 
-    border: 1px solid rgba(128,128,128,.25);
+    border: 1px solid rgba(255,255,255,.40);
+
+    background: rgba(0,0,0,.35);
+
+    color: #ffffff;
 
     font-size: 10px;
 
-    font-weight: 600;
+    font-weight: 800;
+
+    letter-spacing: .4px;
+
+    opacity: 1;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.9);
 
 }
 
 
+/* =========================================================
+   MOBILE FOUNDER
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .founder-card {
+
+        padding: 20px;
+
+    }
+
+
+    .founder-information {
+
+        padding: 24px 20px;
+
+    }
+
+
+    .founder-information h3 {
+
+        font-size: 25px;
+
+    }
+
+
+    .founder-information h4 {
+
+        font-size: 14px;
+
+    }
+
+
+    .founder-information p {
+
+        font-size: 12px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .profile-label {
+
+        font-size: 10px;
+
+    }
+
+}
 /* SEARCH */
 
 .team-controls {
