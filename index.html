@@ -1266,11 +1266,205 @@ observer.observe(counter);
 
 
 
-<a href="team.html" class="nirosh-team-page-button">
+<!-- =========================================================
+     NIROSH SOFTWARE — PROFESSIONAL OUR TEAM BUTTON
+     ========================================================= -->
 
-    <span class="nirosh-team-status-dot"></span>
+<style>
 
-    <span>Our Team</span>
+.nirosh-team-page-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    width: max-content;
+
+    margin: 30px auto;
+
+    padding: 14px 26px;
+
+    border: 1px solid #ff5555;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #d60000,
+        #a80000
+    );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(214,0,0,.35);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+
+    animation:
+        niroshTeamButtonPulse 2.2s ease-in-out infinite;
+
+}
+
+
+/* SHINE EFFECT */
+
+.nirosh-team-page-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 70%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.20),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition:
+        left .7s ease;
+
+}
+
+
+/* HOVER */
+
+.nirosh-team-page-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #ff8888;
+
+    box-shadow:
+        0 14px 40px rgba(214,0,0,.50);
+
+}
+
+
+/* SHINE */
+
+.nirosh-team-page-button:hover::before {
+
+    left: 130%;
+
+}
+
+
+/* ARROW */
+
+.nirosh-team-button-arrow {
+
+    font-size: 17px;
+
+    line-height: 1;
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.nirosh-team-page-button:hover
+.nirosh-team-button-arrow {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* CONTINUOUS ANIMATION */
+
+@keyframes niroshTeamButtonPulse {
+
+    0% {
+
+        box-shadow:
+            0 8px 25px rgba(214,0,0,.25);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 8px 32px rgba(214,0,0,.50);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 8px 25px rgba(214,0,0,.25);
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .nirosh-team-page-button {
+
+        padding: 13px 21px;
+
+        font-size: 11px;
+
+        margin: 25px auto;
+
+    }
+
+}
+
+</style>
+
+
+<!-- =========================
+     BUTTON
+     ========================= -->
+
+<a href="team.html"
+   class="nirosh-team-page-button">
+
+    <span>CLICK NOW</span>
 
     <span class="nirosh-team-button-arrow">→</span>
 
