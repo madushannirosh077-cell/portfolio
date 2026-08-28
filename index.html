@@ -1871,6 +1871,146 @@ SUBMIT YOUR CV
     }
 
 }
+    /* =========================================================
+   CYBER SECURITY PAYMENT BUTTON
+========================================================= */
+
+.payment-cyber-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    height: 52px;
+    padding: 2px;
+    border-radius: 30px;
+    text-decoration: none;
+    background: #0f172a;
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow:
+        0 0 15px rgba(37, 99, 235, 0.25),
+        inset 0 0 12px rgba(37, 99, 235, 0.10);
+}
+
+
+/* Rotating Cyber Ring */
+
+.payment-cyber-button .cyber-ring {
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        transparent 250deg,
+        #2563eb 285deg,
+        #60a5fa 310deg,
+        #ffffff 325deg,
+        #2563eb 340deg,
+        transparent 360deg
+    );
+    border-radius: 50%;
+    animation: cyberPaymentRotate 2s linear infinite;
+    z-index: 0;
+}
+
+
+/* Inner Button */
+
+.payment-cyber-button::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border-radius: 28px;
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #172554,
+        #0f172a
+    );
+    z-index: 1;
+}
+
+
+/* Button Content */
+
+.payment-button-content {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+
+/* Icons */
+
+.payment-button-content i:first-child {
+    color: #60a5fa;
+    font-size: 13px;
+}
+
+.payment-button-content i:last-child {
+    color: #93c5fd;
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.payment-cyber-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 20px rgba(37, 99, 235, 0.45),
+        0 0 40px rgba(37, 99, 235, 0.18);
+}
+
+.payment-cyber-button:hover
+.payment-button-content i:last-child {
+    transform: translateX(4px);
+}
+
+
+/* Circular Loading Animation */
+
+@keyframes cyberPaymentRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .payment-cyber-button {
+        width: 175px;
+        height: 48px;
+    }
+
+    .payment-button-content {
+        font-size: 11px;
+        gap: 8px;
+    }
+
+}
 </style>
 
 
@@ -2418,6 +2558,15 @@ READ MORE
 </div>
 </section>
 <!-- BLOG SECTION END -->
+    <a href="payment-methods.html" class="payment-cyber-button">
+    <span class="cyber-ring"></span>
+
+    <span class="payment-button-content">
+        <i class="fa-solid fa-credit-card"></i>
+        <span>Payment Methods</span>
+        <i class="fa-solid fa-arrow-right"></i>
+    </span>
+</a>
     <div style="text-align:center; margin:35px 0;">
 
     <a href="technology-blog.html" class="nirosh-blog-button">
