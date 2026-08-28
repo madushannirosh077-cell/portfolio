@@ -1267,171 +1267,158 @@ observer.observe(counter);
 
 
 <!-- =========================================================
-     NIROSH SOFTWARE — PROFESSIONAL OUR TEAM BUTTON
+     NIROSH SOFTWARE — FINAL CENTERED TEAM BUTTON
      ========================================================= -->
 
 <style>
 
-.nirosh-team-page-button {
+a.nirosh-team-page-button {
 
-    display: flex;
+    display: flex !important;
 
-    align-items: center;
+    align-items: center !important;
 
-    justify-content: center;
+    justify-content: center !important;
 
-    gap: 11px;
+    gap: 12px !important;
 
-    width: max-content;
+    width: fit-content !important;
 
-    margin: 30px auto;
+    max-width: 90% !important;
 
-    padding: 14px 26px;
+    margin: 35px auto !important;
 
-    border: 1px solid #ff5555;
+    padding: 15px 28px !important;
 
-    border-radius: 14px;
+    box-sizing: border-box !important;
 
-    background: linear-gradient(
+    position: relative !important;
+
+    left: auto !important;
+
+    right: auto !important;
+
+    transform: none;
+
+    border: 1px solid #ff6666 !important;
+
+    border-radius: 12px !important;
+
+    background: #d60000 !important;
+
+    background-image: linear-gradient(
         135deg,
-        #d60000,
+        #e00000,
         #a80000
-    );
+    ) !important;
 
-    color: #ffffff;
+    color: #ffffff !important;
 
-    text-decoration: none;
+    text-decoration: none !important;
 
-    font-size: 12px;
+    font-family: inherit !important;
 
-    font-weight: 800;
+    font-size: 13px !important;
 
-    letter-spacing: 1px;
+    font-weight: 800 !important;
 
-    text-transform: uppercase;
+    letter-spacing: 1px !important;
 
-    cursor: pointer;
+    text-transform: uppercase !important;
 
-    position: relative;
-
-    overflow: hidden;
+    cursor: pointer !important;
 
     box-shadow:
-        0 8px 25px rgba(214,0,0,.35);
+        0 8px 25px rgba(214,0,0,.40) !important;
 
     transition:
         transform .3s ease,
         box-shadow .3s ease,
-        border-color .3s ease;
+        border-color .3s ease !important;
 
     animation:
-        niroshTeamButtonPulse 2.2s ease-in-out infinite;
-
-}
-
-
-/* SHINE EFFECT */
-
-.nirosh-team-page-button::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-
-    left: -120%;
-
-    width: 70%;
-
-    height: 100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.20),
-            transparent
-        );
-
-    transform: skewX(-20deg);
-
-    transition:
-        left .7s ease;
-
-}
-
-
-/* HOVER */
-
-.nirosh-team-page-button:hover {
-
-    transform:
-        translateY(-3px);
-
-    border-color:
-        #ff8888;
-
-    box-shadow:
-        0 14px 40px rgba(214,0,0,.50);
-
-}
-
-
-/* SHINE */
-
-.nirosh-team-page-button:hover::before {
-
-    left: 130%;
+        niroshFinalTeamPulse 2.2s ease-in-out infinite !important;
 
 }
 
 
 /* ARROW */
 
+a.nirosh-team-page-button
 .nirosh-team-button-arrow {
 
-    font-size: 17px;
+    display: inline-block !important;
 
-    line-height: 1;
+    color: #ffffff !important;
+
+    font-size: 18px !important;
+
+    line-height: 1 !important;
 
     transition:
-        transform .3s ease;
+        transform .3s ease !important;
 
 }
 
 
-.nirosh-team-page-button:hover
+/* HOVER */
+
+a.nirosh-team-page-button:hover {
+
+    transform:
+        translateY(-4px) !important;
+
+    background: #ed0000 !important;
+
+    background-image: linear-gradient(
+        135deg,
+        #f00000,
+        #b80000
+    ) !important;
+
+    border-color:
+        #ff9999 !important;
+
+    color:
+        #ffffff !important;
+
+    box-shadow:
+        0 15px 40px rgba(214,0,0,.55) !important;
+
+}
+
+
+a.nirosh-team-page-button:hover
 .nirosh-team-button-arrow {
 
     transform:
-        translateX(5px);
+        translateX(6px) !important;
 
 }
 
 
-/* CONTINUOUS ANIMATION */
+/* CONTINUOUS PULSE */
 
-@keyframes niroshTeamButtonPulse {
+@keyframes niroshFinalTeamPulse {
 
     0% {
 
         box-shadow:
-            0 8px 25px rgba(214,0,0,.25);
+            0 8px 25px rgba(214,0,0,.30);
 
     }
 
     50% {
 
         box-shadow:
-            0 8px 32px rgba(214,0,0,.50);
+            0 8px 35px rgba(214,0,0,.60);
 
     }
 
     100% {
 
         box-shadow:
-            0 8px 25px rgba(214,0,0,.25);
+            0 8px 25px rgba(214,0,0,.30);
 
     }
 
@@ -1442,13 +1429,13 @@ observer.observe(counter);
 
 @media (max-width: 600px) {
 
-    .nirosh-team-page-button {
+    a.nirosh-team-page-button {
 
-        padding: 13px 21px;
+        margin: 28px auto !important;
 
-        font-size: 11px;
+        padding: 13px 22px !important;
 
-        margin: 25px auto;
+        font-size: 11px !important;
 
     }
 
@@ -1457,9 +1444,9 @@ observer.observe(counter);
 </style>
 
 
-<!-- =========================
+<!-- =========================================================
      BUTTON
-     ========================= -->
+     ========================================================= -->
 
 <a href="team.html"
    class="nirosh-team-page-button">
