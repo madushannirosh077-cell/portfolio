@@ -1265,13 +1265,104 @@ observer.observe(counter);
 </script>
 
 
-MEET OUR TEAM
-Discover our professional team and leadership.
 <!-- =========================================================
-     NIROSH SOFTWARE — FINAL CENTERED TEAM BUTTON
+     NIROSH SOFTWARE — TEAM BUTTON CARD
      ========================================================= -->
 
 <style>
+
+/* =========================================================
+   TEAM BUTTON CARD
+   ========================================================= */
+
+.nirosh-team-button-card {
+
+    width: fit-content;
+
+    max-width: 92%;
+
+    margin: 35px auto;
+
+    padding: 22px 30px 25px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,.06);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.25),
+
+        inset 0 1px 0
+        rgba(255,255,255,.10);
+
+}
+
+
+/* =========================================================
+   TEAM BUTTON CARD TEXT
+   ========================================================= */
+
+.nirosh-team-button-title {
+
+    margin: 0 0 6px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+}
+
+
+.nirosh-team-button-description {
+
+    margin: 0 0 17px;
+
+    color: #ffffff;
+
+    opacity: .68;
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   EXISTING TEAM BUTTON — STYLE PRESERVED
+   ========================================================= */
 
 a.nirosh-team-page-button {
 
@@ -1287,7 +1378,7 @@ a.nirosh-team-page-button {
 
     max-width: 90% !important;
 
-    margin: 35px auto !important;
+    margin: 0 auto !important;
 
     padding: 15px 28px !important;
 
@@ -1343,7 +1434,9 @@ a.nirosh-team-page-button {
 }
 
 
-/* ARROW */
+/* =========================================================
+   ARROW
+   ========================================================= */
 
 a.nirosh-team-page-button
 .nirosh-team-button-arrow {
@@ -1362,7 +1455,9 @@ a.nirosh-team-page-button
 }
 
 
-/* HOVER */
+/* =========================================================
+   HOVER
+   ========================================================= */
 
 a.nirosh-team-page-button:hover {
 
@@ -1398,7 +1493,9 @@ a.nirosh-team-page-button:hover
 }
 
 
-/* CONTINUOUS PULSE */
+/* =========================================================
+   CONTINUOUS ON / OFF ANIMATION
+   ========================================================= */
 
 @keyframes niroshFinalTeamPulse {
 
@@ -1432,13 +1529,44 @@ a.nirosh-team-page-button:hover
 }
 
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
-    a.nirosh-team-page-button {
+    .nirosh-team-button-card {
 
-        margin: 28px auto !important;
+        max-width: 94%;
+
+        padding: 20px 18px 22px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .nirosh-team-button-title {
+
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    .nirosh-team-button-description {
+
+        font-size: 7px;
+
+        letter-spacing: .8px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    a.nirosh-team-page-button {
 
         padding: 13px 22px !important;
 
@@ -1452,17 +1580,37 @@ a.nirosh-team-page-button:hover
 
 
 <!-- =========================================================
-     BUTTON
+     TEAM BUTTON CARD
      ========================================================= -->
 
-<a href="team.html"
-   class="nirosh-team-page-button">
+<div class="nirosh-team-button-card">
 
-    <span>CLICK NOW</span>
+    <div class="nirosh-team-button-title">
 
-    <span class="nirosh-team-button-arrow">→</span>
+        MEET OUR TEAM
 
-</a>
+    </div>
+
+
+    <div class="nirosh-team-button-description">
+
+        DISCOVER OUR PROFESSIONAL TEAM &amp; LEADERSHIP.
+
+    </div>
+
+
+    <!-- EXISTING BUTTON -->
+
+    <a href="team.html"
+       class="nirosh-team-page-button">
+
+        <span>CLICK NOW</span>
+
+        <span class="nirosh-team-button-arrow">→</span>
+
+    </a>
+
+</div>
         
 <!-- CAREERS SECTION START -->
 
