@@ -2347,6 +2347,143 @@ SUBMIT YOUR CV
     }
 
 }
+    /* =========================================================
+   PERSONALLY OWNED ASSETS BUTTON
+========================================================= */
+
+.assets-cyber-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 52px;
+    padding: 2px;
+    border-radius: 30px;
+    text-decoration: none;
+    background: #0f172a;
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow:
+        0 0 15px rgba(37, 99, 235, 0.25),
+        inset 0 0 12px rgba(37, 99, 235, 0.10);
+}
+
+
+/* Rotating Blue Cyber Ring */
+
+.assets-cyber-button .assets-cyber-ring {
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        transparent 250deg,
+        #2563eb 285deg,
+        #60a5fa 310deg,
+        #ffffff 325deg,
+        #2563eb 340deg,
+        transparent 360deg
+    );
+    border-radius: 50%;
+    animation: assetsCyberRotate 2s linear infinite;
+    z-index: 0;
+}
+
+
+/* Inner Button */
+
+.assets-cyber-button::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border-radius: 28px;
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #172554,
+        #0f172a
+    );
+    z-index: 1;
+}
+
+
+/* Button Content */
+
+.assets-button-content {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/* Arrow */
+
+.assets-button-content i {
+    color: #93c5fd;
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.assets-cyber-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(37, 99, 235, 0.45),
+        0 0 40px rgba(37, 99, 235, 0.18);
+}
+
+
+.assets-cyber-button:hover
+.assets-button-content i {
+    transform: translateX(4px);
+}
+
+
+/* Circular Blue Light Animation */
+
+@keyframes assetsCyberRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .assets-cyber-button {
+        width: 220px;
+        height: 48px;
+    }
+
+    .assets-button-content {
+        font-size: 10px;
+        gap: 8px;
+    }
+
+}
 </style>
 
 
@@ -2907,7 +3044,18 @@ READ MORE
     </a>
 
     <br><br>
+<div style="text-align: center; margin: 35px 0;">
 
+    <a href="personally-owned-assets.html" class="assets-cyber-button">
+        <span class="assets-cyber-ring"></span>
+
+        <span class="assets-button-content">
+            <span>PERSONALLY OWNED ASSETS</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </span>
+    </a>
+
+</div>
     <a href="technology-blog.html" class="nirosh-blog-button">
         EXPLORE OUR BLOG
         <span>→</span>
