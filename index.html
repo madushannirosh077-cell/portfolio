@@ -33,15 +33,64 @@ user-drag:none;
 /* HERO */
 .hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738');
-background-size:cover;
-background-position:center;
+position:relative;
+overflow:hidden;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 padding:20px;
+background:#000;
+isolation:isolate;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+z-index:-2;
+background-image:var(--hero-bg);
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+transform:translateX(0);
+transition:transform 1.2s ease-in-out;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+z-index:-1;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9));
+}
+
+.hero h1,
+.hero p,
+.hero > *{
+position:relative;
+z-index:1;
+}
+.hero.slide-out::before{
+transform:translateX(-100%);
+}
+
+.hero.slide-in::before{
+transform:translateX(100%);
+}
+
+.hero.slide-in-now::before{
+transform:translateX(0);
+}
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+max-width:700px;
+margin-top:15px;
+opacity:0.8;
+line-height:1.8;
 }
 
 .hero h1{
@@ -4032,5 +4081,48 @@ niroshBotInput.addEventListener("keypress", function(e){
 }
 </script>
 <!-- Nirosh Advanced Chatbot End -->
+ <script>
+const hero = document.querySelector('.hero');
+
+const heroPhotos = [
+    'hero1jpg.jpeg',
+    'hero2jpg.jpeg',
+    'hero3jpg.jpeg',
+    'hero4jpg.jpeg',
+    'hero5jpg.jpeg'
+];
+
+let heroIndex = 0;
+
+hero.style.setProperty('--hero-bg', "url('hero1jpg.jpeg')");
+
+setInterval(() => {
+
+    hero.classList.remove('slide-in-now');
+    hero.classList.add('slide-out');
+
+    setTimeout(() => {
+
+        heroIndex = (heroIndex + 1) % heroPhotos.length;
+
+        hero.style.setProperty(
+            '--hero-bg',
+            `url('${heroPhotos[heroIndex]}')`
+        );
+
+        hero.classList.remove('slide-out');
+        hero.classList.add('slide-in');
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                hero.classList.remove('slide-in');
+                hero.classList.add('slide-in-now');
+            });
+        });
+
+    }, 1200);
+
+}, 5000);
+</script>   
 </body>
 </html>
