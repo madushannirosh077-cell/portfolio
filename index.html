@@ -44,25 +44,39 @@ background:#000;
 isolation:isolate;
 }
 
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-z-index:-2;
-background-image:var(--hero-bg);
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-transform:translateX(0);
-transition:transform 1.2s ease-in-out;
-}
-
+/* HERO BACKGROUND - TWO IMAGE LAYERS */
+.hero::before,
 .hero::after{
 content:"";
 position:absolute;
 inset:0;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.hero::before{
+z-index:-2;
+background-image:var(--hero-current);
+transform:translateX(0);
+}
+
+.hero::after{
 z-index:-1;
-background:linear-gradient(rgba(0,0,0,0.30),rgba(0,0,0,0.45));
+background-image:
+linear-gradient(rgba(0,0,0,0.30),rgba(0,0,0,0.45)),
+var(--hero-next);
+transform:translateX(100%);
+transition:transform 1.2s ease-in-out;
+}
+
+.hero.transition::before{
+transform:translateX(-100%);
+transition:transform 1.2s ease-in-out;
+}
+
+.hero.transition::after{
+transform:translateX(0);
 }
 
 .hero h1,
@@ -70,27 +84,6 @@ background:linear-gradient(rgba(0,0,0,0.30),rgba(0,0,0,0.45));
 .hero > *{
 position:relative;
 z-index:1;
-}
-.hero.slide-out::before{
-transform:translateX(-100%);
-}
-
-.hero.slide-in::before{
-transform:translateX(100%);
-}
-
-.hero.slide-in-now::before{
-transform:translateX(0);
-}
-.hero h1{
-font-size:40px;
-}
-
-.hero p{
-max-width:700px;
-margin-top:15px;
-opacity:0.8;
-line-height:1.8;
 }
 
 .hero h1{
@@ -4094,33 +4087,66 @@ const heroPhotos = [
 
 let heroIndex = 0;
 
-hero.style.setProperty('--hero-bg', "url('hero1jpg.jpeg')");
+/* First photo */
+hero.style.setProperty(
+    '--hero-current',
+    `url('${heroPhotos[0]}')`
+);
 
+hero.style.setProperty(
+    '--hero-next',
+    `url('${heroPhotos[1]}')`
+);
+
+/* Change background every 5 seconds */
 setInterval(() => {
 
-    hero.classList.remove('slide-in-now');
-    hero.classList.add('slide-out');
+    const nextIndex =
+        (heroIndex + 1) % heroPhotos.length;
 
-    setTimeout(() => {
+    const nextPhoto =
+        heroPhotos[nextIndex];
 
-        heroIndex = (heroIndex + 1) % heroPhotos.length;
+    /* Make sure the next photo is loaded first */
+    const img = new Image();
 
+    img.onload = () => {
+
+        /* Put next photo into the second layer */
         hero.style.setProperty(
-            '--hero-bg',
-            `url('${heroPhotos[heroIndex]}')`
+            '--hero-next',
+            `url('${nextPhoto}')`
         );
 
-        hero.classList.remove('slide-out');
-        hero.classList.add('slide-in');
+        /* Start the transition */
+        hero.classList.add('transition');
 
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                hero.classList.remove('slide-in');
-                hero.classList.add('slide-in-now');
-            });
-        });
+        /* After 1.2 seconds, make the new photo current */
+        setTimeout(() => {
 
-    }, 1200);
+            heroIndex = nextIndex;
+
+            hero.style.setProperty(
+                '--hero-current',
+                `url('${heroPhotos[heroIndex]}')`
+            );
+
+            /* Prepare the following photo */
+            const followingIndex =
+                (heroIndex + 1) % heroPhotos.length;
+
+            hero.style.setProperty(
+                '--hero-next',
+                `url('${heroPhotos[followingIndex]}')`
+            );
+
+            hero.classList.remove('transition');
+
+        }, 1200);
+
+    };
+
+    img.src = nextPhoto;
 
 }, 5000);
 </script>   
