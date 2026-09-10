@@ -287,12 +287,34 @@ opacity:0.9;
     padding:60px 15px;
     text-align:center;
     color:white;
+    isolation:isolate;
+}
+
+/* STICKY BACKGROUND PHOTO */
+.company-section::before{
+    content:"";
+    position:sticky;
+    top:0;
+    display:block;
+
+    width:100%;
+    height:100vh;
+
+    margin-bottom:-100vh;
 
     background:
         linear-gradient(rgba(0,0,0,0.08),rgba(0,0,0,0.12)),
         url('nirosh-company.jpeg') center/cover no-repeat;
 
-    background-attachment:fixed;
+    z-index:0;
+    pointer-events:none;
+}
+
+/* COMPANY CONTENT ABOVE PHOTO */
+.company-section h2,
+.company-card{
+    position:relative;
+    z-index:1;
 }
 
 /* COMPANY TITLE */
