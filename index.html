@@ -287,27 +287,9 @@ opacity:0.9;
     padding:60px 15px;
     text-align:center;
     color:white;
+    background:url('nirosh-company.jpeg') center/cover no-repeat;
+    background-attachment:fixed;
     isolation:isolate;
-}
-
-/* STICKY BACKGROUND PHOTO */
-.company-section::before{
-    content:"";
-    position:sticky;
-    top:0;
-    display:block;
-
-    width:100%;
-    height:100vh;
-
-    margin-bottom:-100vh;
-
-    background:
-        linear-gradient(rgba(0,0,0,0.08),rgba(0,0,0,0.12)),
-        url('nirosh-company.jpeg') center/cover no-repeat;
-
-    z-index:0;
-    pointer-events:none;
 }
 
 /* COMPANY CONTENT ABOVE PHOTO */
@@ -370,7 +352,7 @@ opacity:0.9;
 @media(max-width:600px){
     .company-section{
         padding:45px 15px;
-        background-attachment:scroll;
+        
     }
 
     .company-section h2{
@@ -2933,7 +2915,7 @@ NIROSH SOFTWARE DEVELOPMENT & SYSTEM ARCHITECTURE SOLUTION COMPANY
 </div>
 </section>
 <!-- COMPANY -->
-<section class="company-section">
+<section class="company-section" style="padding:30px 15px;background:url('nirosh-company.jpeg') center/cover no-repeat;background-attachment:fixed;position:relative;">
 
 <h2>ABOUT OUR COMPANY</h2>
 
