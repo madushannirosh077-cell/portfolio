@@ -6,7 +6,7 @@
 <title>Nirosh Software</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <style>
 *{
 margin:0;
@@ -190,167 +190,291 @@ font-size:45px;
 margin-bottom:15px;
 }
 
-/* ================================
-   TECHNOLOGIES - COMPACT LOGO TAGS
-================================ */
+/* =========================================
+   TECHNOLOGIES SECTION
+========================================= */
+
+.technologies-section {
+    position:relative;
+    padding:75px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.72),
+            rgba(0,0,0,0.72)
+        );
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+
+/* ALL GLASS CARDS */
+
+.technology-groups {
+    max-width:1200px;
+    margin:40px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(320px,1fr));
+
+    gap:18px;
+}
+
+
+/* GLASS CARD */
+
+.technology-card {
+    padding:22px;
+
+    background:rgba(255,255,255,0.075);
+
+    border:1px solid rgba(255,255,255,0.18);
+
+    border-radius:22px;
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.30);
+
+    transition:all 0.3s ease;
+}
+
+
+/* CARD HOVER */
+
+.technology-card:hover {
+    transform:translateY(-4px);
+
+    background:rgba(255,255,255,0.10);
+
+    border-color:rgba(24,224,196,0.40);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.40);
+}
+
+
+/* CATEGORY TITLE */
+
+.technology-card h3 {
+    margin:0 0 17px;
+
+    text-align:center;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:700;
+}
+
+
+/* TECHNOLOGY TAG AREA */
 
 .tech-container {
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-align-items:center;
+    display:flex;
 
-gap:8px;
+    flex-wrap:wrap;
 
-max-width:1200px;
-margin:30px auto 0;
-padding:0 8px;
+    justify-content:center;
+
+    align-items:center;
+
+    gap:7px;
+
+    margin:0;
+
+    padding:0;
 }
 
 
 /* TECHNOLOGY TAG */
 
 .tech {
-display:inline-flex;
-align-items:center;
-justify-content:center;
+    display:inline-flex;
 
-gap:7px;
+    align-items:center;
 
-background:#111;
+    justify-content:center;
 
-padding:7px 12px;
+    gap:6px;
 
-border:1px solid rgba(255,255,255,0.06);
+    min-height:34px;
 
-border-radius:50px;
+    padding:6px 10px;
 
-font-size:13px;
-font-weight:600;
+    background:rgba(0,0,0,0.38);
 
-color:#fff;
+    border:1px solid rgba(255,255,255,0.10);
 
-white-space:nowrap;
+    border-radius:50px;
 
-line-height:1;
+    color:#ffffff;
 
-transition:all 0.25s ease;
+    font-size:12px;
+
+    font-weight:600;
+
+    line-height:1;
+
+    white-space:nowrap;
+
+    transition:all 0.25s ease;
 }
 
 
-/* TECHNOLOGY LOGO */
+/* REAL TECHNOLOGY LOGOS */
 
-.tech img {
-width:22px;
-height:22px;
+.tech i {
+    font-size:20px;
 
-object-fit:contain;
+    line-height:1;
 
-display:block;
-
-flex-shrink:0;
+    flex-shrink:0;
 }
 
 
-/* TEXT-BASED LOGO */
+/* LOGO FOR ITEMS WITHOUT AN OFFICIAL ICON */
 
-.tech-logo-text {
-width:22px;
-height:22px;
+.special-logo {
+    width:20px;
+    height:20px;
 
-display:flex;
-align-items:center;
-justify-content:center;
+    display:flex;
 
-flex-shrink:0;
+    align-items:center;
+    justify-content:center;
 
-background:#18e0c4;
+    flex-shrink:0;
 
-color:#06110f;
+    border-radius:6px;
 
-border-radius:6px;
+    background:#18e0c4;
 
-font-size:7px;
-font-weight:800;
+    color:#06110f;
 
-line-height:1;
+    font-size:7px;
+
+    font-weight:800;
+
+    line-height:1;
 }
 
 
-/* HOVER */
+/* TECHNOLOGY HOVER */
 
 .tech:hover {
-background:#00aeff;
+    background:rgba(24,224,196,0.16);
 
-border-color:#00aeff;
+    border-color:rgba(24,224,196,0.45);
 
-transform:translateY(-2px);
-
-box-shadow:0 5px 15px rgba(0,174,255,0.20);
+    transform:translateY(-2px);
 }
 
 
-/* MOBILE */
+/* SECTION TITLE */
 
-@media(max-width:600px){
+.technologies-section > h2 {
+    color:#ffffff;
 
-.tech-container {
-gap:6px;
+    font-size:32px;
 
-padding:0 4px;
-}
-
-.tech {
-gap:6px;
-
-padding:6px 10px;
-
-font-size:12px;
-}
-
-.tech img {
-width:20px;
-height:20px;
-}
-
-.tech-logo-text {
-width:20px;
-height:20px;
-
-font-size:6px;
-}
-
+    font-weight:700;
 }
 
 
-/* SMALL MOBILE */
+/* =========================================
+   MOBILE
+========================================= */
 
-@media(max-width:380px){
+@media(max-width:700px) {
 
-.tech-container {
-gap:5px;
+    .technologies-section {
+        padding:60px 12px;
+    }
+
+    .technology-groups {
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+        margin-top:30px;
+    }
+
+    .technology-card {
+        padding:18px;
+
+        border-radius:19px;
+    }
+
+    .technology-card h3 {
+        font-size:16px;
+
+        margin-bottom:14px;
+    }
+
+    .tech-container {
+        gap:6px;
+    }
+
+    .tech {
+        min-height:32px;
+
+        padding:6px 9px;
+
+        font-size:11px;
+
+        gap:5px;
+    }
+
+    .tech i {
+        font-size:18px;
+    }
+
+    .special-logo {
+        width:18px;
+        height:18px;
+
+        font-size:6px;
+    }
+
+    .technologies-section > h2 {
+        font-size:26px;
+    }
 }
 
-.tech {
-padding:5px 8px;
 
-font-size:11px;
+/* =========================================
+   SMALL PHONES
+========================================= */
 
-gap:5px;
-}
+@media(max-width:380px) {
 
-.tech img {
-width:18px;
-height:18px;
-}
+    .technology-card {
+        padding:15px;
+    }
 
-.tech-logo-text {
-width:18px;
-height:18px;
-}
+    .tech {
+        padding:5px 8px;
 
-}
+        font-size:10px;
+    }
 
+    .tech i {
+        font-size:17px;
+    }
+
+    .special-logo {
+        width:17px;
+        height:17px;
+    }
+}    
 /* STATS */
 .stats{
 display:grid;
@@ -1356,113 +1480,207 @@ height:65px;
 
     
 <!-- TECHNOLOGIES -->
-<section>
+<section class="technologies-section">
 
 <h2 style="text-align:center;">Technologies We Use</h2>
 
-<div class="tech-container">
+<div class="technology-groups">
 
 <!-- FRONTEND -->
-<div class="tech"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5"><span>HTML5</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3"><span>CSS3</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript"><span>JavaScript (ES6+)</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript"><span>TypeScript</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React.js"><span>React.js</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="Next.js"><span>Next.js</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/vuejs/4FC08D" alt="Vue.js"><span>Vue.js</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/angular/DD0031" alt="Angular"><span>Angular</span></div>
+<div class="technology-card">
+<h3>Frontend Development</h3>
+<div class="tech-container">
+
+<div class="tech"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+<div class="tech"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+<div class="tech"><i class="devicon-javascript-plain colored"></i><span>JavaScript (ES6+)</span></div>
+<div class="tech"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+<div class="tech"><i class="devicon-react-original colored"></i><span>React.js</span></div>
+<div class="tech"><i class="devicon-nextjs-plain"></i><span>Next.js</span></div>
+<div class="tech"><i class="devicon-vuejs-plain colored"></i><span>Vue.js</span></div>
+<div class="tech"><i class="devicon-angularjs-plain colored"></i><span>Angular</span></div>
+
+</div>
+</div>
+
 
 <!-- BACKEND -->
-<div class="tech"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js"><span>Node.js</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/express/FFFFFF" alt="Express.js"><span>Express.js</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python"><span>Python</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/django/092E20" alt="Django"><span>Django</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/flask/FFFFFF" alt="Flask"><span>Flask</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP"><span>PHP</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel"><span>Laravel</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/java/ED8B00" alt="Java"><span>Java</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/springboot/6DB33F" alt="Spring Boot"><span>Spring Boot</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/dotnet/512BD4" alt="C# .NET"><span>C# .NET</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/go/00ADD8" alt="Go"><span>Go</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/rust/FFFFFF" alt="Rust"><span>Rust</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/rubyonrails/CC0000" alt="Ruby on Rails"><span>Ruby on Rails</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="NestJS"><span>NestJS</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI"><span>FastAPI</span></div>
+<div class="technology-card">
+<h3>Backend Development</h3>
+<div class="tech-container">
+
+<div class="tech"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+<div class="tech"><i class="devicon-express-original"></i><span>Express.js</span></div>
+<div class="tech"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+<div class="tech"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+<div class="tech"><i class="devicon-flask-original"></i><span>Flask</span></div>
+<div class="tech"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+<div class="tech"><i class="devicon-laravel-original colored"></i><span>Laravel</span></div>
+<div class="tech"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+<div class="tech"><i class="devicon-spring-original colored"></i><span>Spring Boot</span></div>
+<div class="tech"><i class="devicon-csharp-plain colored"></i><span>C# .NET</span></div>
+<div class="tech"><i class="devicon-go-original-wordmark colored"></i><span>Go</span></div>
+<div class="tech"><i class="devicon-rust-original"></i><span>Rust</span></div>
+<div class="tech"><i class="devicon-nestjs-plain colored"></i><span>NestJS</span></div>
+<div class="tech"><i class="devicon-fastapi-plain colored"></i><span>FastAPI</span></div>
+
+</div>
+</div>
+
 
 <!-- MOBILE -->
-<div class="tech"><img src="https://cdn.simpleicons.org/flutter/02569B" alt="Flutter"><span>Flutter</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React Native"><span>React Native</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/android/3DDC84" alt="Android"><span>Android</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/apple/FFFFFF" alt="iOS"><span>iOS</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/kotlin/7F52FF" alt="Kotlin"><span>Kotlin</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/swift/F05138" alt="Swift"><span>Swift</span></div>
+<div class="technology-card">
+<h3>Mobile Development</h3>
+<div class="tech-container">
+
+<div class="tech"><i class="devicon-flutter-plain colored"></i><span>Flutter</span></div>
+<div class="tech"><i class="devicon-react-original colored"></i><span>React Native</span></div>
+<div class="tech"><i class="devicon-android-plain colored"></i><span>Android</span></div>
+<div class="tech"><i class="devicon-apple-original"></i><span>iOS</span></div>
+<div class="tech"><i class="devicon-kotlin-plain colored"></i><span>Kotlin</span></div>
+<div class="tech"><i class="devicon-swift-plain colored"></i><span>Swift</span></div>
+
+</div>
+</div>
+
 
 <!-- DATABASE -->
-<div class="tech"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL"><span>MySQL</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL"><span>PostgreSQL</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB"><span>MongoDB</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase"><span>Firebase</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/redis/DC382D" alt="Redis"><span>Redis</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/sqlite/003B57" alt="SQLite"><span>SQLite</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/mariadb/003545" alt="MariaDB"><span>MariaDB</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/microsoftsqlserver/CC2927" alt="SQL Server"><span>SQL Server</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/oracle/F80000" alt="Oracle Database"><span>Oracle Database</span></div>
+<div class="technology-card">
+<h3>Database &amp; Storage</h3>
+<div class="tech-container">
 
-<!-- API & ARCHITECTURE -->
-<div class="tech"><div class="tech-logo-text">API</div><span>REST API</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/graphql/E10098" alt="GraphQL"><span>GraphQL</span></div>
-<div class="tech"><div class="tech-logo-text">gRPC</div><span>gRPC</span></div>
-<div class="tech"><div class="tech-logo-text">MS</div><span>Microservices</span></div>
-<div class="tech"><div class="tech-logo-text">SA</div><span>Serverless</span></div>
-<div class="tech"><div class="tech-logo-text">EDA</div><span>Event-Driven Architecture</span></div>
+<div class="tech"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+<div class="tech"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+<div class="tech"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+<div class="tech"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
+<div class="tech"><i class="devicon-redis-plain colored"></i><span>Redis</span></div>
+<div class="tech"><i class="devicon-sqlite-plain colored"></i><span>SQLite</span></div>
+<div class="tech"><i class="devicon-mariadb-plain colored"></i><span>MariaDB</span></div>
+<div class="tech"><i class="devicon-oracle-original colored"></i><span>Oracle Database</span></div>
+<div class="tech"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
+
+</div>
+</div>
+
+
+<!-- API -->
+<div class="technology-card">
+<h3>API &amp; System Architecture</h3>
+<div class="tech-container">
+
+<div class="tech"><span class="special-logo">API</span><span>REST API</span></div>
+<div class="tech"><i class="devicon-graphql-plain colored"></i><span>GraphQL</span></div>
+<div class="tech"><span class="special-logo">gRPC</span><span>gRPC</span></div>
+<div class="tech"><span class="special-logo">MS</span><span>Microservices</span></div>
+<div class="tech"><span class="special-logo">SRV</span><span>Serverless</span></div>
+<div class="tech"><span class="special-logo">EDA</span><span>Event-Driven Architecture</span></div>
+
+</div>
+</div>
+
 
 <!-- DEVOPS -->
-<div class="tech"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker"><span>Docker</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes"><span>Kubernetes</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git"><span>Git</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub"><span>GitHub</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="GitHub Actions"><span>GitHub Actions</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/jenkins/D24939" alt="Jenkins"><span>Jenkins</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/terraform/844FBA" alt="Terraform"><span>Terraform</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/ansible/EE0000" alt="Ansible"><span>Ansible</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/nginx/009639" alt="Nginx"><span>Nginx</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux"><span>Linux</span></div>
+<div class="technology-card">
+<h3>DevOps &amp; Development Tools</h3>
+<div class="tech-container">
+
+<div class="tech"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+<div class="tech"><i class="devicon-kubernetes-plain colored"></i><span>Kubernetes</span></div>
+<div class="tech"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+<div class="tech"><i class="devicon-github-original"></i><span>GitHub</span></div>
+<div class="tech"><i class="devicon-githubactions-plain colored"></i><span>GitHub Actions</span></div>
+<div class="tech"><i class="devicon-jenkins-line colored"></i><span>Jenkins</span></div>
+<div class="tech"><i class="devicon-terraform-plain colored"></i><span>Terraform</span></div>
+<div class="tech"><i class="devicon-ansible-plain colored"></i><span>Ansible</span></div>
+<div class="tech"><i class="devicon-nginx-original colored"></i><span>Nginx</span></div>
+<div class="tech"><i class="devicon-linux-plain"></i><span>Linux</span></div>
+<div class="tech"><span class="special-logo">CI</span><span>CI/CD</span></div>
+
+</div>
+</div>
+
 
 <!-- CLOUD -->
-<div class="tech"><img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="AWS"><span>AWS</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="Google Cloud"><span>Google Cloud</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="Microsoft Azure"><span>Microsoft Azure</span></div>
-<div class="tech"><div class="tech-logo-text">☁</div><span>Cloud Hosting</span></div>
-<div class="tech"><div class="tech-logo-text">DEV</div><span>DevOps</span></div>
-<div class="tech"><div class="tech-logo-text">CI</div><span>CI/CD</span></div>
+<div class="technology-card">
+<h3>Cloud &amp; Hosting</h3>
+<div class="tech-container">
+
+<div class="tech"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
+<div class="tech"><i class="devicon-googlecloud-plain colored"></i><span>Google Cloud</span></div>
+<div class="tech"><i class="devicon-azure-plain colored"></i><span>Microsoft Azure</span></div>
+<div class="tech"><span class="special-logo">☁</span><span>Cloud Hosting</span></div>
+<div class="tech"><span class="special-logo">DEV</span><span>DevOps</span></div>
+
+</div>
+</div>
+
 
 <!-- AI -->
-<div class="tech"><img src="https://cdn.simpleicons.org/openai/FFFFFF" alt="OpenAI"><span>AI Integration</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow"><span>Machine Learning</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch"><span>PyTorch</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="Hugging Face"><span>Generative AI</span></div>
+<div class="technology-card">
+<h3>AI &amp; Machine Learning</h3>
+<div class="tech-container">
 
-<!-- CYBERSECURITY -->
-<div class="tech"><div class="tech-logo-text">🛡</div><span>Cyber Security</span></div>
-<div class="tech"><div class="tech-logo-text">OW</div><span>OWASP</span></div>
-<div class="tech"><div class="tech-logo-text">IAM</div><span>Identity & Access</span></div>
-<div class="tech"><div class="tech-logo-text">TLS</div><span>SSL / TLS</span></div>
+<div class="tech"><span class="special-logo">AI</span><span>AI Integration</span></div>
+<div class="tech"><i class="devicon-tensorflow-original colored"></i><span>Machine Learning</span></div>
+<div class="tech"><i class="devicon-pytorch-original colored"></i><span>PyTorch</span></div>
+<div class="tech"><span class="special-logo">GEN</span><span>Generative AI</span></div>
+
+</div>
+</div>
+
+
+<!-- CYBER SECURITY -->
+<div class="technology-card">
+<h3>Cyber Security</h3>
+<div class="tech-container">
+
+<div class="tech"><span class="special-logo">🛡</span><span>Cyber Security</span></div>
+<div class="tech"><span class="special-logo">OW</span><span>OWASP</span></div>
+<div class="tech"><span class="special-logo">IAM</span><span>Identity &amp; Access</span></div>
+<div class="tech"><span class="special-logo">TLS</span><span>SSL / TLS</span></div>
+
+</div>
+</div>
+
 
 <!-- TESTING -->
-<div class="tech"><img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman"><span>Postman</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/selenium/43B02A" alt="Selenium"><span>Selenium</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/playwright/2EAD33" alt="Playwright"><span>Playwright</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/jest/C21325" alt="Jest"><span>Jest</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/cypress/69D3A7" alt="Cypress"><span>Cypress</span></div>
+<div class="technology-card">
+<h3>Testing &amp; Quality Assurance</h3>
+<div class="tech-container">
+
+<div class="tech"><i class="devicon-postman-plain colored"></i><span>Postman</span></div>
+<div class="tech"><i class="devicon-selenium-original colored"></i><span>Selenium</span></div>
+<div class="tech"><i class="devicon-playwright-plain colored"></i><span>Playwright</span></div>
+<div class="tech"><i class="devicon-jest-plain colored"></i><span>Jest</span></div>
+<div class="tech"><i class="devicon-cypressio-plain colored"></i><span>Cypress</span></div>
+
+</div>
+</div>
+
 
 <!-- DESIGN -->
-<div class="tech"><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma"><span>Figma</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" alt="Adobe Photoshop"><span>Adobe Photoshop</span></div>
-<div class="tech"><img src="https://cdn.simpleicons.org/adobeillustrator/FF9A00" alt="Adobe Illustrator"><span>Adobe Illustrator</span></div>
-<div class="tech"><div class="tech-logo-text">UI</div><span>UI/UX Design</span></div>
+<div class="technology-card">
+<h3>UI/UX &amp; Design</h3>
+<div class="tech-container">
+
+<div class="tech"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+<div class="tech"><i class="devicon-photoshop-plain colored"></i><span>Adobe Photoshop</span></div>
+<div class="tech"><i class="devicon-illustrator-plain colored"></i><span>Adobe Illustrator</span></div>
+<div class="tech"><span class="special-logo">UI</span><span>UI/UX Design</span></div>
+
+</div>
+</div>
+
 
 <!-- SEO -->
-<div class="tech"><div class="tech-logo-text">SEO</div><span>SEO Optimization</span></div>
+<div class="technology-card">
+<h3>Digital &amp; SEO</h3>
+<div class="tech-container">
+
+<div class="tech"><span class="special-logo">SEO</span><span>SEO Optimization</span></div>
+
+</div>
+</div>
 
 </div>
 
