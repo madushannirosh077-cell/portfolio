@@ -3606,6 +3606,455 @@ READ MORE
     </a>
 
 </div>
+ <!-- ==================== NIROSH SOFTWARE | FAQ SECTION ==================== -->
+
+<style>
+/* FAQ SECTION */
+.nirosh-faq-section {
+    position: relative;
+    padding: 90px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.90)),
+        url('faq-background.jpg') center center / cover no-repeat;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Soft background glow */
+.nirosh-faq-section::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    top: -180px;
+    left: -180px;
+    background: rgba(0, 140, 255, 0.10);
+    filter: blur(100px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.nirosh-faq-section::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    bottom: -180px;
+    right: -120px;
+    background: rgba(0, 90, 255, 0.10);
+    filter: blur(100px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Header */
+.nirosh-faq-header {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.nirosh-faq-label {
+    display: inline-block;
+    padding: 7px 18px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(100,180,255,0.35);
+    border-radius: 30px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #8fc9ff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nirosh-faq-header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nirosh-faq-header h2 span {
+    color: #7fc4ff;
+}
+
+.nirosh-faq-header p {
+    max-width: 720px;
+    margin: 18px auto 0;
+    color: rgba(255,255,255,0.72);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* FAQ container */
+.nirosh-faq-container {
+    max-width: 950px;
+    margin: auto;
+}
+
+/* Individual FAQ */
+.nirosh-faq-item {
+    margin-bottom: 16px;
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 18px;
+    background: rgba(255,255,255,0.075);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.28);
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+
+.nirosh-faq-item:hover {
+    border-color: rgba(110,190,255,0.38);
+    background: rgba(255,255,255,0.095);
+    transform: translateY(-2px);
+}
+
+/* Question button */
+.nirosh-faq-question {
+    width: 100%;
+    padding: 22px 25px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.nirosh-faq-question:hover {
+    color: #9dd2ff;
+}
+
+/* Plus icon */
+.nirosh-faq-icon {
+    min-width: 34px;
+    width: 34px;
+    height: 34px;
+    margin-left: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(130,200,255,0.35);
+    background: rgba(80,160,255,0.08);
+    color: #8ecbff;
+    font-size: 23px;
+    font-weight: 300;
+    transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.nirosh-faq-item.active .nirosh-faq-icon {
+    transform: rotate(45deg);
+    background: rgba(80,160,255,0.18);
+}
+
+/* Answer */
+.nirosh-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease;
+}
+
+.nirosh-faq-answer-inner {
+    padding: 0 25px 23px;
+    color: rgba(255,255,255,0.70);
+    font-size: 14px;
+    line-height: 1.8;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.nirosh-faq-item.active .nirosh-faq-answer {
+    max-height: 300px;
+}
+
+/* Bottom trust text */
+.nirosh-faq-trust {
+    margin: 42px auto 0;
+    max-width: 700px;
+    text-align: center;
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.nirosh-faq-trust strong {
+    color: rgba(255,255,255,0.82);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .nirosh-faq-section {
+        padding: 70px 15px;
+    }
+
+    .nirosh-faq-header h2 {
+        font-size: 30px;
+    }
+
+    .nirosh-faq-header p {
+        font-size: 14px;
+    }
+
+    .nirosh-faq-question {
+        padding: 19px 17px;
+        font-size: 14px;
+    }
+
+    .nirosh-faq-answer-inner {
+        padding: 0 17px 20px;
+        font-size: 13px;
+    }
+
+    .nirosh-faq-icon {
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+}
+</style>
+
+
+<section id="faq" class="nirosh-faq-section">
+
+    <div class="nirosh-faq-header">
+
+        <div class="nirosh-faq-label">
+            Nirosh Software
+        </div>
+
+        <h2>
+            Frequently Asked <span>Questions</span>
+        </h2>
+
+        <p>
+            Find clear answers to common questions about our software
+            development services, solutions and technical support.
+        </p>
+
+    </div>
+
+
+    <div class="nirosh-faq-container">
+
+        <!-- FAQ 01 -->
+        <div class="nirosh-faq-item">
+            <button class="nirosh-faq-question">
+                <span>What services does Nirosh Software provide?</span>
+                <span class="nirosh-faq-icon">+</span>
+            </button>
+
+            <div class="nirosh-faq-answer">
+                <div class="nirosh-faq-answer-inner">
+                    Nirosh Software provides Website Development, Mobile App
+                    Development, E-Commerce Development, UI/UX Design,
+                    Custom Software Development, System Architecture Solutions,
+                    Maintenance & Support, Web Hosting & Domain, SSL
+                    Certification, Business Email Setup and SEO Optimization.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FAQ 02 -->
+        <div class="nirosh-faq-item">
+            <button class="nirosh-faq-question">
+                <span>Does Nirosh Software develop custom websites?</span>
+                <span class="nirosh-faq-icon">+</span>
+            </button>
+
+            <div class="nirosh-faq-answer">
+                <div class="nirosh-faq-answer-inner">
+                    Yes. We develop customized, responsive and modern websites
+                    based on the specific requirements of each business or
+                    organization.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FAQ 03 -->
+        <div class="nirosh-faq-item">
+            <button class="nirosh-faq-question">
+                <span>Does Nirosh Software develop mobile applications?</span>
+                <span class="nirosh-faq-icon">+</span>
+            </button>
+
+            <div class="nirosh-faq-answer">
+                <div class="nirosh-faq-answer-inner">
+                    Yes. We provide mobile application development services
+                    based on the functional and technical requirements of
+                    businesses and organizations.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FAQ 04 -->
+        <div class="nirosh-faq-item">
+            <button class="nirosh-faq-question">
+                <span>Do you provide E-Commerce website development?</span>
+                <span class="nirosh-faq-icon">+</span>
+            </button>
+
+            <div class="nirosh-faq-answer">
+                <div class="nirosh-faq-answer-inner">
+                    Yes. We develop E-Commerce solutions with features such
+                    as product management, online ordering, customer
+                    management and other business-specific requirements.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FAQ 05 -->
+        <div class="nirosh-faq-item">
+            <button class="nirosh-faq-question">
+                <span>Do you provide UI/UX design services?</span>
+                <span class="nirosh-faq-icon">+</span>
+            </button>
+
+            <div class="nirosh-faq-answer">
+                <div class="nirosh-faq-answer-inner">
+                    Yes. We provide UI/UX design solutions focused on creating
+                    modern, user-friendly and responsive digital experiences.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FAQ 06 -->
+        <div class="nirosh-faq-item">
+            <button class="nirosh-faq-question">
+                <span>Can you develop custom software for a business?</span>
+                <span class="nirosh-faq-icon">+</span>
+            </button>
+
+            <div class="nirosh-faq-answer">
+                <div class="nirosh-faq-answer-inner">
+                    Yes. We develop custom software solutions according to the
+                    specific workflow, requirements and objectives of a
+                    business or organization.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FAQ 07 -->
+        <div class="nirosh-faq-item">
+            <button class="nirosh-faq-question">
+                <span>Do you provide system architecture solutions?</span>
+                <span class="nirosh-faq-icon">+</span>
+            </button>
+
+            <div class="nirosh-faq-answer">
+                <div class="nirosh-faq-answer-inner">
+                    Yes. We provide system architecture solutions designed to
+                    help businesses plan scalable, secure and maintainable
+                    software systems.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FAQ 08 -->
+        <div class="nirosh-faq-item">
+            <button class="nirosh-faq-question">
+                <span>Do you provide website maintenance and technical support?</span>
+                <span class="nirosh-faq-icon">+</span>
+            </button>
+
+            <div class="nirosh-faq-answer">
+                <div class="nirosh-faq-answer-inner">
+                    Yes. We provide ongoing maintenance and technical support
+                    to help keep websites and software systems updated,
+                    secure and operational.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FAQ 09 -->
+        <div class="nirosh-faq-item">
+            <button class="nirosh-faq-question">
+                <span>Do you provide hosting, domain, SSL and business email services?</span>
+                <span class="nirosh-faq-icon">+</span>
+            </button>
+
+            <div class="nirosh-faq-answer">
+                <div class="nirosh-faq-answer-inner">
+                    Yes. We provide Web Hosting & Domain, SSL Certification
+                    and Business Email Setup services as part of our digital
+                    solutions.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FAQ 10 -->
+        <div class="nirosh-faq-item">
+            <button class="nirosh-faq-question">
+                <span>How can I contact Nirosh Software for a project?</span>
+                <span class="nirosh-faq-icon">+</span>
+            </button>
+
+            <div class="nirosh-faq-answer">
+                <div class="nirosh-faq-answer-inner">
+                    You can contact Nirosh Software to discuss your project
+                    requirements and receive further information about our
+                    services, solutions and project process.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="nirosh-faq-trust">
+        <strong>Nirosh Software</strong> — Software Development & System
+        Architecture Solutions focused on professional, reliable and
+        practical digital solutions.
+    </div>
+
+</section>
+
+
+<script>
+document.querySelectorAll('.nirosh-faq-question').forEach(function(button) {
+
+    button.addEventListener('click', function() {
+
+        const item = this.parentElement;
+        const answer = item.querySelector('.nirosh-faq-answer');
+
+        item.classList.toggle('active');
+
+        if (item.classList.contains('active')) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        } else {
+            answer.style.maxHeight = null;
+        }
+
+    });
+
+});
+</script>
+
+<!-- ==================== FAQ SECTION END ==================== -->   
 <!-- CONTACT -->
 <section>
 <h2 style="text-align:center;">Contact</h2>
